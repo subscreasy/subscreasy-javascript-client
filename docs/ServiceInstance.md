@@ -1,0 +1,79 @@
+# ApiDocumentation.ServiceInstance
+
+## Properties
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**capacity** | **Number** |  | [optional] 
+**currentUsage** | **Number** |  | [optional] 
+**endDate** | **Date** |  | [optional] 
+**id** | **Number** |  | [optional] 
+**name** | **String** |  | [optional] 
+**numberOfUnits** | **Number** |  | [optional] 
+**offer** | [**Offer**](Offer.md) |  | [optional] 
+**overUsage** | **Number** |  | [optional] 
+**overUsageQuota** | **Number** |  | [optional] 
+**quotaOrigin** | **String** |  | [optional] 
+**serviceOffering** | [**ServiceOffering**](ServiceOffering.md) |  | [optional] 
+**serviceType** | **String** |  | [optional] 
+**startDate** | **Date** |  | [optional] 
+**status** | **String** |  | [optional] 
+**subscriberId** | **String** |  | [optional] 
+**subscription** | [**Subsription**](Subsription.md) |  | [optional] 
+**type** | **String** |  | [optional] 
+**version** | **Number** |  | [optional] 
+
+
+<a name="QuotaOriginEnum"></a>
+## Enum: QuotaOriginEnum
+
+
+* `SUBS` (value: `"SUBS"`)
+
+* `OVER` (value: `"OVER"`)
+
+
+
+
+<a name="ServiceTypeEnum"></a>
+## Enum: ServiceTypeEnum
+
+
+* `ONOFF` (value: `"ONOFF"`)
+
+* `SEAT_BASED` (value: `"SEAT_BASED"`)
+
+* `USAGE_BASED` (value: `"USAGE_BASED"`)
+
+
+
+
+<a name="StatusEnum"></a>
+## Enum: StatusEnum
+
+
+* `NEW` (value: `"NEW"`)
+
+* `ACTIVE` (value: `"ACTIVE"`)
+
+* `SUSPENDED` (value: `"SUSPENDED"`)
+
+* `FINISHED` (value: `"FINISHED"`)
+
+* `CANCELLED` (value: `"CANCELLED"`)
+
+
+
+
+<a name="TypeEnum"></a>
+## Enum: TypeEnum
+
+
+* `ONOFF` (value: `"ONOFF"`)
+
+* `SEAT_BASED` (value: `"SEAT_BASED"`)
+
+* `USAGE_BASED` (value: `"USAGE_BASED"`)
+
+
+
+
