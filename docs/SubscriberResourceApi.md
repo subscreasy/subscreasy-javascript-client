@@ -9,6 +9,7 @@ Method | HTTP request | Description
 [**getAllSubscribersUsingGET**](SubscriberResourceApi.md#getAllSubscribersUsingGET) | **GET** /api/subscribers | getAllSubscribers
 [**getSubscriberByEmailUsingGET**](SubscriberResourceApi.md#getSubscriberByEmailUsingGET) | **GET** /api/subscribers/email/{email} | getSubscriberByEmail
 [**getSubscriberByNameUsingGET**](SubscriberResourceApi.md#getSubscriberByNameUsingGET) | **GET** /api/subscribers/name/{name} | getSubscriberByName
+[**getSubscriberBySecureIdUsingGET**](SubscriberResourceApi.md#getSubscriberBySecureIdUsingGET) | **GET** /api/subscribers/secureId/{secureId} | getSubscriberBySecureId
 [**getSubscriberUsingGET**](SubscriberResourceApi.md#getSubscriberUsingGET) | **GET** /api/subscribers/{id} | getSubscriber
 [**updateSubscriberUsingPUT**](SubscriberResourceApi.md#updateSubscriberUsingPUT) | **PUT** /api/subscribers | updateSubscriber
 
@@ -252,6 +253,57 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**[Subscriber]**](Subscriber.md)
+
+### Authorization
+
+[apiKey](../README.md#apiKey)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: */*
+
+<a name="getSubscriberBySecureIdUsingGET"></a>
+# **getSubscriberBySecureIdUsingGET**
+> Subscriber getSubscriberBySecureIdUsingGET(secureId)
+
+getSubscriberBySecureId
+
+### Example
+```javascript
+var ApiDocumentation = require('api_documentation');
+var defaultClient = ApiDocumentation.ApiClient.instance;
+
+// Configure API key authorization: apiKey
+var apiKey = defaultClient.authentications['apiKey'];
+apiKey.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//apiKey.apiKeyPrefix = 'Token';
+
+var apiInstance = new ApiDocumentation.SubscriberResourceApi();
+
+var secureId = "secureId_example"; // String | secureId
+
+
+var callback = function(error, data, response) {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+};
+apiInstance.getSubscriberBySecureIdUsingGET(secureId, callback);
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **secureId** | **String**| secureId | 
+
+### Return type
+
+[**Subscriber**](Subscriber.md)
 
 ### Authorization
 

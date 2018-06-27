@@ -14,7 +14,8 @@ Name | Type | Description | Notes
 **services** | [**[ServiceInstance]**](ServiceInstance.md) |  | [optional] 
 **startDate** | **Date** |  | [optional] 
 **status** | **String** |  | [optional] 
-**subscriberId** | **String** |  | [optional] 
+**subscriber** | [**Subscriber**](Subscriber.md) |  | [optional] 
+**subscriberSecureId** | **String** |  | [optional] 
 **version** | **Number** |  | [optional] 
 
 

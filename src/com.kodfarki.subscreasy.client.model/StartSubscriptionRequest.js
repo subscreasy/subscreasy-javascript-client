@@ -16,18 +16,18 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient', 'com.kodfarki.subscreasy.client.model/PaymentCard', 'com.kodfarki.subscreasy.client.model/Subscriber', 'com.kodfarki.subscreasy.client.model/SubscriptionPlan'], factory);
+    define(['ApiClient', 'com.kodfarki.subscreasy.client.model/Offer', 'com.kodfarki.subscreasy.client.model/PaymentCard', 'com.kodfarki.subscreasy.client.model/Subscriber'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('./PaymentCard'), require('./Subscriber'), require('./SubscriptionPlan'));
+    module.exports = factory(require('../ApiClient'), require('./Offer'), require('./PaymentCard'), require('./Subscriber'));
   } else {
     // Browser globals (root is window)
     if (!root.ApiDocumentation) {
       root.ApiDocumentation = {};
     }
-    root.ApiDocumentation.StartSubscriptionRequest = factory(root.ApiDocumentation.ApiClient, root.ApiDocumentation.PaymentCard, root.ApiDocumentation.Subscriber, root.ApiDocumentation.SubscriptionPlan);
+    root.ApiDocumentation.StartSubscriptionRequest = factory(root.ApiDocumentation.ApiClient, root.ApiDocumentation.Offer, root.ApiDocumentation.PaymentCard, root.ApiDocumentation.Subscriber);
   }
-}(this, function(ApiClient, PaymentCard, Subscriber, SubscriptionPlan) {
+}(this, function(ApiClient, Offer, PaymentCard, Subscriber) {
   'use strict';
 
 
@@ -46,6 +46,7 @@
    */
   var exports = function() {
     var _this = this;
+
 
 
 
@@ -76,10 +77,13 @@
         obj['couponCode'] = ApiClient.convertToType(data['couponCode'], 'String');
       }
       if (data.hasOwnProperty('offer')) {
-        obj['offer'] = SubscriptionPlan.constructFromObject(data['offer']);
+        obj['offer'] = Offer.constructFromObject(data['offer']);
       }
       if (data.hasOwnProperty('paymentCard')) {
         obj['paymentCard'] = PaymentCard.constructFromObject(data['paymentCard']);
+      }
+      if (data.hasOwnProperty('price')) {
+        obj['price'] = ApiClient.convertToType(data['price'], 'Number');
       }
       if (data.hasOwnProperty('subscriber')) {
         obj['subscriber'] = Subscriber.constructFromObject(data['subscriber']);
@@ -101,13 +105,17 @@
    */
   exports.prototype['couponCode'] = undefined;
   /**
-   * @member {module:com.kodfarki.subscreasy.client.model/SubscriptionPlan} offer
+   * @member {module:com.kodfarki.subscreasy.client.model/Offer} offer
    */
   exports.prototype['offer'] = undefined;
   /**
    * @member {module:com.kodfarki.subscreasy.client.model/PaymentCard} paymentCard
    */
   exports.prototype['paymentCard'] = undefined;
+  /**
+   * @member {Number} price
+   */
+  exports.prototype['price'] = undefined;
   /**
    * @member {module:com.kodfarki.subscreasy.client.model/Subscriber} subscriber
    */

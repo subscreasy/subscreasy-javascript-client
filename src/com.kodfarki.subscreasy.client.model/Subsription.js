@@ -16,18 +16,18 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient', 'com.kodfarki.subscreasy.client.model/Company', 'com.kodfarki.subscreasy.client.model/Coupon', 'com.kodfarki.subscreasy.client.model/Offer', 'com.kodfarki.subscreasy.client.model/SavedCard', 'com.kodfarki.subscreasy.client.model/ServiceInstance'], factory);
+    define(['ApiClient', 'com.kodfarki.subscreasy.client.model/Company', 'com.kodfarki.subscreasy.client.model/Coupon', 'com.kodfarki.subscreasy.client.model/Offer', 'com.kodfarki.subscreasy.client.model/SavedCard', 'com.kodfarki.subscreasy.client.model/ServiceInstance', 'com.kodfarki.subscreasy.client.model/Subscriber'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('./Company'), require('./Coupon'), require('./Offer'), require('./SavedCard'), require('./ServiceInstance'));
+    module.exports = factory(require('../ApiClient'), require('./Company'), require('./Coupon'), require('./Offer'), require('./SavedCard'), require('./ServiceInstance'), require('./Subscriber'));
   } else {
     // Browser globals (root is window)
     if (!root.ApiDocumentation) {
       root.ApiDocumentation = {};
     }
-    root.ApiDocumentation.Subsription = factory(root.ApiDocumentation.ApiClient, root.ApiDocumentation.Company, root.ApiDocumentation.Coupon, root.ApiDocumentation.Offer, root.ApiDocumentation.SavedCard, root.ApiDocumentation.ServiceInstance);
+    root.ApiDocumentation.Subsription = factory(root.ApiDocumentation.ApiClient, root.ApiDocumentation.Company, root.ApiDocumentation.Coupon, root.ApiDocumentation.Offer, root.ApiDocumentation.SavedCard, root.ApiDocumentation.ServiceInstance, root.ApiDocumentation.Subscriber);
   }
-}(this, function(ApiClient, Company, Coupon, Offer, SavedCard, ServiceInstance) {
+}(this, function(ApiClient, Company, Coupon, Offer, SavedCard, ServiceInstance, Subscriber) {
   'use strict';
 
 
@@ -57,6 +57,7 @@
 
 
     _this['offer'] = offer;
+
 
 
 
@@ -108,8 +109,11 @@
       if (data.hasOwnProperty('status')) {
         obj['status'] = ApiClient.convertToType(data['status'], 'String');
       }
-      if (data.hasOwnProperty('subscriberId')) {
-        obj['subscriberId'] = ApiClient.convertToType(data['subscriberId'], 'String');
+      if (data.hasOwnProperty('subscriber')) {
+        obj['subscriber'] = Subscriber.constructFromObject(data['subscriber']);
+      }
+      if (data.hasOwnProperty('subscriberSecureId')) {
+        obj['subscriberSecureId'] = ApiClient.convertToType(data['subscriberSecureId'], 'String');
       }
       if (data.hasOwnProperty('version')) {
         obj['version'] = ApiClient.convertToType(data['version'], 'Number');
@@ -163,9 +167,13 @@
    */
   exports.prototype['status'] = undefined;
   /**
-   * @member {String} subscriberId
+   * @member {module:com.kodfarki.subscreasy.client.model/Subscriber} subscriber
    */
-  exports.prototype['subscriberId'] = undefined;
+  exports.prototype['subscriber'] = undefined;
+  /**
+   * @member {String} subscriberSecureId
+   */
+  exports.prototype['subscriberSecureId'] = undefined;
   /**
    * @member {Number} version
    */

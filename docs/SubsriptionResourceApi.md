@@ -217,7 +217,7 @@ Name | Type | Description  | Notes
 
 <a name="startSubscriptionUsingPOST"></a>
 # **startSubscriptionUsingPOST**
-> SubscriptionCreateResult startSubscriptionUsingPOST(request)
+> StartSubscriptionResult startSubscriptionUsingPOST(request)
 
 startSubscription
 
@@ -255,7 +255,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**SubscriptionCreateResult**](SubscriptionCreateResult.md)
+[**StartSubscriptionResult**](StartSubscriptionResult.md)
 
 ### Authorization
 

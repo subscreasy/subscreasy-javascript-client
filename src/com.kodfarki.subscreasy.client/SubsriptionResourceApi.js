@@ -16,18 +16,18 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient', 'com.kodfarki.subscreasy.client.model/Cancellation', 'com.kodfarki.subscreasy.client.model/StartSubscriptionRequest', 'com.kodfarki.subscreasy.client.model/SubscriptionCreateResult', 'com.kodfarki.subscreasy.client.model/Subsription'], factory);
+    define(['ApiClient', 'com.kodfarki.subscreasy.client.model/Cancellation', 'com.kodfarki.subscreasy.client.model/StartSubscriptionRequest', 'com.kodfarki.subscreasy.client.model/StartSubscriptionResult', 'com.kodfarki.subscreasy.client.model/Subsription'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('../com.kodfarki.subscreasy.client.model/Cancellation'), require('../com.kodfarki.subscreasy.client.model/StartSubscriptionRequest'), require('../com.kodfarki.subscreasy.client.model/SubscriptionCreateResult'), require('../com.kodfarki.subscreasy.client.model/Subsription'));
+    module.exports = factory(require('../ApiClient'), require('../com.kodfarki.subscreasy.client.model/Cancellation'), require('../com.kodfarki.subscreasy.client.model/StartSubscriptionRequest'), require('../com.kodfarki.subscreasy.client.model/StartSubscriptionResult'), require('../com.kodfarki.subscreasy.client.model/Subsription'));
   } else {
     // Browser globals (root is window)
     if (!root.ApiDocumentation) {
       root.ApiDocumentation = {};
     }
-    root.ApiDocumentation.SubsriptionResourceApi = factory(root.ApiDocumentation.ApiClient, root.ApiDocumentation.Cancellation, root.ApiDocumentation.StartSubscriptionRequest, root.ApiDocumentation.SubscriptionCreateResult, root.ApiDocumentation.Subsription);
+    root.ApiDocumentation.SubsriptionResourceApi = factory(root.ApiDocumentation.ApiClient, root.ApiDocumentation.Cancellation, root.ApiDocumentation.StartSubscriptionRequest, root.ApiDocumentation.StartSubscriptionResult, root.ApiDocumentation.Subsription);
   }
-}(this, function(ApiClient, Cancellation, StartSubscriptionRequest, SubscriptionCreateResult, Subsription) {
+}(this, function(ApiClient, Cancellation, StartSubscriptionRequest, StartSubscriptionResult, Subsription) {
   'use strict';
 
   /**
@@ -238,7 +238,7 @@
      * Callback function to receive the result of the startSubscriptionUsingPOST operation.
      * @callback module:com.kodfarki.subscreasy.client/SubsriptionResourceApi~startSubscriptionUsingPOSTCallback
      * @param {String} error Error message, if any.
-     * @param {module:com.kodfarki.subscreasy.client.model/SubscriptionCreateResult} data The data returned by the service call.
+     * @param {module:com.kodfarki.subscreasy.client.model/StartSubscriptionResult} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -246,7 +246,7 @@
      * startSubscription
      * @param {module:com.kodfarki.subscreasy.client.model/StartSubscriptionRequest} request request
      * @param {module:com.kodfarki.subscreasy.client/SubsriptionResourceApi~startSubscriptionUsingPOSTCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:com.kodfarki.subscreasy.client.model/SubscriptionCreateResult}
+     * data is of type: {@link module:com.kodfarki.subscreasy.client.model/StartSubscriptionResult}
      */
     this.startSubscriptionUsingPOST = function(request, callback) {
       var postBody = request;
@@ -271,7 +271,7 @@
       var authNames = ['apiKey'];
       var contentTypes = ['application/json'];
       var accepts = ['application/json'];
-      var returnType = SubscriptionCreateResult;
+      var returnType = StartSubscriptionResult;
 
       return this.apiClient.callApi(
         '/api/subscriptions/start', 'POST',

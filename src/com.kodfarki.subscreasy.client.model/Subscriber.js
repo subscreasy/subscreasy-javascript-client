@@ -16,18 +16,18 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient'], factory);
+    define(['ApiClient', 'com.kodfarki.subscreasy.client.model/Address', 'com.kodfarki.subscreasy.client.model/Company'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'));
+    module.exports = factory(require('../ApiClient'), require('./Address'), require('./Company'));
   } else {
     // Browser globals (root is window)
     if (!root.ApiDocumentation) {
       root.ApiDocumentation = {};
     }
-    root.ApiDocumentation.Subscriber = factory(root.ApiDocumentation.ApiClient);
+    root.ApiDocumentation.Subscriber = factory(root.ApiDocumentation.ApiClient, root.ApiDocumentation.Address, root.ApiDocumentation.Company);
   }
-}(this, function(ApiClient) {
+}(this, function(ApiClient, Address, Company) {
   'use strict';
 
 
@@ -66,6 +66,13 @@
 
 
 
+
+
+
+
+
+
+
   };
 
   /**
@@ -79,20 +86,38 @@
     if (data) {
       obj = obj || new exports();
 
+      if (data.hasOwnProperty('activated')) {
+        obj['activated'] = ApiClient.convertToType(data['activated'], 'Boolean');
+      }
+      if (data.hasOwnProperty('activationKey')) {
+        obj['activationKey'] = ApiClient.convertToType(data['activationKey'], 'String');
+      }
       if (data.hasOwnProperty('address')) {
         obj['address'] = ApiClient.convertToType(data['address'], 'String');
+      }
+      if (data.hasOwnProperty('billingAddress')) {
+        obj['billingAddress'] = Address.constructFromObject(data['billingAddress']);
       }
       if (data.hasOwnProperty('city')) {
         obj['city'] = ApiClient.convertToType(data['city'], 'String');
       }
+      if (data.hasOwnProperty('company')) {
+        obj['company'] = Company.constructFromObject(data['company']);
+      }
       if (data.hasOwnProperty('country')) {
         obj['country'] = ApiClient.convertToType(data['country'], 'String');
+      }
+      if (data.hasOwnProperty('createDate')) {
+        obj['createDate'] = ApiClient.convertToType(data['createDate'], 'Date');
       }
       if (data.hasOwnProperty('email')) {
         obj['email'] = ApiClient.convertToType(data['email'], 'String');
       }
       if (data.hasOwnProperty('gsmNumber')) {
         obj['gsmNumber'] = ApiClient.convertToType(data['gsmNumber'], 'String');
+      }
+      if (data.hasOwnProperty('id')) {
+        obj['id'] = ApiClient.convertToType(data['id'], 'Number');
       }
       if (data.hasOwnProperty('identityNumber')) {
         obj['identityNumber'] = ApiClient.convertToType(data['identityNumber'], 'String');
@@ -106,6 +131,9 @@
       if (data.hasOwnProperty('name')) {
         obj['name'] = ApiClient.convertToType(data['name'], 'String');
       }
+      if (data.hasOwnProperty('passwordHash')) {
+        obj['passwordHash'] = ApiClient.convertToType(data['passwordHash'], 'String');
+      }
       if (data.hasOwnProperty('registrationDate')) {
         obj['registrationDate'] = ApiClient.convertToType(data['registrationDate'], 'String');
       }
@@ -113,7 +141,7 @@
         obj['secureId'] = ApiClient.convertToType(data['secureId'], 'String');
       }
       if (data.hasOwnProperty('shippingAddress')) {
-        obj['shippingAddress'] = ApiClient.convertToType(data['shippingAddress'], 'String');
+        obj['shippingAddress'] = Address.constructFromObject(data['shippingAddress']);
       }
       if (data.hasOwnProperty('shippingCity')) {
         obj['shippingCity'] = ApiClient.convertToType(data['shippingCity'], 'String');
@@ -141,17 +169,37 @@
   }
 
   /**
+   * @member {Boolean} activated
+   */
+  exports.prototype['activated'] = undefined;
+  /**
+   * @member {String} activationKey
+   */
+  exports.prototype['activationKey'] = undefined;
+  /**
    * @member {String} address
    */
   exports.prototype['address'] = undefined;
+  /**
+   * @member {module:com.kodfarki.subscreasy.client.model/Address} billingAddress
+   */
+  exports.prototype['billingAddress'] = undefined;
   /**
    * @member {String} city
    */
   exports.prototype['city'] = undefined;
   /**
+   * @member {module:com.kodfarki.subscreasy.client.model/Company} company
+   */
+  exports.prototype['company'] = undefined;
+  /**
    * @member {String} country
    */
   exports.prototype['country'] = undefined;
+  /**
+   * @member {Date} createDate
+   */
+  exports.prototype['createDate'] = undefined;
   /**
    * @member {String} email
    */
@@ -160,6 +208,10 @@
    * @member {String} gsmNumber
    */
   exports.prototype['gsmNumber'] = undefined;
+  /**
+   * @member {Number} id
+   */
+  exports.prototype['id'] = undefined;
   /**
    * @member {String} identityNumber
    */
@@ -177,6 +229,10 @@
    */
   exports.prototype['name'] = undefined;
   /**
+   * @member {String} passwordHash
+   */
+  exports.prototype['passwordHash'] = undefined;
+  /**
    * @member {String} registrationDate
    */
   exports.prototype['registrationDate'] = undefined;
@@ -185,7 +241,7 @@
    */
   exports.prototype['secureId'] = undefined;
   /**
-   * @member {String} shippingAddress
+   * @member {module:com.kodfarki.subscreasy.client.model/Address} shippingAddress
    */
   exports.prototype['shippingAddress'] = undefined;
   /**

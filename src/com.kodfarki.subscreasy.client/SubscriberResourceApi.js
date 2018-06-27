@@ -274,6 +274,53 @@
     }
 
     /**
+     * Callback function to receive the result of the getSubscriberBySecureIdUsingGET operation.
+     * @callback module:com.kodfarki.subscreasy.client/SubscriberResourceApi~getSubscriberBySecureIdUsingGETCallback
+     * @param {String} error Error message, if any.
+     * @param {module:com.kodfarki.subscreasy.client.model/Subscriber} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * getSubscriberBySecureId
+     * @param {String} secureId secureId
+     * @param {module:com.kodfarki.subscreasy.client/SubscriberResourceApi~getSubscriberBySecureIdUsingGETCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:com.kodfarki.subscreasy.client.model/Subscriber}
+     */
+    this.getSubscriberBySecureIdUsingGET = function(secureId, callback) {
+      var postBody = null;
+
+      // verify the required parameter 'secureId' is set
+      if (secureId === undefined || secureId === null) {
+        throw new Error("Missing the required parameter 'secureId' when calling getSubscriberBySecureIdUsingGET");
+      }
+
+
+      var pathParams = {
+        'secureId': secureId
+      };
+      var queryParams = {
+      };
+      var collectionQueryParams = {
+      };
+      var headerParams = {
+      };
+      var formParams = {
+      };
+
+      var authNames = ['apiKey'];
+      var contentTypes = [];
+      var accepts = ['*/*'];
+      var returnType = Subscriber;
+
+      return this.apiClient.callApi(
+        '/api/subscribers/secureId/{secureId}', 'GET',
+        pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
+
+    /**
      * Callback function to receive the result of the getSubscriberUsingGET operation.
      * @callback module:com.kodfarki.subscreasy.client/SubscriberResourceApi~getSubscriberUsingGETCallback
      * @param {String} error Error message, if any.

@@ -123,11 +123,6 @@ All URIs are relative to *https://localhost:8080*
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
 *ApiDocumentation.AnalyticsResourceApi* | [**getDashboardAnalyticsUsingGET**](docs/AnalyticsResourceApi.md#getDashboardAnalyticsUsingGET) | **GET** /api/analytics/dashboard | getDashboardAnalytics
-*ApiDocumentation.CardResourceApi* | [**createCardUsingPOST**](docs/CardResourceApi.md#createCardUsingPOST) | **POST** /api/cards | createCard
-*ApiDocumentation.CardResourceApi* | [**deleteCardUsingDELETE**](docs/CardResourceApi.md#deleteCardUsingDELETE) | **DELETE** /api/cards/{id} | deleteCard
-*ApiDocumentation.CardResourceApi* | [**getAllCardsUsingGET**](docs/CardResourceApi.md#getAllCardsUsingGET) | **GET** /api/cards | getAllCards
-*ApiDocumentation.CardResourceApi* | [**getCardUsingGET**](docs/CardResourceApi.md#getCardUsingGET) | **GET** /api/cards/{id} | getCard
-*ApiDocumentation.CardResourceApi* | [**updateCardUsingPUT**](docs/CardResourceApi.md#updateCardUsingPUT) | **PUT** /api/cards | updateCard
 *ApiDocumentation.ChargingLogResourceApi* | [**createChargingLogUsingPOST**](docs/ChargingLogResourceApi.md#createChargingLogUsingPOST) | **POST** /api/charging-logs | createChargingLog
 *ApiDocumentation.ChargingLogResourceApi* | [**deleteChargingLogUsingDELETE**](docs/ChargingLogResourceApi.md#deleteChargingLogUsingDELETE) | **DELETE** /api/charging-logs/{id} | deleteChargingLog
 *ApiDocumentation.ChargingLogResourceApi* | [**getAllChargingLogsUsingGET**](docs/ChargingLogResourceApi.md#getAllChargingLogsUsingGET) | **GET** /api/charging-logs | getAllChargingLogs
@@ -181,6 +176,11 @@ Class | Method | HTTP request | Description
 *ApiDocumentation.OfferResourceApi* | [**getOfferUsingGET**](docs/OfferResourceApi.md#getOfferUsingGET) | **GET** /api/offers/{id} | getOffer
 *ApiDocumentation.OfferResourceApi* | [**updateOfferUsingPUT**](docs/OfferResourceApi.md#updateOfferUsingPUT) | **PUT** /api/offers | updateOffer
 *ApiDocumentation.ProfileInfoResourceApi* | [**getActiveProfilesUsingGET**](docs/ProfileInfoResourceApi.md#getActiveProfilesUsingGET) | **GET** /api/profile-info | getActiveProfiles
+*ApiDocumentation.SavedCardResourceApi* | [**createCardUsingPOST**](docs/SavedCardResourceApi.md#createCardUsingPOST) | **POST** /api/saved-cards | createCard
+*ApiDocumentation.SavedCardResourceApi* | [**deleteCardUsingDELETE**](docs/SavedCardResourceApi.md#deleteCardUsingDELETE) | **DELETE** /api/saved-cards/{id} | deleteCard
+*ApiDocumentation.SavedCardResourceApi* | [**getAllCardsUsingGET**](docs/SavedCardResourceApi.md#getAllCardsUsingGET) | **GET** /api/saved-cards | getAllCards
+*ApiDocumentation.SavedCardResourceApi* | [**getCardUsingGET**](docs/SavedCardResourceApi.md#getCardUsingGET) | **GET** /api/saved-cards/{id} | getCard
+*ApiDocumentation.SavedCardResourceApi* | [**updateCardUsingPUT**](docs/SavedCardResourceApi.md#updateCardUsingPUT) | **PUT** /api/saved-cards | updateCard
 *ApiDocumentation.ServiceInstanceResourceApi* | [**createServiceInstanceUsingPOST**](docs/ServiceInstanceResourceApi.md#createServiceInstanceUsingPOST) | **POST** /api/service-instances | createServiceInstance
 *ApiDocumentation.ServiceInstanceResourceApi* | [**deleteServiceInstanceUsingDELETE**](docs/ServiceInstanceResourceApi.md#deleteServiceInstanceUsingDELETE) | **DELETE** /api/service-instances/{id} | deleteServiceInstance
 *ApiDocumentation.ServiceInstanceResourceApi* | [**getAllServiceInstancesUsingGET**](docs/ServiceInstanceResourceApi.md#getAllServiceInstancesUsingGET) | **GET** /api/service-instances | getAllServiceInstances
@@ -201,6 +201,7 @@ Class | Method | HTTP request | Description
 *ApiDocumentation.SubscriberResourceApi* | [**getAllSubscribersUsingGET**](docs/SubscriberResourceApi.md#getAllSubscribersUsingGET) | **GET** /api/subscribers | getAllSubscribers
 *ApiDocumentation.SubscriberResourceApi* | [**getSubscriberByEmailUsingGET**](docs/SubscriberResourceApi.md#getSubscriberByEmailUsingGET) | **GET** /api/subscribers/email/{email} | getSubscriberByEmail
 *ApiDocumentation.SubscriberResourceApi* | [**getSubscriberByNameUsingGET**](docs/SubscriberResourceApi.md#getSubscriberByNameUsingGET) | **GET** /api/subscribers/name/{name} | getSubscriberByName
+*ApiDocumentation.SubscriberResourceApi* | [**getSubscriberBySecureIdUsingGET**](docs/SubscriberResourceApi.md#getSubscriberBySecureIdUsingGET) | **GET** /api/subscribers/secureId/{secureId} | getSubscriberBySecureId
 *ApiDocumentation.SubscriberResourceApi* | [**getSubscriberUsingGET**](docs/SubscriberResourceApi.md#getSubscriberUsingGET) | **GET** /api/subscribers/{id} | getSubscriber
 *ApiDocumentation.SubscriberResourceApi* | [**updateSubscriberUsingPUT**](docs/SubscriberResourceApi.md#updateSubscriberUsingPUT) | **PUT** /api/subscribers | updateSubscriber
 *ApiDocumentation.SubsriptionResourceApi* | [**cancelSubscriptionUsingPUT**](docs/SubsriptionResourceApi.md#cancelSubscriptionUsingPUT) | **PUT** /api/subscriptions/cancel | cancelSubscription
@@ -251,9 +252,8 @@ Class | Method | HTTP request | Description
  - [ApiDocumentation.ServiceOffering](docs/ServiceOffering.md)
  - [ApiDocumentation.ServiceOfferingResult](docs/ServiceOfferingResult.md)
  - [ApiDocumentation.StartSubscriptionRequest](docs/StartSubscriptionRequest.md)
+ - [ApiDocumentation.StartSubscriptionResult](docs/StartSubscriptionResult.md)
  - [ApiDocumentation.Subscriber](docs/Subscriber.md)
- - [ApiDocumentation.SubscriptionCreateResult](docs/SubscriptionCreateResult.md)
- - [ApiDocumentation.SubscriptionPlan](docs/SubscriptionPlan.md)
  - [ApiDocumentation.Subsription](docs/Subsription.md)
  - [ApiDocumentation.UsageNotification](docs/UsageNotification.md)
  - [ApiDocumentation.User](docs/User.md)
