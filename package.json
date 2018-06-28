@@ -1,6 +1,6 @@
 {
   "name": "api_documentation",
-  "version": "1.0",
+  "version": "1.0.0",
   "description": "Api_Documentation",
   "license": "Apache 2.0",
   "main": "src/index.js",
