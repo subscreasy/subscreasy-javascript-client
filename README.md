@@ -103,7 +103,7 @@ apiKey.apiKey = "YOUR API KEY"
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //apiKey.apiKeyPrefix['Authorization'] = "Token"
 
-var api = new ApiDocumentation.AnalyticsResourceApi()
+var api = new ApiDocumentation.AccountResourceApi()
 
 var callback = function(error, data, response) {
   if (error) {
@@ -112,7 +112,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.getDashboardAnalyticsUsingGET(callback);
+api.isAuthenticatedUsingGET(callback);
 
 ```
 
@@ -122,6 +122,8 @@ All URIs are relative to *https://localhost:8080*
 
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
+*ApiDocumentation.AccountResourceApi* | [**isAuthenticatedUsingGET**](docs/AccountResourceApi.md#isAuthenticatedUsingGET) | **GET** /api/authenticate | isAuthenticated
+*ApiDocumentation.AccountResourceApi* | [**registerAccountUsingPOST**](docs/AccountResourceApi.md#registerAccountUsingPOST) | **POST** /api/register | registerAccount
 *ApiDocumentation.AnalyticsResourceApi* | [**getDashboardAnalyticsUsingGET**](docs/AnalyticsResourceApi.md#getDashboardAnalyticsUsingGET) | **GET** /api/analytics/dashboard | getDashboardAnalytics
 *ApiDocumentation.ChargingLogResourceApi* | [**createChargingLogUsingPOST**](docs/ChargingLogResourceApi.md#createChargingLogUsingPOST) | **POST** /api/charging-logs | createChargingLog
 *ApiDocumentation.ChargingLogResourceApi* | [**deleteChargingLogUsingDELETE**](docs/ChargingLogResourceApi.md#deleteChargingLogUsingDELETE) | **DELETE** /api/charging-logs/{id} | deleteChargingLog
@@ -214,6 +216,7 @@ Class | Method | HTTP request | Description
 *ApiDocumentation.UsageNotificationResourceApi* | [**getAllUsageNotificationsUsingGET**](docs/UsageNotificationResourceApi.md#getAllUsageNotificationsUsingGET) | **GET** /api/usage-notifications | getAllUsageNotifications
 *ApiDocumentation.UsageNotificationResourceApi* | [**getUsageNotificationUsingGET**](docs/UsageNotificationResourceApi.md#getUsageNotificationUsingGET) | **GET** /api/usage-notifications/{id} | getUsageNotification
 *ApiDocumentation.UsageNotificationResourceApi* | [**updateUsageNotificationUsingPUT**](docs/UsageNotificationResourceApi.md#updateUsageNotificationUsingPUT) | **PUT** /api/usage-notifications | updateUsageNotification
+*ApiDocumentation.UserJwtControllerApi* | [**authorizeUsingPOST**](docs/UserJwtControllerApi.md#authorizeUsingPOST) | **POST** /api/authenticate | authorize
 *ApiDocumentation.UserResourceApi* | [**createUserUsingPOST**](docs/UserResourceApi.md#createUserUsingPOST) | **POST** /api/users | createUser
 *ApiDocumentation.UserResourceApi* | [**deleteUserUsingDELETE**](docs/UserResourceApi.md#deleteUserUsingDELETE) | **DELETE** /api/users/{login} | deleteUser
 *ApiDocumentation.UserResourceApi* | [**getAllUsersUsingGET**](docs/UserResourceApi.md#getAllUsersUsingGET) | **GET** /api/users | getAllUsers
@@ -238,6 +241,7 @@ Class | Method | HTTP request | Description
  - [ApiDocumentation.History](docs/History.md)
  - [ApiDocumentation.Invoice](docs/Invoice.md)
  - [ApiDocumentation.InvoiceRequest](docs/InvoiceRequest.md)
+ - [ApiDocumentation.LoginVM](docs/LoginVM.md)
  - [ApiDocumentation.ManagedUserVM](docs/ManagedUserVM.md)
  - [ApiDocumentation.MessageTemplate](docs/MessageTemplate.md)
  - [ApiDocumentation.Offer](docs/Offer.md)
@@ -257,6 +261,7 @@ Class | Method | HTTP request | Description
  - [ApiDocumentation.Subsription](docs/Subsription.md)
  - [ApiDocumentation.UsageNotification](docs/UsageNotification.md)
  - [ApiDocumentation.User](docs/User.md)
+ - [ApiDocumentation.UserDTO](docs/UserDTO.md)
 
 
 ## Documentation for Authorization
