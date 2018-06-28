@@ -25,20 +25,20 @@
     if (!root.ApiDocumentation) {
       root.ApiDocumentation = {};
     }
-    root.ApiDocumentation.CardResourceApi = factory(root.ApiDocumentation.ApiClient, root.ApiDocumentation.SavedCard);
+    root.ApiDocumentation.SavedCardResourceApi = factory(root.ApiDocumentation.ApiClient, root.ApiDocumentation.SavedCard);
   }
 }(this, function(ApiClient, SavedCard) {
   'use strict';
 
   /**
-   * CardResource service.
-   * @module com.kodfarki.subscreasy.client/CardResourceApi
+   * SavedCardResource service.
+   * @module com.kodfarki.subscreasy.client/SavedCardResourceApi
    * @version 1.0
    */
 
   /**
-   * Constructs a new CardResourceApi. 
-   * @alias module:com.kodfarki.subscreasy.client/CardResourceApi
+   * Constructs a new SavedCardResourceApi. 
+   * @alias module:com.kodfarki.subscreasy.client/SavedCardResourceApi
    * @class
    * @param {module:ApiClient} [apiClient] Optional API client implementation to use,
    * default to {@link module:ApiClient#instance} if unspecified.
@@ -49,7 +49,7 @@
 
     /**
      * Callback function to receive the result of the createCardUsingPOST operation.
-     * @callback module:com.kodfarki.subscreasy.client/CardResourceApi~createCardUsingPOSTCallback
+     * @callback module:com.kodfarki.subscreasy.client/SavedCardResourceApi~createCardUsingPOSTCallback
      * @param {String} error Error message, if any.
      * @param {module:com.kodfarki.subscreasy.client.model/SavedCard} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -58,7 +58,7 @@
     /**
      * createCard
      * @param {module:com.kodfarki.subscreasy.client.model/SavedCard} card card
-     * @param {module:com.kodfarki.subscreasy.client/CardResourceApi~createCardUsingPOSTCallback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:com.kodfarki.subscreasy.client/SavedCardResourceApi~createCardUsingPOSTCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:com.kodfarki.subscreasy.client.model/SavedCard}
      */
     this.createCardUsingPOST = function(card, callback) {
@@ -87,7 +87,7 @@
       var returnType = SavedCard;
 
       return this.apiClient.callApi(
-        '/api/cards', 'POST',
+        '/api/saved-cards', 'POST',
         pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, callback
       );
@@ -95,7 +95,7 @@
 
     /**
      * Callback function to receive the result of the deleteCardUsingDELETE operation.
-     * @callback module:com.kodfarki.subscreasy.client/CardResourceApi~deleteCardUsingDELETECallback
+     * @callback module:com.kodfarki.subscreasy.client/SavedCardResourceApi~deleteCardUsingDELETECallback
      * @param {String} error Error message, if any.
      * @param data This operation does not return a value.
      * @param {String} response The complete HTTP response.
@@ -104,7 +104,7 @@
     /**
      * deleteCard
      * @param {Number} id id
-     * @param {module:com.kodfarki.subscreasy.client/CardResourceApi~deleteCardUsingDELETECallback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:com.kodfarki.subscreasy.client/SavedCardResourceApi~deleteCardUsingDELETECallback} callback The callback function, accepting three arguments: error, data, response
      */
     this.deleteCardUsingDELETE = function(id, callback) {
       var postBody = null;
@@ -133,7 +133,7 @@
       var returnType = null;
 
       return this.apiClient.callApi(
-        '/api/cards/{id}', 'DELETE',
+        '/api/saved-cards/{id}', 'DELETE',
         pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, callback
       );
@@ -141,7 +141,7 @@
 
     /**
      * Callback function to receive the result of the getAllCardsUsingGET operation.
-     * @callback module:com.kodfarki.subscreasy.client/CardResourceApi~getAllCardsUsingGETCallback
+     * @callback module:com.kodfarki.subscreasy.client/SavedCardResourceApi~getAllCardsUsingGETCallback
      * @param {String} error Error message, if any.
      * @param {Array.<module:com.kodfarki.subscreasy.client.model/SavedCard>} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -149,7 +149,7 @@
 
     /**
      * getAllCards
-     * @param {module:com.kodfarki.subscreasy.client/CardResourceApi~getAllCardsUsingGETCallback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:com.kodfarki.subscreasy.client/SavedCardResourceApi~getAllCardsUsingGETCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link Array.<module:com.kodfarki.subscreasy.client.model/SavedCard>}
      */
     this.getAllCardsUsingGET = function(callback) {
@@ -173,7 +173,7 @@
       var returnType = [SavedCard];
 
       return this.apiClient.callApi(
-        '/api/cards', 'GET',
+        '/api/saved-cards', 'GET',
         pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, callback
       );
@@ -181,7 +181,7 @@
 
     /**
      * Callback function to receive the result of the getCardUsingGET operation.
-     * @callback module:com.kodfarki.subscreasy.client/CardResourceApi~getCardUsingGETCallback
+     * @callback module:com.kodfarki.subscreasy.client/SavedCardResourceApi~getCardUsingGETCallback
      * @param {String} error Error message, if any.
      * @param {module:com.kodfarki.subscreasy.client.model/SavedCard} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -190,7 +190,7 @@
     /**
      * getCard
      * @param {Number} id id
-     * @param {module:com.kodfarki.subscreasy.client/CardResourceApi~getCardUsingGETCallback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:com.kodfarki.subscreasy.client/SavedCardResourceApi~getCardUsingGETCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:com.kodfarki.subscreasy.client.model/SavedCard}
      */
     this.getCardUsingGET = function(id, callback) {
@@ -220,7 +220,7 @@
       var returnType = SavedCard;
 
       return this.apiClient.callApi(
-        '/api/cards/{id}', 'GET',
+        '/api/saved-cards/{id}', 'GET',
         pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, callback
       );
@@ -228,7 +228,7 @@
 
     /**
      * Callback function to receive the result of the updateCardUsingPUT operation.
-     * @callback module:com.kodfarki.subscreasy.client/CardResourceApi~updateCardUsingPUTCallback
+     * @callback module:com.kodfarki.subscreasy.client/SavedCardResourceApi~updateCardUsingPUTCallback
      * @param {String} error Error message, if any.
      * @param {module:com.kodfarki.subscreasy.client.model/SavedCard} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -237,7 +237,7 @@
     /**
      * updateCard
      * @param {module:com.kodfarki.subscreasy.client.model/SavedCard} card card
-     * @param {module:com.kodfarki.subscreasy.client/CardResourceApi~updateCardUsingPUTCallback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:com.kodfarki.subscreasy.client/SavedCardResourceApi~updateCardUsingPUTCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:com.kodfarki.subscreasy.client.model/SavedCard}
      */
     this.updateCardUsingPUT = function(card, callback) {
@@ -266,7 +266,7 @@
       var returnType = SavedCard;
 
       return this.apiClient.callApi(
-        '/api/cards', 'PUT',
+        '/api/saved-cards', 'PUT',
         pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, callback
       );

@@ -1,14 +1,14 @@
-# ApiDocumentation.CardResourceApi
+# ApiDocumentation.SavedCardResourceApi
 
 All URIs are relative to *https://localhost:8080*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**createCardUsingPOST**](CardResourceApi.md#createCardUsingPOST) | **POST** /api/cards | createCard
-[**deleteCardUsingDELETE**](CardResourceApi.md#deleteCardUsingDELETE) | **DELETE** /api/cards/{id} | deleteCard
-[**getAllCardsUsingGET**](CardResourceApi.md#getAllCardsUsingGET) | **GET** /api/cards | getAllCards
-[**getCardUsingGET**](CardResourceApi.md#getCardUsingGET) | **GET** /api/cards/{id} | getCard
-[**updateCardUsingPUT**](CardResourceApi.md#updateCardUsingPUT) | **PUT** /api/cards | updateCard
+[**createCardUsingPOST**](SavedCardResourceApi.md#createCardUsingPOST) | **POST** /api/saved-cards | createCard
+[**deleteCardUsingDELETE**](SavedCardResourceApi.md#deleteCardUsingDELETE) | **DELETE** /api/saved-cards/{id} | deleteCard
+[**getAllCardsUsingGET**](SavedCardResourceApi.md#getAllCardsUsingGET) | **GET** /api/saved-cards | getAllCards
+[**getCardUsingGET**](SavedCardResourceApi.md#getCardUsingGET) | **GET** /api/saved-cards/{id} | getCard
+[**updateCardUsingPUT**](SavedCardResourceApi.md#updateCardUsingPUT) | **PUT** /api/saved-cards | updateCard
 
 
 <a name="createCardUsingPOST"></a>
@@ -28,7 +28,7 @@ apiKey.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //apiKey.apiKeyPrefix = 'Token';
 
-var apiInstance = new ApiDocumentation.CardResourceApi();
+var apiInstance = new ApiDocumentation.SavedCardResourceApi();
 
 var card = new ApiDocumentation.SavedCard(); // SavedCard | card
 
@@ -79,7 +79,7 @@ apiKey.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //apiKey.apiKeyPrefix = 'Token';
 
-var apiInstance = new ApiDocumentation.CardResourceApi();
+var apiInstance = new ApiDocumentation.SavedCardResourceApi();
 
 var id = 789; // Number | id
 
@@ -130,7 +130,7 @@ apiKey.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //apiKey.apiKeyPrefix = 'Token';
 
-var apiInstance = new ApiDocumentation.CardResourceApi();
+var apiInstance = new ApiDocumentation.SavedCardResourceApi();
 
 var callback = function(error, data, response) {
   if (error) {
@@ -175,7 +175,7 @@ apiKey.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //apiKey.apiKeyPrefix = 'Token';
 
-var apiInstance = new ApiDocumentation.CardResourceApi();
+var apiInstance = new ApiDocumentation.SavedCardResourceApi();
 
 var id = 789; // Number | id
 
@@ -226,7 +226,7 @@ apiKey.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //apiKey.apiKeyPrefix = 'Token';
 
-var apiInstance = new ApiDocumentation.CardResourceApi();
+var apiInstance = new ApiDocumentation.SavedCardResourceApi();
 
 var card = new ApiDocumentation.SavedCard(); // SavedCard | card
 
