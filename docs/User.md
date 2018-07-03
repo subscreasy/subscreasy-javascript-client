@@ -4,6 +4,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **activated** | **Boolean** |  | 
+**address** | [**Address**](Address.md) |  | [optional] 
 **authorities** | [**[Authority]**](Authority.md) |  | [optional] 
 **company** | [**Company**](Company.md) |  | [optional] 
 **createdDate** | **Date** |  | [optional] 

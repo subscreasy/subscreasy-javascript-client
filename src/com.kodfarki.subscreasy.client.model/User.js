@@ -16,18 +16,18 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient', 'com.kodfarki.subscreasy.client.model/Authority', 'com.kodfarki.subscreasy.client.model/Company'], factory);
+    define(['ApiClient', 'com.kodfarki.subscreasy.client.model/Address', 'com.kodfarki.subscreasy.client.model/Authority', 'com.kodfarki.subscreasy.client.model/Company'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('./Authority'), require('./Company'));
+    module.exports = factory(require('../ApiClient'), require('./Address'), require('./Authority'), require('./Company'));
   } else {
     // Browser globals (root is window)
     if (!root.ApiDocumentation) {
       root.ApiDocumentation = {};
     }
-    root.ApiDocumentation.User = factory(root.ApiDocumentation.ApiClient, root.ApiDocumentation.Authority, root.ApiDocumentation.Company);
+    root.ApiDocumentation.User = factory(root.ApiDocumentation.ApiClient, root.ApiDocumentation.Address, root.ApiDocumentation.Authority, root.ApiDocumentation.Company);
   }
-}(this, function(ApiClient, Authority, Company) {
+}(this, function(ApiClient, Address, Authority, Company) {
   'use strict';
 
 
@@ -60,6 +60,7 @@
 
 
 
+
     _this['login'] = login;
 
   };
@@ -77,6 +78,9 @@
 
       if (data.hasOwnProperty('activated')) {
         obj['activated'] = ApiClient.convertToType(data['activated'], 'Boolean');
+      }
+      if (data.hasOwnProperty('address')) {
+        obj['address'] = Address.constructFromObject(data['address']);
       }
       if (data.hasOwnProperty('authorities')) {
         obj['authorities'] = ApiClient.convertToType(data['authorities'], [Authority]);
@@ -122,6 +126,10 @@
    * @member {Boolean} activated
    */
   exports.prototype['activated'] = undefined;
+  /**
+   * @member {module:com.kodfarki.subscreasy.client.model/Address} address
+   */
+  exports.prototype['address'] = undefined;
   /**
    * @member {Array.<module:com.kodfarki.subscreasy.client.model/Authority>} authorities
    */
