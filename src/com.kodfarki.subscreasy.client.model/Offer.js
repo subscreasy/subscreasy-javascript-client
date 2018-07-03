@@ -16,18 +16,18 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient', 'com.kodfarki.subscreasy.client.model/Company', 'com.kodfarki.subscreasy.client.model/RecurrencePeriod'], factory);
+    define(['ApiClient', 'com.kodfarki.subscreasy.client.model/Company', 'com.kodfarki.subscreasy.client.model/Product', 'com.kodfarki.subscreasy.client.model/RecurrencePeriod'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('./Company'), require('./RecurrencePeriod'));
+    module.exports = factory(require('../ApiClient'), require('./Company'), require('./Product'), require('./RecurrencePeriod'));
   } else {
     // Browser globals (root is window)
     if (!root.ApiDocumentation) {
       root.ApiDocumentation = {};
     }
-    root.ApiDocumentation.Offer = factory(root.ApiDocumentation.ApiClient, root.ApiDocumentation.Company, root.ApiDocumentation.RecurrencePeriod);
+    root.ApiDocumentation.Offer = factory(root.ApiDocumentation.ApiClient, root.ApiDocumentation.Company, root.ApiDocumentation.Product, root.ApiDocumentation.RecurrencePeriod);
   }
-}(this, function(ApiClient, Company, RecurrencePeriod) {
+}(this, function(ApiClient, Company, Product, RecurrencePeriod) {
   'use strict';
 
 
@@ -47,9 +47,8 @@
    * @param name {String} 
    * @param openEnded {Boolean} 
    * @param price {Number} 
-   * @param recurrence {module:com.kodfarki.subscreasy.client.model/RecurrencePeriod} 
    */
-  var exports = function(company, name, openEnded, price, recurrence) {
+  var exports = function(company, name, openEnded, price) {
     var _this = this;
 
     _this['company'] = company;
@@ -57,7 +56,9 @@
     _this['name'] = name;
     _this['openEnded'] = openEnded;
     _this['price'] = price;
-    _this['recurrence'] = recurrence;
+
+
+
 
 
 
@@ -88,6 +89,12 @@
       }
       if (data.hasOwnProperty('price')) {
         obj['price'] = ApiClient.convertToType(data['price'], 'Number');
+      }
+      if (data.hasOwnProperty('product')) {
+        obj['product'] = Product.constructFromObject(data['product']);
+      }
+      if (data.hasOwnProperty('purchaseType')) {
+        obj['purchaseType'] = ApiClient.convertToType(data['purchaseType'], 'String');
       }
       if (data.hasOwnProperty('recurrence')) {
         obj['recurrence'] = RecurrencePeriod.constructFromObject(data['recurrence']);
@@ -126,6 +133,14 @@
    */
   exports.prototype['price'] = undefined;
   /**
+   * @member {module:com.kodfarki.subscreasy.client.model/Product} product
+   */
+  exports.prototype['product'] = undefined;
+  /**
+   * @member {module:com.kodfarki.subscreasy.client.model/Offer.PurchaseTypeEnum} purchaseType
+   */
+  exports.prototype['purchaseType'] = undefined;
+  /**
    * @member {module:com.kodfarki.subscreasy.client.model/RecurrencePeriod} recurrence
    */
   exports.prototype['recurrence'] = undefined;
@@ -142,6 +157,23 @@
    */
   exports.prototype['trialPeriod'] = undefined;
 
+
+  /**
+   * Allowed values for the <code>purchaseType</code> property.
+   * @enum {String}
+   * @readonly
+   */
+  exports.PurchaseTypeEnum = {
+    /**
+     * value: "ONCE"
+     * @const
+     */
+    "ONCE": "ONCE",
+    /**
+     * value: "SUBSCRIPTION"
+     * @const
+     */
+    "SUBSCRIPTION": "SUBSCRIPTION"  };
 
 
   return exports;
