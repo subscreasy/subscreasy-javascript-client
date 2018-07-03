@@ -49,6 +49,7 @@
   var exports = function(password, username) {
     var _this = this;
 
+
     _this['password'] = password;
 
     _this['username'] = username;
@@ -65,6 +66,9 @@
     if (data) {
       obj = obj || new exports();
 
+      if (data.hasOwnProperty('company')) {
+        obj['company'] = ApiClient.convertToType(data['company'], 'String');
+      }
       if (data.hasOwnProperty('password')) {
         obj['password'] = ApiClient.convertToType(data['password'], 'String');
       }
@@ -78,6 +82,10 @@
     return obj;
   }
 
+  /**
+   * @member {String} company
+   */
+  exports.prototype['company'] = undefined;
   /**
    * @member {String} password
    */
