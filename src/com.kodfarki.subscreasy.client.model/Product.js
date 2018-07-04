@@ -16,18 +16,18 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient'], factory);
+    define(['ApiClient', 'com.kodfarki.subscreasy.client.model/Offer'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'));
+    module.exports = factory(require('../ApiClient'), require('./Offer'));
   } else {
     // Browser globals (root is window)
     if (!root.ApiDocumentation) {
       root.ApiDocumentation = {};
     }
-    root.ApiDocumentation.Product = factory(root.ApiDocumentation.ApiClient);
+    root.ApiDocumentation.Product = factory(root.ApiDocumentation.ApiClient, root.ApiDocumentation.Offer);
   }
-}(this, function(ApiClient) {
+}(this, function(ApiClient, Offer) {
   'use strict';
 
 
@@ -53,6 +53,7 @@
 
     _this['name'] = name;
 
+
   };
 
   /**
@@ -75,6 +76,9 @@
       if (data.hasOwnProperty('name')) {
         obj['name'] = ApiClient.convertToType(data['name'], 'String');
       }
+      if (data.hasOwnProperty('offers')) {
+        obj['offers'] = ApiClient.convertToType(data['offers'], [Offer]);
+      }
       if (data.hasOwnProperty('productType')) {
         obj['productType'] = ApiClient.convertToType(data['productType'], 'String');
       }
@@ -94,6 +98,10 @@
    * @member {String} name
    */
   exports.prototype['name'] = undefined;
+  /**
+   * @member {Array.<module:com.kodfarki.subscreasy.client.model/Offer>} offers
+   */
+  exports.prototype['offers'] = undefined;
   /**
    * @member {module:com.kodfarki.subscreasy.client.model/Product.ProductTypeEnum} productType
    */

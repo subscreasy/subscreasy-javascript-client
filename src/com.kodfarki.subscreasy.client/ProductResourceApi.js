@@ -94,52 +94,6 @@
     }
 
     /**
-     * Callback function to receive the result of the deleteProductUsingDELETE operation.
-     * @callback module:com.kodfarki.subscreasy.client/ProductResourceApi~deleteProductUsingDELETECallback
-     * @param {String} error Error message, if any.
-     * @param data This operation does not return a value.
-     * @param {String} response The complete HTTP response.
-     */
-
-    /**
-     * deleteProduct
-     * @param {Number} id id
-     * @param {module:com.kodfarki.subscreasy.client/ProductResourceApi~deleteProductUsingDELETECallback} callback The callback function, accepting three arguments: error, data, response
-     */
-    this.deleteProductUsingDELETE = function(id, callback) {
-      var postBody = null;
-
-      // verify the required parameter 'id' is set
-      if (id === undefined || id === null) {
-        throw new Error("Missing the required parameter 'id' when calling deleteProductUsingDELETE");
-      }
-
-
-      var pathParams = {
-        'id': id
-      };
-      var queryParams = {
-      };
-      var collectionQueryParams = {
-      };
-      var headerParams = {
-      };
-      var formParams = {
-      };
-
-      var authNames = ['apiKey'];
-      var contentTypes = [];
-      var accepts = ['*/*'];
-      var returnType = null;
-
-      return this.apiClient.callApi(
-        '/api/products/{id}', 'DELETE',
-        pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, callback
-      );
-    }
-
-    /**
      * Callback function to receive the result of the getAllProductsUsingGET operation.
      * @callback module:com.kodfarki.subscreasy.client/ProductResourceApi~getAllProductsUsingGETCallback
      * @param {String} error Error message, if any.
@@ -174,6 +128,60 @@
 
       return this.apiClient.callApi(
         '/api/products', 'GET',
+        pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the getCompanyProductUsingGET operation.
+     * @callback module:com.kodfarki.subscreasy.client/ProductResourceApi~getCompanyProductUsingGETCallback
+     * @param {String} error Error message, if any.
+     * @param {module:com.kodfarki.subscreasy.client.model/Product} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * getCompanyProduct
+     * @param {String} companyName companyName
+     * @param {Number} id id
+     * @param {module:com.kodfarki.subscreasy.client/ProductResourceApi~getCompanyProductUsingGETCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:com.kodfarki.subscreasy.client.model/Product}
+     */
+    this.getCompanyProductUsingGET = function(companyName, id, callback) {
+      var postBody = null;
+
+      // verify the required parameter 'companyName' is set
+      if (companyName === undefined || companyName === null) {
+        throw new Error("Missing the required parameter 'companyName' when calling getCompanyProductUsingGET");
+      }
+
+      // verify the required parameter 'id' is set
+      if (id === undefined || id === null) {
+        throw new Error("Missing the required parameter 'id' when calling getCompanyProductUsingGET");
+      }
+
+
+      var pathParams = {
+        'companyName': companyName,
+        'id': id
+      };
+      var queryParams = {
+      };
+      var collectionQueryParams = {
+      };
+      var headerParams = {
+      };
+      var formParams = {
+      };
+
+      var authNames = ['apiKey'];
+      var contentTypes = [];
+      var accepts = ['*/*'];
+      var returnType = Product;
+
+      return this.apiClient.callApi(
+        '/api/na/products/{companyName}/{id}', 'GET',
         pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, callback
       );
