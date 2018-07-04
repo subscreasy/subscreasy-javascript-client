@@ -177,6 +177,21 @@ Class | Method | HTTP request | Description
 *ApiDocumentation.OfferResourceApi* | [**getAllOffersUsingGET**](docs/OfferResourceApi.md#getAllOffersUsingGET) | **GET** /api/offers | getAllOffers
 *ApiDocumentation.OfferResourceApi* | [**getOfferUsingGET**](docs/OfferResourceApi.md#getOfferUsingGET) | **GET** /api/offers/{id} | getOffer
 *ApiDocumentation.OfferResourceApi* | [**updateOfferUsingPUT**](docs/OfferResourceApi.md#updateOfferUsingPUT) | **PUT** /api/offers | updateOffer
+*ApiDocumentation.OrderItemResourceApi* | [**createOrderItemUsingPOST**](docs/OrderItemResourceApi.md#createOrderItemUsingPOST) | **POST** /api/order-items | createOrderItem
+*ApiDocumentation.OrderItemResourceApi* | [**deleteOrderItemUsingDELETE**](docs/OrderItemResourceApi.md#deleteOrderItemUsingDELETE) | **DELETE** /api/order-items/{id} | deleteOrderItem
+*ApiDocumentation.OrderItemResourceApi* | [**getAllOrderItemsUsingGET**](docs/OrderItemResourceApi.md#getAllOrderItemsUsingGET) | **GET** /api/order-items | getAllOrderItems
+*ApiDocumentation.OrderItemResourceApi* | [**getOrderItemUsingGET**](docs/OrderItemResourceApi.md#getOrderItemUsingGET) | **GET** /api/order-items/{id} | getOrderItem
+*ApiDocumentation.OrderItemResourceApi* | [**updateOrderItemUsingPUT**](docs/OrderItemResourceApi.md#updateOrderItemUsingPUT) | **PUT** /api/order-items | updateOrderItem
+*ApiDocumentation.OrderResourceApi* | [**createOrderUsingPOST**](docs/OrderResourceApi.md#createOrderUsingPOST) | **POST** /api/orders | createOrder
+*ApiDocumentation.OrderResourceApi* | [**getAllOrdersUsingGET**](docs/OrderResourceApi.md#getAllOrdersUsingGET) | **GET** /api/orders | getAllOrders
+*ApiDocumentation.OrderResourceApi* | [**getOrderUsingGET**](docs/OrderResourceApi.md#getOrderUsingGET) | **GET** /api/orders/{id} | getOrder
+*ApiDocumentation.OrderResourceApi* | [**updateOrderUsingPUT**](docs/OrderResourceApi.md#updateOrderUsingPUT) | **PUT** /api/orders | updateOrder
+*ApiDocumentation.ProductResourceApi* | [**createProductUsingPOST**](docs/ProductResourceApi.md#createProductUsingPOST) | **POST** /api/products | createProduct
+*ApiDocumentation.ProductResourceApi* | [**getAllCompanyProductUsingGET**](docs/ProductResourceApi.md#getAllCompanyProductUsingGET) | **GET** /api/na/products2/{companyName} | getAllCompanyProduct
+*ApiDocumentation.ProductResourceApi* | [**getAllProductsUsingGET**](docs/ProductResourceApi.md#getAllProductsUsingGET) | **GET** /api/products | getAllProducts
+*ApiDocumentation.ProductResourceApi* | [**getCompanyProductUsingGET**](docs/ProductResourceApi.md#getCompanyProductUsingGET) | **GET** /api/na/products/{companyName}/{id} | getCompanyProduct
+*ApiDocumentation.ProductResourceApi* | [**getProductUsingGET**](docs/ProductResourceApi.md#getProductUsingGET) | **GET** /api/products/{id} | getProduct
+*ApiDocumentation.ProductResourceApi* | [**updateProductUsingPUT**](docs/ProductResourceApi.md#updateProductUsingPUT) | **PUT** /api/products | updateProduct
 *ApiDocumentation.ProfileInfoResourceApi* | [**getActiveProfilesUsingGET**](docs/ProfileInfoResourceApi.md#getActiveProfilesUsingGET) | **GET** /api/profile-info | getActiveProfiles
 *ApiDocumentation.SavedCardResourceApi* | [**createCardUsingPOST**](docs/SavedCardResourceApi.md#createCardUsingPOST) | **POST** /api/saved-cards | createCard
 *ApiDocumentation.SavedCardResourceApi* | [**deleteCardUsingDELETE**](docs/SavedCardResourceApi.md#deleteCardUsingDELETE) | **DELETE** /api/saved-cards/{id} | deleteCard
@@ -236,6 +251,7 @@ Class | Method | HTTP request | Description
  - [ApiDocumentation.Company](docs/Company.md)
  - [ApiDocumentation.CompanyProps](docs/CompanyProps.md)
  - [ApiDocumentation.Coupon](docs/Coupon.md)
+ - [ApiDocumentation.CreateOrderRequest](docs/CreateOrderRequest.md)
  - [ApiDocumentation.Deduction](docs/Deduction.md)
  - [ApiDocumentation.DeductionResult](docs/DeductionResult.md)
  - [ApiDocumentation.History](docs/History.md)
@@ -245,7 +261,10 @@ Class | Method | HTTP request | Description
  - [ApiDocumentation.ManagedUserVM](docs/ManagedUserVM.md)
  - [ApiDocumentation.MessageTemplate](docs/MessageTemplate.md)
  - [ApiDocumentation.Offer](docs/Offer.md)
+ - [ApiDocumentation.Order](docs/Order.md)
+ - [ApiDocumentation.OrderItem](docs/OrderItem.md)
  - [ApiDocumentation.PaymentCard](docs/PaymentCard.md)
+ - [ApiDocumentation.Product](docs/Product.md)
  - [ApiDocumentation.ProfileInfoVM](docs/ProfileInfoVM.md)
  - [ApiDocumentation.RecurrencePeriod](docs/RecurrencePeriod.md)
  - [ApiDocumentation.ResponseEntity](docs/ResponseEntity.md)
