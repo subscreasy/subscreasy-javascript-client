@@ -3,6 +3,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**company** | [**Company**](Company.md) |  | 
 **description** | **String** |  | 
 **id** | **Number** |  | [optional] 
 **name** | **String** |  | 

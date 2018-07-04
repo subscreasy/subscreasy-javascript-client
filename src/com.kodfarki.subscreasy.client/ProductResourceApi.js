@@ -94,6 +94,53 @@
     }
 
     /**
+     * Callback function to receive the result of the getAllCompanyProductUsingGET operation.
+     * @callback module:com.kodfarki.subscreasy.client/ProductResourceApi~getAllCompanyProductUsingGETCallback
+     * @param {String} error Error message, if any.
+     * @param {Array.<module:com.kodfarki.subscreasy.client.model/Product>} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * getAllCompanyProduct
+     * @param {String} companyName companyName
+     * @param {module:com.kodfarki.subscreasy.client/ProductResourceApi~getAllCompanyProductUsingGETCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link Array.<module:com.kodfarki.subscreasy.client.model/Product>}
+     */
+    this.getAllCompanyProductUsingGET = function(companyName, callback) {
+      var postBody = null;
+
+      // verify the required parameter 'companyName' is set
+      if (companyName === undefined || companyName === null) {
+        throw new Error("Missing the required parameter 'companyName' when calling getAllCompanyProductUsingGET");
+      }
+
+
+      var pathParams = {
+        'companyName': companyName
+      };
+      var queryParams = {
+      };
+      var collectionQueryParams = {
+      };
+      var headerParams = {
+      };
+      var formParams = {
+      };
+
+      var authNames = ['apiKey'];
+      var contentTypes = [];
+      var accepts = ['*/*'];
+      var returnType = [Product];
+
+      return this.apiClient.callApi(
+        '/api/na/products2/{companyName}', 'GET',
+        pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
+
+    /**
      * Callback function to receive the result of the getAllProductsUsingGET operation.
      * @callback module:com.kodfarki.subscreasy.client/ProductResourceApi~getAllProductsUsingGETCallback
      * @param {String} error Error message, if any.

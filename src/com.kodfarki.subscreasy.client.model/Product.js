@@ -16,18 +16,18 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient', 'com.kodfarki.subscreasy.client.model/Offer'], factory);
+    define(['ApiClient', 'com.kodfarki.subscreasy.client.model/Company', 'com.kodfarki.subscreasy.client.model/Offer'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('./Offer'));
+    module.exports = factory(require('../ApiClient'), require('./Company'), require('./Offer'));
   } else {
     // Browser globals (root is window)
     if (!root.ApiDocumentation) {
       root.ApiDocumentation = {};
     }
-    root.ApiDocumentation.Product = factory(root.ApiDocumentation.ApiClient, root.ApiDocumentation.Offer);
+    root.ApiDocumentation.Product = factory(root.ApiDocumentation.ApiClient, root.ApiDocumentation.Company, root.ApiDocumentation.Offer);
   }
-}(this, function(ApiClient, Offer) {
+}(this, function(ApiClient, Company, Offer) {
   'use strict';
 
 
@@ -43,12 +43,14 @@
    * Constructs a new <code>Product</code>.
    * @alias module:com.kodfarki.subscreasy.client.model/Product
    * @class
+   * @param company {module:com.kodfarki.subscreasy.client.model/Company} 
    * @param description {String} 
    * @param name {String} 
    */
-  var exports = function(description, name) {
+  var exports = function(company, description, name) {
     var _this = this;
 
+    _this['company'] = company;
     _this['description'] = description;
 
     _this['name'] = name;
@@ -67,6 +69,9 @@
     if (data) {
       obj = obj || new exports();
 
+      if (data.hasOwnProperty('company')) {
+        obj['company'] = Company.constructFromObject(data['company']);
+      }
       if (data.hasOwnProperty('description')) {
         obj['description'] = ApiClient.convertToType(data['description'], 'String');
       }
@@ -86,6 +91,10 @@
     return obj;
   }
 
+  /**
+   * @member {module:com.kodfarki.subscreasy.client.model/Company} company
+   */
+  exports.prototype['company'] = undefined;
   /**
    * @member {String} description
    */
