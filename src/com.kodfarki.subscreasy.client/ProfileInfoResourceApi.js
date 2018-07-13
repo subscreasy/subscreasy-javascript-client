@@ -22,10 +22,10 @@
     module.exports = factory(require('../ApiClient'), require('../com.kodfarki.subscreasy.client.model/ProfileInfoVM'));
   } else {
     // Browser globals (root is window)
-    if (!root.ApiDocumentation) {
-      root.ApiDocumentation = {};
+    if (!root.SubscreasyJsClient) {
+      root.SubscreasyJsClient = {};
     }
-    root.ApiDocumentation.ProfileInfoResourceApi = factory(root.ApiDocumentation.ApiClient, root.ApiDocumentation.ProfileInfoVM);
+    root.SubscreasyJsClient.ProfileInfoResourceApi = factory(root.SubscreasyJsClient.ApiClient, root.SubscreasyJsClient.ProfileInfoVM);
   }
 }(this, function(ApiClient, ProfileInfoVM) {
   'use strict';
@@ -33,7 +33,7 @@
   /**
    * ProfileInfoResource service.
    * @module com.kodfarki.subscreasy.client/ProfileInfoResourceApi
-   * @version 1.0
+   * @version 1.0.0
    */
 
   /**

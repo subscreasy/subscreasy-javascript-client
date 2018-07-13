@@ -1,4 +1,4 @@
-# ApiDocumentation.History
+# SubscreasyJsClient.History
 
 ## Properties
 Name | Type | Description | Notes

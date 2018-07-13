@@ -1,11 +1,11 @@
-# ApiDocumentation.User
+# SubscreasyJsClient.User
 
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **activated** | **Boolean** |  | 
-**address** | [**Address**](Address.md) |  | [optional] 
 **authorities** | [**[Authority]**](Authority.md) |  | [optional] 
+**billingAddress** | [**Address**](Address.md) |  | [optional] 
 **company** | [**Company**](Company.md) |  | [optional] 
 **createdDate** | **Date** |  | [optional] 
 **email** | **String** |  | [optional] 
@@ -17,5 +17,6 @@ Name | Type | Description | Notes
 **lastName** | **String** |  | [optional] 
 **login** | **String** |  | 
 **resetDate** | **Date** |  | [optional] 
+**shippingAddress** | [**Address**](Address.md) |  | [optional] 
 
 

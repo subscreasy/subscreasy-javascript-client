@@ -22,10 +22,10 @@
     module.exports = factory(require('../ApiClient'), require('../com.kodfarki.subscreasy.client.model/ResponseEntity'), require('../com.kodfarki.subscreasy.client.model/UserDTO'));
   } else {
     // Browser globals (root is window)
-    if (!root.ApiDocumentation) {
-      root.ApiDocumentation = {};
+    if (!root.SubscreasyJsClient) {
+      root.SubscreasyJsClient = {};
     }
-    root.ApiDocumentation.AccountResourceApi = factory(root.ApiDocumentation.ApiClient, root.ApiDocumentation.ResponseEntity, root.ApiDocumentation.UserDTO);
+    root.SubscreasyJsClient.AccountResourceApi = factory(root.SubscreasyJsClient.ApiClient, root.SubscreasyJsClient.ResponseEntity, root.SubscreasyJsClient.UserDTO);
   }
 }(this, function(ApiClient, ResponseEntity, UserDTO) {
   'use strict';
@@ -33,7 +33,7 @@
   /**
    * AccountResource service.
    * @module com.kodfarki.subscreasy.client/AccountResourceApi
-   * @version 1.0
+   * @version 1.0.0
    */
 
   /**

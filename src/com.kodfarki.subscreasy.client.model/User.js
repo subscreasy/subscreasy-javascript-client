@@ -22,10 +22,10 @@
     module.exports = factory(require('../ApiClient'), require('./Address'), require('./Authority'), require('./Company'));
   } else {
     // Browser globals (root is window)
-    if (!root.ApiDocumentation) {
-      root.ApiDocumentation = {};
+    if (!root.SubscreasyJsClient) {
+      root.SubscreasyJsClient = {};
     }
-    root.ApiDocumentation.User = factory(root.ApiDocumentation.ApiClient, root.ApiDocumentation.Address, root.ApiDocumentation.Authority, root.ApiDocumentation.Company);
+    root.SubscreasyJsClient.User = factory(root.SubscreasyJsClient.ApiClient, root.SubscreasyJsClient.Address, root.SubscreasyJsClient.Authority, root.SubscreasyJsClient.Company);
   }
 }(this, function(ApiClient, Address, Authority, Company) {
   'use strict';
@@ -36,7 +36,7 @@
   /**
    * The User model module.
    * @module com.kodfarki.subscreasy.client.model/User
-   * @version 1.0
+   * @version 1.0.0
    */
 
   /**
@@ -63,6 +63,7 @@
 
     _this['login'] = login;
 
+
   };
 
   /**
@@ -79,11 +80,11 @@
       if (data.hasOwnProperty('activated')) {
         obj['activated'] = ApiClient.convertToType(data['activated'], 'Boolean');
       }
-      if (data.hasOwnProperty('address')) {
-        obj['address'] = Address.constructFromObject(data['address']);
-      }
       if (data.hasOwnProperty('authorities')) {
         obj['authorities'] = ApiClient.convertToType(data['authorities'], [Authority]);
+      }
+      if (data.hasOwnProperty('billingAddress')) {
+        obj['billingAddress'] = Address.constructFromObject(data['billingAddress']);
       }
       if (data.hasOwnProperty('company')) {
         obj['company'] = Company.constructFromObject(data['company']);
@@ -118,6 +119,9 @@
       if (data.hasOwnProperty('resetDate')) {
         obj['resetDate'] = ApiClient.convertToType(data['resetDate'], 'Date');
       }
+      if (data.hasOwnProperty('shippingAddress')) {
+        obj['shippingAddress'] = Address.constructFromObject(data['shippingAddress']);
+      }
     }
     return obj;
   }
@@ -127,13 +131,13 @@
    */
   exports.prototype['activated'] = undefined;
   /**
-   * @member {module:com.kodfarki.subscreasy.client.model/Address} address
-   */
-  exports.prototype['address'] = undefined;
-  /**
    * @member {Array.<module:com.kodfarki.subscreasy.client.model/Authority>} authorities
    */
   exports.prototype['authorities'] = undefined;
+  /**
+   * @member {module:com.kodfarki.subscreasy.client.model/Address} billingAddress
+   */
+  exports.prototype['billingAddress'] = undefined;
   /**
    * @member {module:com.kodfarki.subscreasy.client.model/Company} company
    */
@@ -178,6 +182,10 @@
    * @member {Date} resetDate
    */
   exports.prototype['resetDate'] = undefined;
+  /**
+   * @member {module:com.kodfarki.subscreasy.client.model/Address} shippingAddress
+   */
+  exports.prototype['shippingAddress'] = undefined;
 
 
 

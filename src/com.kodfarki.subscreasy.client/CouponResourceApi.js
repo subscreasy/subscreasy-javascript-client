@@ -22,10 +22,10 @@
     module.exports = factory(require('../ApiClient'), require('../com.kodfarki.subscreasy.client.model/Coupon'));
   } else {
     // Browser globals (root is window)
-    if (!root.ApiDocumentation) {
-      root.ApiDocumentation = {};
+    if (!root.SubscreasyJsClient) {
+      root.SubscreasyJsClient = {};
     }
-    root.ApiDocumentation.CouponResourceApi = factory(root.ApiDocumentation.ApiClient, root.ApiDocumentation.Coupon);
+    root.SubscreasyJsClient.CouponResourceApi = factory(root.SubscreasyJsClient.ApiClient, root.SubscreasyJsClient.Coupon);
   }
 }(this, function(ApiClient, Coupon) {
   'use strict';
@@ -33,7 +33,7 @@
   /**
    * CouponResource service.
    * @module com.kodfarki.subscreasy.client/CouponResourceApi
-   * @version 1.0
+   * @version 1.0.0
    */
 
   /**

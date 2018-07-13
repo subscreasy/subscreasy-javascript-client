@@ -22,10 +22,10 @@
     module.exports = factory(require('../ApiClient'), require('../com.kodfarki.subscreasy.client.model/UsageNotification'));
   } else {
     // Browser globals (root is window)
-    if (!root.ApiDocumentation) {
-      root.ApiDocumentation = {};
+    if (!root.SubscreasyJsClient) {
+      root.SubscreasyJsClient = {};
     }
-    root.ApiDocumentation.UsageNotificationResourceApi = factory(root.ApiDocumentation.ApiClient, root.ApiDocumentation.UsageNotification);
+    root.SubscreasyJsClient.UsageNotificationResourceApi = factory(root.SubscreasyJsClient.ApiClient, root.SubscreasyJsClient.UsageNotification);
   }
 }(this, function(ApiClient, UsageNotification) {
   'use strict';
@@ -33,7 +33,7 @@
   /**
    * UsageNotificationResource service.
    * @module com.kodfarki.subscreasy.client/UsageNotificationResourceApi
-   * @version 1.0
+   * @version 1.0.0
    */
 
   /**

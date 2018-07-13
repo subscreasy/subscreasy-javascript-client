@@ -22,10 +22,10 @@
     module.exports = factory(require('../ApiClient'), require('../com.kodfarki.subscreasy.client.model/ManagedUserVM'), require('../com.kodfarki.subscreasy.client.model/ResponseEntity'), require('../com.kodfarki.subscreasy.client.model/User'));
   } else {
     // Browser globals (root is window)
-    if (!root.ApiDocumentation) {
-      root.ApiDocumentation = {};
+    if (!root.SubscreasyJsClient) {
+      root.SubscreasyJsClient = {};
     }
-    root.ApiDocumentation.UserResourceApi = factory(root.ApiDocumentation.ApiClient, root.ApiDocumentation.ManagedUserVM, root.ApiDocumentation.ResponseEntity, root.ApiDocumentation.User);
+    root.SubscreasyJsClient.UserResourceApi = factory(root.SubscreasyJsClient.ApiClient, root.SubscreasyJsClient.ManagedUserVM, root.SubscreasyJsClient.ResponseEntity, root.SubscreasyJsClient.User);
   }
 }(this, function(ApiClient, ManagedUserVM, ResponseEntity, User) {
   'use strict';
@@ -33,7 +33,7 @@
   /**
    * UserResource service.
    * @module com.kodfarki.subscreasy.client/UserResourceApi
-   * @version 1.0
+   * @version 1.0.0
    */
 
   /**

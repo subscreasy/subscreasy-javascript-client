@@ -1,4 +1,4 @@
-# ApiDocumentation.Deduction
+# SubscreasyJsClient.Deduction
 
 ## Properties
 Name | Type | Description | Notes

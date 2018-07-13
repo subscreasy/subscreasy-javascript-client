@@ -22,10 +22,10 @@
     module.exports = factory(require('../ApiClient'), require('../com.kodfarki.subscreasy.client.model/MessageTemplate'));
   } else {
     // Browser globals (root is window)
-    if (!root.ApiDocumentation) {
-      root.ApiDocumentation = {};
+    if (!root.SubscreasyJsClient) {
+      root.SubscreasyJsClient = {};
     }
-    root.ApiDocumentation.MessageTemplateResourceApi = factory(root.ApiDocumentation.ApiClient, root.ApiDocumentation.MessageTemplate);
+    root.SubscreasyJsClient.MessageTemplateResourceApi = factory(root.SubscreasyJsClient.ApiClient, root.SubscreasyJsClient.MessageTemplate);
   }
 }(this, function(ApiClient, MessageTemplate) {
   'use strict';
@@ -33,7 +33,7 @@
   /**
    * MessageTemplateResource service.
    * @module com.kodfarki.subscreasy.client/MessageTemplateResourceApi
-   * @version 1.0
+   * @version 1.0.0
    */
 
   /**

@@ -1,4 +1,4 @@
-# ApiDocumentation.HistoryResourceApi
+# SubscreasyJsClient.HistoryResourceApi
 
 All URIs are relative to *https://localhost:8080*
 
@@ -19,8 +19,8 @@ createHistory
 
 ### Example
 ```javascript
-var ApiDocumentation = require('api_documentation');
-var defaultClient = ApiDocumentation.ApiClient.instance;
+var SubscreasyJsClient = require('subscreasy-js-client');
+var defaultClient = SubscreasyJsClient.ApiClient.instance;
 
 // Configure API key authorization: apiKey
 var apiKey = defaultClient.authentications['apiKey'];
@@ -28,9 +28,9 @@ apiKey.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //apiKey.apiKeyPrefix = 'Token';
 
-var apiInstance = new ApiDocumentation.HistoryResourceApi();
+var apiInstance = new SubscreasyJsClient.HistoryResourceApi();
 
-var history = new ApiDocumentation.History(); // History | history
+var history = new SubscreasyJsClient.History(); // History | history
 
 
 var callback = function(error, data, response) {
@@ -70,8 +70,8 @@ deleteHistory
 
 ### Example
 ```javascript
-var ApiDocumentation = require('api_documentation');
-var defaultClient = ApiDocumentation.ApiClient.instance;
+var SubscreasyJsClient = require('subscreasy-js-client');
+var defaultClient = SubscreasyJsClient.ApiClient.instance;
 
 // Configure API key authorization: apiKey
 var apiKey = defaultClient.authentications['apiKey'];
@@ -79,7 +79,7 @@ apiKey.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //apiKey.apiKeyPrefix = 'Token';
 
-var apiInstance = new ApiDocumentation.HistoryResourceApi();
+var apiInstance = new SubscreasyJsClient.HistoryResourceApi();
 
 var id = 789; // Number | id
 
@@ -121,8 +121,8 @@ getAllHistories
 
 ### Example
 ```javascript
-var ApiDocumentation = require('api_documentation');
-var defaultClient = ApiDocumentation.ApiClient.instance;
+var SubscreasyJsClient = require('subscreasy-js-client');
+var defaultClient = SubscreasyJsClient.ApiClient.instance;
 
 // Configure API key authorization: apiKey
 var apiKey = defaultClient.authentications['apiKey'];
@@ -130,7 +130,7 @@ apiKey.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //apiKey.apiKeyPrefix = 'Token';
 
-var apiInstance = new ApiDocumentation.HistoryResourceApi();
+var apiInstance = new SubscreasyJsClient.HistoryResourceApi();
 
 var callback = function(error, data, response) {
   if (error) {
@@ -166,8 +166,8 @@ getHistory
 
 ### Example
 ```javascript
-var ApiDocumentation = require('api_documentation');
-var defaultClient = ApiDocumentation.ApiClient.instance;
+var SubscreasyJsClient = require('subscreasy-js-client');
+var defaultClient = SubscreasyJsClient.ApiClient.instance;
 
 // Configure API key authorization: apiKey
 var apiKey = defaultClient.authentications['apiKey'];
@@ -175,7 +175,7 @@ apiKey.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //apiKey.apiKeyPrefix = 'Token';
 
-var apiInstance = new ApiDocumentation.HistoryResourceApi();
+var apiInstance = new SubscreasyJsClient.HistoryResourceApi();
 
 var id = 789; // Number | id
 
@@ -217,8 +217,8 @@ updateHistory
 
 ### Example
 ```javascript
-var ApiDocumentation = require('api_documentation');
-var defaultClient = ApiDocumentation.ApiClient.instance;
+var SubscreasyJsClient = require('subscreasy-js-client');
+var defaultClient = SubscreasyJsClient.ApiClient.instance;
 
 // Configure API key authorization: apiKey
 var apiKey = defaultClient.authentications['apiKey'];
@@ -226,9 +226,9 @@ apiKey.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //apiKey.apiKeyPrefix = 'Token';
 
-var apiInstance = new ApiDocumentation.HistoryResourceApi();
+var apiInstance = new SubscreasyJsClient.HistoryResourceApi();
 
-var history = new ApiDocumentation.History(); // History | history
+var history = new SubscreasyJsClient.History(); // History | history
 
 
 var callback = function(error, data, response) {

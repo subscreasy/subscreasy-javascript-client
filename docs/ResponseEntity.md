@@ -1,4 +1,4 @@
-# ApiDocumentation.ResponseEntity
+# SubscreasyJsClient.ResponseEntity
 
 ## Properties
 Name | Type | Description | Notes

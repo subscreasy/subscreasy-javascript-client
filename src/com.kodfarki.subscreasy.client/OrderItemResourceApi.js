@@ -22,10 +22,10 @@
     module.exports = factory(require('../ApiClient'), require('../com.kodfarki.subscreasy.client.model/OrderItem'));
   } else {
     // Browser globals (root is window)
-    if (!root.ApiDocumentation) {
-      root.ApiDocumentation = {};
+    if (!root.SubscreasyJsClient) {
+      root.SubscreasyJsClient = {};
     }
-    root.ApiDocumentation.OrderItemResourceApi = factory(root.ApiDocumentation.ApiClient, root.ApiDocumentation.OrderItem);
+    root.SubscreasyJsClient.OrderItemResourceApi = factory(root.SubscreasyJsClient.ApiClient, root.SubscreasyJsClient.OrderItem);
   }
 }(this, function(ApiClient, OrderItem) {
   'use strict';
@@ -33,7 +33,7 @@
   /**
    * OrderItemResource service.
    * @module com.kodfarki.subscreasy.client/OrderItemResourceApi
-   * @version 1.0
+   * @version 1.0.0
    */
 
   /**

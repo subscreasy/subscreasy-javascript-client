@@ -22,10 +22,10 @@
     module.exports = factory(require('../ApiClient'), require('../com.kodfarki.subscreasy.client.model/LoginVM'), require('../com.kodfarki.subscreasy.client.model/ResponseEntity'));
   } else {
     // Browser globals (root is window)
-    if (!root.ApiDocumentation) {
-      root.ApiDocumentation = {};
+    if (!root.SubscreasyJsClient) {
+      root.SubscreasyJsClient = {};
     }
-    root.ApiDocumentation.UserJwtControllerApi = factory(root.ApiDocumentation.ApiClient, root.ApiDocumentation.LoginVM, root.ApiDocumentation.ResponseEntity);
+    root.SubscreasyJsClient.UserJwtControllerApi = factory(root.SubscreasyJsClient.ApiClient, root.SubscreasyJsClient.LoginVM, root.SubscreasyJsClient.ResponseEntity);
   }
 }(this, function(ApiClient, LoginVM, ResponseEntity) {
   'use strict';
@@ -33,7 +33,7 @@
   /**
    * UserJwtController service.
    * @module com.kodfarki.subscreasy.client/UserJwtControllerApi
-   * @version 1.0
+   * @version 1.0.0
    */
 
   /**

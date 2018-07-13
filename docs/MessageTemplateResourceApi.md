@@ -1,4 +1,4 @@
-# ApiDocumentation.MessageTemplateResourceApi
+# SubscreasyJsClient.MessageTemplateResourceApi
 
 All URIs are relative to *https://localhost:8080*
 
@@ -19,8 +19,8 @@ createMessageTemplate
 
 ### Example
 ```javascript
-var ApiDocumentation = require('api_documentation');
-var defaultClient = ApiDocumentation.ApiClient.instance;
+var SubscreasyJsClient = require('subscreasy-js-client');
+var defaultClient = SubscreasyJsClient.ApiClient.instance;
 
 // Configure API key authorization: apiKey
 var apiKey = defaultClient.authentications['apiKey'];
@@ -28,9 +28,9 @@ apiKey.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //apiKey.apiKeyPrefix = 'Token';
 
-var apiInstance = new ApiDocumentation.MessageTemplateResourceApi();
+var apiInstance = new SubscreasyJsClient.MessageTemplateResourceApi();
 
-var messageTemplate = new ApiDocumentation.MessageTemplate(); // MessageTemplate | messageTemplate
+var messageTemplate = new SubscreasyJsClient.MessageTemplate(); // MessageTemplate | messageTemplate
 
 
 var callback = function(error, data, response) {
@@ -70,8 +70,8 @@ deleteMessageTemplate
 
 ### Example
 ```javascript
-var ApiDocumentation = require('api_documentation');
-var defaultClient = ApiDocumentation.ApiClient.instance;
+var SubscreasyJsClient = require('subscreasy-js-client');
+var defaultClient = SubscreasyJsClient.ApiClient.instance;
 
 // Configure API key authorization: apiKey
 var apiKey = defaultClient.authentications['apiKey'];
@@ -79,7 +79,7 @@ apiKey.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //apiKey.apiKeyPrefix = 'Token';
 
-var apiInstance = new ApiDocumentation.MessageTemplateResourceApi();
+var apiInstance = new SubscreasyJsClient.MessageTemplateResourceApi();
 
 var id = 789; // Number | id
 
@@ -121,8 +121,8 @@ getAllMessageTemplates
 
 ### Example
 ```javascript
-var ApiDocumentation = require('api_documentation');
-var defaultClient = ApiDocumentation.ApiClient.instance;
+var SubscreasyJsClient = require('subscreasy-js-client');
+var defaultClient = SubscreasyJsClient.ApiClient.instance;
 
 // Configure API key authorization: apiKey
 var apiKey = defaultClient.authentications['apiKey'];
@@ -130,7 +130,7 @@ apiKey.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //apiKey.apiKeyPrefix = 'Token';
 
-var apiInstance = new ApiDocumentation.MessageTemplateResourceApi();
+var apiInstance = new SubscreasyJsClient.MessageTemplateResourceApi();
 
 var callback = function(error, data, response) {
   if (error) {
@@ -166,8 +166,8 @@ getMessageTemplate
 
 ### Example
 ```javascript
-var ApiDocumentation = require('api_documentation');
-var defaultClient = ApiDocumentation.ApiClient.instance;
+var SubscreasyJsClient = require('subscreasy-js-client');
+var defaultClient = SubscreasyJsClient.ApiClient.instance;
 
 // Configure API key authorization: apiKey
 var apiKey = defaultClient.authentications['apiKey'];
@@ -175,7 +175,7 @@ apiKey.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //apiKey.apiKeyPrefix = 'Token';
 
-var apiInstance = new ApiDocumentation.MessageTemplateResourceApi();
+var apiInstance = new SubscreasyJsClient.MessageTemplateResourceApi();
 
 var id = 789; // Number | id
 
@@ -217,8 +217,8 @@ updateMessageTemplate
 
 ### Example
 ```javascript
-var ApiDocumentation = require('api_documentation');
-var defaultClient = ApiDocumentation.ApiClient.instance;
+var SubscreasyJsClient = require('subscreasy-js-client');
+var defaultClient = SubscreasyJsClient.ApiClient.instance;
 
 // Configure API key authorization: apiKey
 var apiKey = defaultClient.authentications['apiKey'];
@@ -226,9 +226,9 @@ apiKey.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //apiKey.apiKeyPrefix = 'Token';
 
-var apiInstance = new ApiDocumentation.MessageTemplateResourceApi();
+var apiInstance = new SubscreasyJsClient.MessageTemplateResourceApi();
 
-var messageTemplate = new ApiDocumentation.MessageTemplate(); // MessageTemplate | messageTemplate
+var messageTemplate = new SubscreasyJsClient.MessageTemplate(); // MessageTemplate | messageTemplate
 
 
 var callback = function(error, data, response) {

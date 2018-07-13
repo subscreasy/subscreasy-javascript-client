@@ -1,4 +1,4 @@
-# ApiDocumentation.MessageTemplate
+# SubscreasyJsClient.MessageTemplate
 
 ## Properties
 Name | Type | Description | Notes

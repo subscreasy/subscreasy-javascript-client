@@ -22,10 +22,10 @@
     module.exports = factory(require('../ApiClient'), require('./Address'));
   } else {
     // Browser globals (root is window)
-    if (!root.ApiDocumentation) {
-      root.ApiDocumentation = {};
+    if (!root.SubscreasyJsClient) {
+      root.SubscreasyJsClient = {};
     }
-    root.ApiDocumentation.Company = factory(root.ApiDocumentation.ApiClient, root.ApiDocumentation.Address);
+    root.SubscreasyJsClient.Company = factory(root.SubscreasyJsClient.ApiClient, root.SubscreasyJsClient.Address);
   }
 }(this, function(ApiClient, Address) {
   'use strict';
@@ -36,7 +36,7 @@
   /**
    * The Company model module.
    * @module com.kodfarki.subscreasy.client.model/Company
-   * @version 1.0
+   * @version 1.0.0
    */
 
   /**

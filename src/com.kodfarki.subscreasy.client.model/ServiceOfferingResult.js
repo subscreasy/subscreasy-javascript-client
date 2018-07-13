@@ -22,10 +22,10 @@
     module.exports = factory(require('../ApiClient'));
   } else {
     // Browser globals (root is window)
-    if (!root.ApiDocumentation) {
-      root.ApiDocumentation = {};
+    if (!root.SubscreasyJsClient) {
+      root.SubscreasyJsClient = {};
     }
-    root.ApiDocumentation.ServiceOfferingResult = factory(root.ApiDocumentation.ApiClient);
+    root.SubscreasyJsClient.ServiceOfferingResult = factory(root.SubscreasyJsClient.ApiClient);
   }
 }(this, function(ApiClient) {
   'use strict';
@@ -36,7 +36,7 @@
   /**
    * The ServiceOfferingResult model module.
    * @module com.kodfarki.subscreasy.client.model/ServiceOfferingResult
-   * @version 1.0
+   * @version 1.0.0
    */
 
   /**

@@ -22,10 +22,10 @@
     module.exports = factory(require('../ApiClient'), require('./Company'), require('./Coupon'), require('./Offer'), require('./SavedCard'), require('./ServiceInstance'), require('./Subscriber'));
   } else {
     // Browser globals (root is window)
-    if (!root.ApiDocumentation) {
-      root.ApiDocumentation = {};
+    if (!root.SubscreasyJsClient) {
+      root.SubscreasyJsClient = {};
     }
-    root.ApiDocumentation.Subsription = factory(root.ApiDocumentation.ApiClient, root.ApiDocumentation.Company, root.ApiDocumentation.Coupon, root.ApiDocumentation.Offer, root.ApiDocumentation.SavedCard, root.ApiDocumentation.ServiceInstance, root.ApiDocumentation.Subscriber);
+    root.SubscreasyJsClient.Subsription = factory(root.SubscreasyJsClient.ApiClient, root.SubscreasyJsClient.Company, root.SubscreasyJsClient.Coupon, root.SubscreasyJsClient.Offer, root.SubscreasyJsClient.SavedCard, root.SubscreasyJsClient.ServiceInstance, root.SubscreasyJsClient.Subscriber);
   }
 }(this, function(ApiClient, Company, Coupon, Offer, SavedCard, ServiceInstance, Subscriber) {
   'use strict';
@@ -36,7 +36,7 @@
   /**
    * The Subsription model module.
    * @module com.kodfarki.subscreasy.client.model/Subsription
-   * @version 1.0
+   * @version 1.0.0
    */
 
   /**

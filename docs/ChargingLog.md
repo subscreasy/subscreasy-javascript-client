@@ -1,4 +1,4 @@
-# ApiDocumentation.ChargingLog
+# SubscreasyJsClient.ChargingLog
 
 ## Properties
 Name | Type | Description | Notes
@@ -13,6 +13,7 @@ Name | Type | Description | Notes
 **id** | **Number** |  | [optional] 
 **invoiceId** | **Number** |  | [optional] 
 **jobId** | **Number** |  | [optional] 
+**orderId** | **Number** |  | [optional] 
 **parent** | [**ChargingLog**](ChargingLog.md) |  | [optional] 
 **paymentGateway** | **String** |  | [optional] 
 **paymentId** | **String** |  | [optional] 
@@ -21,7 +22,7 @@ Name | Type | Description | Notes
 **serviceInstanceId** | **Number** |  | [optional] 
 **status** | **String** |  | [optional] 
 **subscriberSecureId** | **String** |  | [optional] 
-**subscriptionId** | **Number** |  | [optional] 
+**subscription** | [**Subsription**](Subsription.md) |  | [optional] 
 **transactionId** | **String** |  | [optional] 
 
 

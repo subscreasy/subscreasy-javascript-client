@@ -22,10 +22,10 @@
     module.exports = factory(require('../ApiClient'), require('../com.kodfarki.subscreasy.client.model/ChargingLog'));
   } else {
     // Browser globals (root is window)
-    if (!root.ApiDocumentation) {
-      root.ApiDocumentation = {};
+    if (!root.SubscreasyJsClient) {
+      root.SubscreasyJsClient = {};
     }
-    root.ApiDocumentation.ChargingLogResourceApi = factory(root.ApiDocumentation.ApiClient, root.ApiDocumentation.ChargingLog);
+    root.SubscreasyJsClient.ChargingLogResourceApi = factory(root.SubscreasyJsClient.ApiClient, root.SubscreasyJsClient.ChargingLog);
   }
 }(this, function(ApiClient, ChargingLog) {
   'use strict';
@@ -33,7 +33,7 @@
   /**
    * ChargingLogResource service.
    * @module com.kodfarki.subscreasy.client/ChargingLogResourceApi
-   * @version 1.0
+   * @version 1.0.0
    */
 
   /**

@@ -1,4 +1,4 @@
-# ApiDocumentation.Coupon
+# SubscreasyJsClient.Coupon
 
 ## Properties
 Name | Type | Description | Notes

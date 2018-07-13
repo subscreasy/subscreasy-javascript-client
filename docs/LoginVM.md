@@ -1,4 +1,4 @@
-# ApiDocumentation.LoginVM
+# SubscreasyJsClient.LoginVM
 
 ## Properties
 Name | Type | Description | Notes

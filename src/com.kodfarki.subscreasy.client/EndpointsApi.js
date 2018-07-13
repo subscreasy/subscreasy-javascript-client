@@ -22,10 +22,10 @@
     module.exports = factory(require('../ApiClient'), require('../com.kodfarki.subscreasy.client.model/Authorization'), require('../com.kodfarki.subscreasy.client.model/AuthorizedServicesResponse'), require('../com.kodfarki.subscreasy.client.model/ChargingLog'), require('../com.kodfarki.subscreasy.client.model/Deduction'), require('../com.kodfarki.subscreasy.client.model/DeductionResult'), require('../com.kodfarki.subscreasy.client.model/InvoiceRequest'), require('../com.kodfarki.subscreasy.client.model/MessageTemplate'), require('../com.kodfarki.subscreasy.client.model/ServiceInstanceResult'), require('../com.kodfarki.subscreasy.client.model/ServiceOfferingResult'));
   } else {
     // Browser globals (root is window)
-    if (!root.ApiDocumentation) {
-      root.ApiDocumentation = {};
+    if (!root.SubscreasyJsClient) {
+      root.SubscreasyJsClient = {};
     }
-    root.ApiDocumentation.EndpointsApi = factory(root.ApiDocumentation.ApiClient, root.ApiDocumentation.Authorization, root.ApiDocumentation.AuthorizedServicesResponse, root.ApiDocumentation.ChargingLog, root.ApiDocumentation.Deduction, root.ApiDocumentation.DeductionResult, root.ApiDocumentation.InvoiceRequest, root.ApiDocumentation.MessageTemplate, root.ApiDocumentation.ServiceInstanceResult, root.ApiDocumentation.ServiceOfferingResult);
+    root.SubscreasyJsClient.EndpointsApi = factory(root.SubscreasyJsClient.ApiClient, root.SubscreasyJsClient.Authorization, root.SubscreasyJsClient.AuthorizedServicesResponse, root.SubscreasyJsClient.ChargingLog, root.SubscreasyJsClient.Deduction, root.SubscreasyJsClient.DeductionResult, root.SubscreasyJsClient.InvoiceRequest, root.SubscreasyJsClient.MessageTemplate, root.SubscreasyJsClient.ServiceInstanceResult, root.SubscreasyJsClient.ServiceOfferingResult);
   }
 }(this, function(ApiClient, Authorization, AuthorizedServicesResponse, ChargingLog, Deduction, DeductionResult, InvoiceRequest, MessageTemplate, ServiceInstanceResult, ServiceOfferingResult) {
   'use strict';
@@ -33,7 +33,7 @@
   /**
    * Endpoints service.
    * @module com.kodfarki.subscreasy.client/EndpointsApi
-   * @version 1.0
+   * @version 1.0.0
    */
 
   /**

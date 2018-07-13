@@ -22,10 +22,10 @@
     module.exports = factory(require('../ApiClient'), require('../com.kodfarki.subscreasy.client.model/SavedCard'));
   } else {
     // Browser globals (root is window)
-    if (!root.ApiDocumentation) {
-      root.ApiDocumentation = {};
+    if (!root.SubscreasyJsClient) {
+      root.SubscreasyJsClient = {};
     }
-    root.ApiDocumentation.SavedCardResourceApi = factory(root.ApiDocumentation.ApiClient, root.ApiDocumentation.SavedCard);
+    root.SubscreasyJsClient.SavedCardResourceApi = factory(root.SubscreasyJsClient.ApiClient, root.SubscreasyJsClient.SavedCard);
   }
 }(this, function(ApiClient, SavedCard) {
   'use strict';
@@ -33,7 +33,7 @@
   /**
    * SavedCardResource service.
    * @module com.kodfarki.subscreasy.client/SavedCardResourceApi
-   * @version 1.0
+   * @version 1.0.0
    */
 
   /**

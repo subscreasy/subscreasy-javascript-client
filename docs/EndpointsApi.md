@@ -1,4 +1,4 @@
-# ApiDocumentation.EndpointsApi
+# SubscreasyJsClient.EndpointsApi
 
 All URIs are relative to *https://localhost:8080*
 
@@ -24,8 +24,8 @@ authorize
 
 ### Example
 ```javascript
-var ApiDocumentation = require('api_documentation');
-var defaultClient = ApiDocumentation.ApiClient.instance;
+var SubscreasyJsClient = require('subscreasy-js-client');
+var defaultClient = SubscreasyJsClient.ApiClient.instance;
 
 // Configure API key authorization: apiKey
 var apiKey = defaultClient.authentications['apiKey'];
@@ -33,9 +33,9 @@ apiKey.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //apiKey.apiKeyPrefix = 'Token';
 
-var apiInstance = new ApiDocumentation.EndpointsApi();
+var apiInstance = new SubscreasyJsClient.EndpointsApi();
 
-var authorization = new ApiDocumentation.Authorization(); // Authorization | authorization
+var authorization = new SubscreasyJsClient.Authorization(); // Authorization | authorization
 
 
 var callback = function(error, data, response) {
@@ -75,8 +75,8 @@ deduct
 
 ### Example
 ```javascript
-var ApiDocumentation = require('api_documentation');
-var defaultClient = ApiDocumentation.ApiClient.instance;
+var SubscreasyJsClient = require('subscreasy-js-client');
+var defaultClient = SubscreasyJsClient.ApiClient.instance;
 
 // Configure API key authorization: apiKey
 var apiKey = defaultClient.authentications['apiKey'];
@@ -84,9 +84,9 @@ apiKey.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //apiKey.apiKeyPrefix = 'Token';
 
-var apiInstance = new ApiDocumentation.EndpointsApi();
+var apiInstance = new SubscreasyJsClient.EndpointsApi();
 
-var deduction = new ApiDocumentation.Deduction(); // Deduction | deduction
+var deduction = new SubscreasyJsClient.Deduction(); // Deduction | deduction
 
 
 var callback = function(error, data, response) {
@@ -126,8 +126,8 @@ getAuthorizedServices
 
 ### Example
 ```javascript
-var ApiDocumentation = require('api_documentation');
-var defaultClient = ApiDocumentation.ApiClient.instance;
+var SubscreasyJsClient = require('subscreasy-js-client');
+var defaultClient = SubscreasyJsClient.ApiClient.instance;
 
 // Configure API key authorization: apiKey
 var apiKey = defaultClient.authentications['apiKey'];
@@ -135,7 +135,7 @@ apiKey.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //apiKey.apiKeyPrefix = 'Token';
 
-var apiInstance = new ApiDocumentation.EndpointsApi();
+var apiInstance = new SubscreasyJsClient.EndpointsApi();
 
 var secureId = "secureId_example"; // String | secureId
 
@@ -177,8 +177,8 @@ getChargingLogBySubscription
 
 ### Example
 ```javascript
-var ApiDocumentation = require('api_documentation');
-var defaultClient = ApiDocumentation.ApiClient.instance;
+var SubscreasyJsClient = require('subscreasy-js-client');
+var defaultClient = SubscreasyJsClient.ApiClient.instance;
 
 // Configure API key authorization: apiKey
 var apiKey = defaultClient.authentications['apiKey'];
@@ -186,7 +186,7 @@ apiKey.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //apiKey.apiKeyPrefix = 'Token';
 
-var apiInstance = new ApiDocumentation.EndpointsApi();
+var apiInstance = new SubscreasyJsClient.EndpointsApi();
 
 var id = 789; // Number | id
 
@@ -228,8 +228,8 @@ getCustomerTotalAmount
 
 ### Example
 ```javascript
-var ApiDocumentation = require('api_documentation');
-var defaultClient = ApiDocumentation.ApiClient.instance;
+var SubscreasyJsClient = require('subscreasy-js-client');
+var defaultClient = SubscreasyJsClient.ApiClient.instance;
 
 // Configure API key authorization: apiKey
 var apiKey = defaultClient.authentications['apiKey'];
@@ -237,7 +237,7 @@ apiKey.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //apiKey.apiKeyPrefix = 'Token';
 
-var apiInstance = new ApiDocumentation.EndpointsApi();
+var apiInstance = new SubscreasyJsClient.EndpointsApi();
 
 var id = "id_example"; // String | id
 
@@ -279,8 +279,8 @@ getInvoiceDetails
 
 ### Example
 ```javascript
-var ApiDocumentation = require('api_documentation');
-var defaultClient = ApiDocumentation.ApiClient.instance;
+var SubscreasyJsClient = require('subscreasy-js-client');
+var defaultClient = SubscreasyJsClient.ApiClient.instance;
 
 // Configure API key authorization: apiKey
 var apiKey = defaultClient.authentications['apiKey'];
@@ -288,9 +288,9 @@ apiKey.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //apiKey.apiKeyPrefix = 'Token';
 
-var apiInstance = new ApiDocumentation.EndpointsApi();
+var apiInstance = new SubscreasyJsClient.EndpointsApi();
 
-var invoiceRequest = new ApiDocumentation.InvoiceRequest(); // InvoiceRequest | invoiceRequest
+var invoiceRequest = new SubscreasyJsClient.InvoiceRequest(); // InvoiceRequest | invoiceRequest
 
 
 var callback = function(error, data, response) {
@@ -330,8 +330,8 @@ getMessageTemplate
 
 ### Example
 ```javascript
-var ApiDocumentation = require('api_documentation');
-var defaultClient = ApiDocumentation.ApiClient.instance;
+var SubscreasyJsClient = require('subscreasy-js-client');
+var defaultClient = SubscreasyJsClient.ApiClient.instance;
 
 // Configure API key authorization: apiKey
 var apiKey = defaultClient.authentications['apiKey'];
@@ -339,7 +339,7 @@ apiKey.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //apiKey.apiKeyPrefix = 'Token';
 
-var apiInstance = new ApiDocumentation.EndpointsApi();
+var apiInstance = new SubscreasyJsClient.EndpointsApi();
 
 var lifecycleEventName = "lifecycleEventName_example"; // String | lifecycleEventName
 
@@ -381,8 +381,8 @@ getServiceInstancesBySubscription
 
 ### Example
 ```javascript
-var ApiDocumentation = require('api_documentation');
-var defaultClient = ApiDocumentation.ApiClient.instance;
+var SubscreasyJsClient = require('subscreasy-js-client');
+var defaultClient = SubscreasyJsClient.ApiClient.instance;
 
 // Configure API key authorization: apiKey
 var apiKey = defaultClient.authentications['apiKey'];
@@ -390,7 +390,7 @@ apiKey.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //apiKey.apiKeyPrefix = 'Token';
 
-var apiInstance = new ApiDocumentation.EndpointsApi();
+var apiInstance = new SubscreasyJsClient.EndpointsApi();
 
 var id = 789; // Number | id
 
@@ -432,8 +432,8 @@ getServiceOfferingsBySubscriptionPlan
 
 ### Example
 ```javascript
-var ApiDocumentation = require('api_documentation');
-var defaultClient = ApiDocumentation.ApiClient.instance;
+var SubscreasyJsClient = require('subscreasy-js-client');
+var defaultClient = SubscreasyJsClient.ApiClient.instance;
 
 // Configure API key authorization: apiKey
 var apiKey = defaultClient.authentications['apiKey'];
@@ -441,7 +441,7 @@ apiKey.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //apiKey.apiKeyPrefix = 'Token';
 
-var apiInstance = new ApiDocumentation.EndpointsApi();
+var apiInstance = new SubscreasyJsClient.EndpointsApi();
 
 var id = 789; // Number | id
 
@@ -483,8 +483,8 @@ getTotalRevenuePerMonth
 
 ### Example
 ```javascript
-var ApiDocumentation = require('api_documentation');
-var defaultClient = ApiDocumentation.ApiClient.instance;
+var SubscreasyJsClient = require('subscreasy-js-client');
+var defaultClient = SubscreasyJsClient.ApiClient.instance;
 
 // Configure API key authorization: apiKey
 var apiKey = defaultClient.authentications['apiKey'];
@@ -492,7 +492,7 @@ apiKey.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //apiKey.apiKeyPrefix = 'Token';
 
-var apiInstance = new ApiDocumentation.EndpointsApi();
+var apiInstance = new SubscreasyJsClient.EndpointsApi();
 
 var id = 789; // Number | id
 

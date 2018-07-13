@@ -22,10 +22,10 @@
     module.exports = factory(require('../ApiClient'), require('./Offer'), require('./ServiceOffering'), require('./Subsription'));
   } else {
     // Browser globals (root is window)
-    if (!root.ApiDocumentation) {
-      root.ApiDocumentation = {};
+    if (!root.SubscreasyJsClient) {
+      root.SubscreasyJsClient = {};
     }
-    root.ApiDocumentation.ServiceInstance = factory(root.ApiDocumentation.ApiClient, root.ApiDocumentation.Offer, root.ApiDocumentation.ServiceOffering, root.ApiDocumentation.Subsription);
+    root.SubscreasyJsClient.ServiceInstance = factory(root.SubscreasyJsClient.ApiClient, root.SubscreasyJsClient.Offer, root.SubscreasyJsClient.ServiceOffering, root.SubscreasyJsClient.Subsription);
   }
 }(this, function(ApiClient, Offer, ServiceOffering, Subsription) {
   'use strict';
@@ -36,7 +36,7 @@
   /**
    * The ServiceInstance model module.
    * @module com.kodfarki.subscreasy.client.model/ServiceInstance
-   * @version 1.0
+   * @version 1.0.0
    */
 
   /**

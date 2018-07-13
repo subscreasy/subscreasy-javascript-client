@@ -1,4 +1,4 @@
-# ApiDocumentation.SavedCard
+# SubscreasyJsClient.SavedCard
 
 ## Properties
 Name | Type | Description | Notes

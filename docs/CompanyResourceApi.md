@@ -1,4 +1,4 @@
-# ApiDocumentation.CompanyResourceApi
+# SubscreasyJsClient.CompanyResourceApi
 
 All URIs are relative to *https://localhost:8080*
 
@@ -19,8 +19,8 @@ createCompany
 
 ### Example
 ```javascript
-var ApiDocumentation = require('api_documentation');
-var defaultClient = ApiDocumentation.ApiClient.instance;
+var SubscreasyJsClient = require('subscreasy-js-client');
+var defaultClient = SubscreasyJsClient.ApiClient.instance;
 
 // Configure API key authorization: apiKey
 var apiKey = defaultClient.authentications['apiKey'];
@@ -28,9 +28,9 @@ apiKey.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //apiKey.apiKeyPrefix = 'Token';
 
-var apiInstance = new ApiDocumentation.CompanyResourceApi();
+var apiInstance = new SubscreasyJsClient.CompanyResourceApi();
 
-var company = new ApiDocumentation.Company(); // Company | company
+var company = new SubscreasyJsClient.Company(); // Company | company
 
 
 var callback = function(error, data, response) {
@@ -70,8 +70,8 @@ deleteCompany
 
 ### Example
 ```javascript
-var ApiDocumentation = require('api_documentation');
-var defaultClient = ApiDocumentation.ApiClient.instance;
+var SubscreasyJsClient = require('subscreasy-js-client');
+var defaultClient = SubscreasyJsClient.ApiClient.instance;
 
 // Configure API key authorization: apiKey
 var apiKey = defaultClient.authentications['apiKey'];
@@ -79,7 +79,7 @@ apiKey.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //apiKey.apiKeyPrefix = 'Token';
 
-var apiInstance = new ApiDocumentation.CompanyResourceApi();
+var apiInstance = new SubscreasyJsClient.CompanyResourceApi();
 
 var id = 789; // Number | id
 
@@ -121,8 +121,8 @@ getAllCompanies
 
 ### Example
 ```javascript
-var ApiDocumentation = require('api_documentation');
-var defaultClient = ApiDocumentation.ApiClient.instance;
+var SubscreasyJsClient = require('subscreasy-js-client');
+var defaultClient = SubscreasyJsClient.ApiClient.instance;
 
 // Configure API key authorization: apiKey
 var apiKey = defaultClient.authentications['apiKey'];
@@ -130,7 +130,7 @@ apiKey.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //apiKey.apiKeyPrefix = 'Token';
 
-var apiInstance = new ApiDocumentation.CompanyResourceApi();
+var apiInstance = new SubscreasyJsClient.CompanyResourceApi();
 
 var callback = function(error, data, response) {
   if (error) {
@@ -166,8 +166,8 @@ getCompany
 
 ### Example
 ```javascript
-var ApiDocumentation = require('api_documentation');
-var defaultClient = ApiDocumentation.ApiClient.instance;
+var SubscreasyJsClient = require('subscreasy-js-client');
+var defaultClient = SubscreasyJsClient.ApiClient.instance;
 
 // Configure API key authorization: apiKey
 var apiKey = defaultClient.authentications['apiKey'];
@@ -175,7 +175,7 @@ apiKey.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //apiKey.apiKeyPrefix = 'Token';
 
-var apiInstance = new ApiDocumentation.CompanyResourceApi();
+var apiInstance = new SubscreasyJsClient.CompanyResourceApi();
 
 var id = 789; // Number | id
 
@@ -217,8 +217,8 @@ updateCompany
 
 ### Example
 ```javascript
-var ApiDocumentation = require('api_documentation');
-var defaultClient = ApiDocumentation.ApiClient.instance;
+var SubscreasyJsClient = require('subscreasy-js-client');
+var defaultClient = SubscreasyJsClient.ApiClient.instance;
 
 // Configure API key authorization: apiKey
 var apiKey = defaultClient.authentications['apiKey'];
@@ -226,9 +226,9 @@ apiKey.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //apiKey.apiKeyPrefix = 'Token';
 
-var apiInstance = new ApiDocumentation.CompanyResourceApi();
+var apiInstance = new SubscreasyJsClient.CompanyResourceApi();
 
-var company = new ApiDocumentation.Company(); // Company | company
+var company = new SubscreasyJsClient.Company(); // Company | company
 
 
 var callback = function(error, data, response) {

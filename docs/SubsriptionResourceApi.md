@@ -1,4 +1,4 @@
-# ApiDocumentation.SubsriptionResourceApi
+# SubscreasyJsClient.SubsriptionResourceApi
 
 All URIs are relative to *https://localhost:8080*
 
@@ -19,8 +19,8 @@ cancelSubscription
 
 ### Example
 ```javascript
-var ApiDocumentation = require('api_documentation');
-var defaultClient = ApiDocumentation.ApiClient.instance;
+var SubscreasyJsClient = require('subscreasy-js-client');
+var defaultClient = SubscreasyJsClient.ApiClient.instance;
 
 // Configure API key authorization: apiKey
 var apiKey = defaultClient.authentications['apiKey'];
@@ -28,9 +28,9 @@ apiKey.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //apiKey.apiKeyPrefix = 'Token';
 
-var apiInstance = new ApiDocumentation.SubsriptionResourceApi();
+var apiInstance = new SubscreasyJsClient.SubsriptionResourceApi();
 
-var cancellation = new ApiDocumentation.Cancellation(); // Cancellation | cancellation
+var cancellation = new SubscreasyJsClient.Cancellation(); // Cancellation | cancellation
 
 
 var callback = function(error, data, response) {
@@ -70,8 +70,8 @@ getActiveSubscriptions
 
 ### Example
 ```javascript
-var ApiDocumentation = require('api_documentation');
-var defaultClient = ApiDocumentation.ApiClient.instance;
+var SubscreasyJsClient = require('subscreasy-js-client');
+var defaultClient = SubscreasyJsClient.ApiClient.instance;
 
 // Configure API key authorization: apiKey
 var apiKey = defaultClient.authentications['apiKey'];
@@ -79,7 +79,7 @@ apiKey.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //apiKey.apiKeyPrefix = 'Token';
 
-var apiInstance = new ApiDocumentation.SubsriptionResourceApi();
+var apiInstance = new SubscreasyJsClient.SubsriptionResourceApi();
 
 var secureId = "secureId_example"; // String | secureId
 
@@ -121,8 +121,8 @@ getAllCompanySubscriptions
 
 ### Example
 ```javascript
-var ApiDocumentation = require('api_documentation');
-var defaultClient = ApiDocumentation.ApiClient.instance;
+var SubscreasyJsClient = require('subscreasy-js-client');
+var defaultClient = SubscreasyJsClient.ApiClient.instance;
 
 // Configure API key authorization: apiKey
 var apiKey = defaultClient.authentications['apiKey'];
@@ -130,7 +130,7 @@ apiKey.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //apiKey.apiKeyPrefix = 'Token';
 
-var apiInstance = new ApiDocumentation.SubsriptionResourceApi();
+var apiInstance = new SubscreasyJsClient.SubsriptionResourceApi();
 
 var id = "id_example"; // String | id
 
@@ -172,8 +172,8 @@ getSubsription
 
 ### Example
 ```javascript
-var ApiDocumentation = require('api_documentation');
-var defaultClient = ApiDocumentation.ApiClient.instance;
+var SubscreasyJsClient = require('subscreasy-js-client');
+var defaultClient = SubscreasyJsClient.ApiClient.instance;
 
 // Configure API key authorization: apiKey
 var apiKey = defaultClient.authentications['apiKey'];
@@ -181,7 +181,7 @@ apiKey.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //apiKey.apiKeyPrefix = 'Token';
 
-var apiInstance = new ApiDocumentation.SubsriptionResourceApi();
+var apiInstance = new SubscreasyJsClient.SubsriptionResourceApi();
 
 var id = 789; // Number | id
 
@@ -223,8 +223,8 @@ startSubscription
 
 ### Example
 ```javascript
-var ApiDocumentation = require('api_documentation');
-var defaultClient = ApiDocumentation.ApiClient.instance;
+var SubscreasyJsClient = require('subscreasy-js-client');
+var defaultClient = SubscreasyJsClient.ApiClient.instance;
 
 // Configure API key authorization: apiKey
 var apiKey = defaultClient.authentications['apiKey'];
@@ -232,9 +232,9 @@ apiKey.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //apiKey.apiKeyPrefix = 'Token';
 
-var apiInstance = new ApiDocumentation.SubsriptionResourceApi();
+var apiInstance = new SubscreasyJsClient.SubsriptionResourceApi();
 
-var request = new ApiDocumentation.StartSubscriptionRequest(); // StartSubscriptionRequest | request
+var request = new SubscreasyJsClient.StartSubscriptionRequest(); // StartSubscriptionRequest | request
 
 
 var callback = function(error, data, response) {

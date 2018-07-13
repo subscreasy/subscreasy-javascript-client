@@ -22,17 +22,17 @@
     module.exports = factory(require('superagent'), require('querystring'));
   } else {
     // Browser globals (root is window)
-    if (!root.ApiDocumentation) {
-      root.ApiDocumentation = {};
+    if (!root.SubscreasyJsClient) {
+      root.SubscreasyJsClient = {};
     }
-    root.ApiDocumentation.ApiClient = factory(root.superagent, root.querystring);
+    root.SubscreasyJsClient.ApiClient = factory(root.superagent, root.querystring);
   }
 }(this, function(superagent, querystring) {
   'use strict';
 
   /**
    * @module ApiClient
-   * @version 1.0
+   * @version 1.0.0
    */
 
   /**

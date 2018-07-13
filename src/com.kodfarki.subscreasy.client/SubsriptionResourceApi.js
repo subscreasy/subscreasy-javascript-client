@@ -22,10 +22,10 @@
     module.exports = factory(require('../ApiClient'), require('../com.kodfarki.subscreasy.client.model/Cancellation'), require('../com.kodfarki.subscreasy.client.model/StartSubscriptionRequest'), require('../com.kodfarki.subscreasy.client.model/StartSubscriptionResult'), require('../com.kodfarki.subscreasy.client.model/Subsription'));
   } else {
     // Browser globals (root is window)
-    if (!root.ApiDocumentation) {
-      root.ApiDocumentation = {};
+    if (!root.SubscreasyJsClient) {
+      root.SubscreasyJsClient = {};
     }
-    root.ApiDocumentation.SubsriptionResourceApi = factory(root.ApiDocumentation.ApiClient, root.ApiDocumentation.Cancellation, root.ApiDocumentation.StartSubscriptionRequest, root.ApiDocumentation.StartSubscriptionResult, root.ApiDocumentation.Subsription);
+    root.SubscreasyJsClient.SubsriptionResourceApi = factory(root.SubscreasyJsClient.ApiClient, root.SubscreasyJsClient.Cancellation, root.SubscreasyJsClient.StartSubscriptionRequest, root.SubscreasyJsClient.StartSubscriptionResult, root.SubscreasyJsClient.Subsription);
   }
 }(this, function(ApiClient, Cancellation, StartSubscriptionRequest, StartSubscriptionResult, Subsription) {
   'use strict';
@@ -33,7 +33,7 @@
   /**
    * SubsriptionResource service.
    * @module com.kodfarki.subscreasy.client/SubsriptionResourceApi
-   * @version 1.0
+   * @version 1.0.0
    */
 
   /**

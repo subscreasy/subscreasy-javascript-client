@@ -22,10 +22,10 @@
     module.exports = factory(require('../ApiClient'), require('./Offer'), require('./PaymentCard'), require('./Subscriber'));
   } else {
     // Browser globals (root is window)
-    if (!root.ApiDocumentation) {
-      root.ApiDocumentation = {};
+    if (!root.SubscreasyJsClient) {
+      root.SubscreasyJsClient = {};
     }
-    root.ApiDocumentation.StartSubscriptionRequest = factory(root.ApiDocumentation.ApiClient, root.ApiDocumentation.Offer, root.ApiDocumentation.PaymentCard, root.ApiDocumentation.Subscriber);
+    root.SubscreasyJsClient.StartSubscriptionRequest = factory(root.SubscreasyJsClient.ApiClient, root.SubscreasyJsClient.Offer, root.SubscreasyJsClient.PaymentCard, root.SubscreasyJsClient.Subscriber);
   }
 }(this, function(ApiClient, Offer, PaymentCard, Subscriber) {
   'use strict';
@@ -36,7 +36,7 @@
   /**
    * The StartSubscriptionRequest model module.
    * @module com.kodfarki.subscreasy.client.model/StartSubscriptionRequest
-   * @version 1.0
+   * @version 1.0.0
    */
 
   /**

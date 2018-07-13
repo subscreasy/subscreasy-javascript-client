@@ -1,4 +1,4 @@
-# ApiDocumentation.InvoiceResourceApi
+# SubscreasyJsClient.InvoiceResourceApi
 
 All URIs are relative to *https://localhost:8080*
 
@@ -20,8 +20,8 @@ createInvoice
 
 ### Example
 ```javascript
-var ApiDocumentation = require('api_documentation');
-var defaultClient = ApiDocumentation.ApiClient.instance;
+var SubscreasyJsClient = require('subscreasy-js-client');
+var defaultClient = SubscreasyJsClient.ApiClient.instance;
 
 // Configure API key authorization: apiKey
 var apiKey = defaultClient.authentications['apiKey'];
@@ -29,9 +29,9 @@ apiKey.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //apiKey.apiKeyPrefix = 'Token';
 
-var apiInstance = new ApiDocumentation.InvoiceResourceApi();
+var apiInstance = new SubscreasyJsClient.InvoiceResourceApi();
 
-var invoice = new ApiDocumentation.Invoice(); // Invoice | invoice
+var invoice = new SubscreasyJsClient.Invoice(); // Invoice | invoice
 
 
 var callback = function(error, data, response) {
@@ -71,8 +71,8 @@ deleteInvoice
 
 ### Example
 ```javascript
-var ApiDocumentation = require('api_documentation');
-var defaultClient = ApiDocumentation.ApiClient.instance;
+var SubscreasyJsClient = require('subscreasy-js-client');
+var defaultClient = SubscreasyJsClient.ApiClient.instance;
 
 // Configure API key authorization: apiKey
 var apiKey = defaultClient.authentications['apiKey'];
@@ -80,7 +80,7 @@ apiKey.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //apiKey.apiKeyPrefix = 'Token';
 
-var apiInstance = new ApiDocumentation.InvoiceResourceApi();
+var apiInstance = new SubscreasyJsClient.InvoiceResourceApi();
 
 var id = 789; // Number | id
 
@@ -122,8 +122,8 @@ getAllInvoices
 
 ### Example
 ```javascript
-var ApiDocumentation = require('api_documentation');
-var defaultClient = ApiDocumentation.ApiClient.instance;
+var SubscreasyJsClient = require('subscreasy-js-client');
+var defaultClient = SubscreasyJsClient.ApiClient.instance;
 
 // Configure API key authorization: apiKey
 var apiKey = defaultClient.authentications['apiKey'];
@@ -131,7 +131,7 @@ apiKey.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //apiKey.apiKeyPrefix = 'Token';
 
-var apiInstance = new ApiDocumentation.InvoiceResourceApi();
+var apiInstance = new SubscreasyJsClient.InvoiceResourceApi();
 
 var callback = function(error, data, response) {
   if (error) {
@@ -167,8 +167,8 @@ getInvoiceBySubscriber
 
 ### Example
 ```javascript
-var ApiDocumentation = require('api_documentation');
-var defaultClient = ApiDocumentation.ApiClient.instance;
+var SubscreasyJsClient = require('subscreasy-js-client');
+var defaultClient = SubscreasyJsClient.ApiClient.instance;
 
 // Configure API key authorization: apiKey
 var apiKey = defaultClient.authentications['apiKey'];
@@ -176,7 +176,7 @@ apiKey.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //apiKey.apiKeyPrefix = 'Token';
 
-var apiInstance = new ApiDocumentation.InvoiceResourceApi();
+var apiInstance = new SubscreasyJsClient.InvoiceResourceApi();
 
 var subscriberSecureId = "subscriberSecureId_example"; // String | subscriberSecureId
 
@@ -218,8 +218,8 @@ getInvoice
 
 ### Example
 ```javascript
-var ApiDocumentation = require('api_documentation');
-var defaultClient = ApiDocumentation.ApiClient.instance;
+var SubscreasyJsClient = require('subscreasy-js-client');
+var defaultClient = SubscreasyJsClient.ApiClient.instance;
 
 // Configure API key authorization: apiKey
 var apiKey = defaultClient.authentications['apiKey'];
@@ -227,7 +227,7 @@ apiKey.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //apiKey.apiKeyPrefix = 'Token';
 
-var apiInstance = new ApiDocumentation.InvoiceResourceApi();
+var apiInstance = new SubscreasyJsClient.InvoiceResourceApi();
 
 var id = 789; // Number | id
 
@@ -269,8 +269,8 @@ updateInvoice
 
 ### Example
 ```javascript
-var ApiDocumentation = require('api_documentation');
-var defaultClient = ApiDocumentation.ApiClient.instance;
+var SubscreasyJsClient = require('subscreasy-js-client');
+var defaultClient = SubscreasyJsClient.ApiClient.instance;
 
 // Configure API key authorization: apiKey
 var apiKey = defaultClient.authentications['apiKey'];
@@ -278,9 +278,9 @@ apiKey.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //apiKey.apiKeyPrefix = 'Token';
 
-var apiInstance = new ApiDocumentation.InvoiceResourceApi();
+var apiInstance = new SubscreasyJsClient.InvoiceResourceApi();
 
-var invoice = new ApiDocumentation.Invoice(); // Invoice | invoice
+var invoice = new SubscreasyJsClient.Invoice(); // Invoice | invoice
 
 
 var callback = function(error, data, response) {

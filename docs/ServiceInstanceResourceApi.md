@@ -1,4 +1,4 @@
-# ApiDocumentation.ServiceInstanceResourceApi
+# SubscreasyJsClient.ServiceInstanceResourceApi
 
 All URIs are relative to *https://localhost:8080*
 
@@ -19,8 +19,8 @@ createServiceInstance
 
 ### Example
 ```javascript
-var ApiDocumentation = require('api_documentation');
-var defaultClient = ApiDocumentation.ApiClient.instance;
+var SubscreasyJsClient = require('subscreasy-js-client');
+var defaultClient = SubscreasyJsClient.ApiClient.instance;
 
 // Configure API key authorization: apiKey
 var apiKey = defaultClient.authentications['apiKey'];
@@ -28,9 +28,9 @@ apiKey.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //apiKey.apiKeyPrefix = 'Token';
 
-var apiInstance = new ApiDocumentation.ServiceInstanceResourceApi();
+var apiInstance = new SubscreasyJsClient.ServiceInstanceResourceApi();
 
-var serviceInstance = new ApiDocumentation.ServiceInstance(); // ServiceInstance | serviceInstance
+var serviceInstance = new SubscreasyJsClient.ServiceInstance(); // ServiceInstance | serviceInstance
 
 
 var callback = function(error, data, response) {
@@ -70,8 +70,8 @@ deleteServiceInstance
 
 ### Example
 ```javascript
-var ApiDocumentation = require('api_documentation');
-var defaultClient = ApiDocumentation.ApiClient.instance;
+var SubscreasyJsClient = require('subscreasy-js-client');
+var defaultClient = SubscreasyJsClient.ApiClient.instance;
 
 // Configure API key authorization: apiKey
 var apiKey = defaultClient.authentications['apiKey'];
@@ -79,7 +79,7 @@ apiKey.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //apiKey.apiKeyPrefix = 'Token';
 
-var apiInstance = new ApiDocumentation.ServiceInstanceResourceApi();
+var apiInstance = new SubscreasyJsClient.ServiceInstanceResourceApi();
 
 var id = 789; // Number | id
 
@@ -121,8 +121,8 @@ getAllServiceInstances
 
 ### Example
 ```javascript
-var ApiDocumentation = require('api_documentation');
-var defaultClient = ApiDocumentation.ApiClient.instance;
+var SubscreasyJsClient = require('subscreasy-js-client');
+var defaultClient = SubscreasyJsClient.ApiClient.instance;
 
 // Configure API key authorization: apiKey
 var apiKey = defaultClient.authentications['apiKey'];
@@ -130,7 +130,7 @@ apiKey.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //apiKey.apiKeyPrefix = 'Token';
 
-var apiInstance = new ApiDocumentation.ServiceInstanceResourceApi();
+var apiInstance = new SubscreasyJsClient.ServiceInstanceResourceApi();
 
 var callback = function(error, data, response) {
   if (error) {
@@ -166,8 +166,8 @@ getServiceInstance
 
 ### Example
 ```javascript
-var ApiDocumentation = require('api_documentation');
-var defaultClient = ApiDocumentation.ApiClient.instance;
+var SubscreasyJsClient = require('subscreasy-js-client');
+var defaultClient = SubscreasyJsClient.ApiClient.instance;
 
 // Configure API key authorization: apiKey
 var apiKey = defaultClient.authentications['apiKey'];
@@ -175,7 +175,7 @@ apiKey.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //apiKey.apiKeyPrefix = 'Token';
 
-var apiInstance = new ApiDocumentation.ServiceInstanceResourceApi();
+var apiInstance = new SubscreasyJsClient.ServiceInstanceResourceApi();
 
 var id = 789; // Number | id
 
@@ -217,8 +217,8 @@ updateServiceInstance
 
 ### Example
 ```javascript
-var ApiDocumentation = require('api_documentation');
-var defaultClient = ApiDocumentation.ApiClient.instance;
+var SubscreasyJsClient = require('subscreasy-js-client');
+var defaultClient = SubscreasyJsClient.ApiClient.instance;
 
 // Configure API key authorization: apiKey
 var apiKey = defaultClient.authentications['apiKey'];
@@ -226,9 +226,9 @@ apiKey.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //apiKey.apiKeyPrefix = 'Token';
 
-var apiInstance = new ApiDocumentation.ServiceInstanceResourceApi();
+var apiInstance = new SubscreasyJsClient.ServiceInstanceResourceApi();
 
-var serviceInstance = new ApiDocumentation.ServiceInstance(); // ServiceInstance | serviceInstance
+var serviceInstance = new SubscreasyJsClient.ServiceInstance(); // ServiceInstance | serviceInstance
 
 
 var callback = function(error, data, response) {

@@ -1,4 +1,4 @@
-# ApiDocumentation.ServiceInstanceResult
+# SubscreasyJsClient.ServiceInstanceResult
 
 ## Properties
 Name | Type | Description | Notes

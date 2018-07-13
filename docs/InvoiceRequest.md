@@ -1,4 +1,4 @@
-# ApiDocumentation.InvoiceRequest
+# SubscreasyJsClient.InvoiceRequest
 
 ## Properties
 Name | Type | Description | Notes

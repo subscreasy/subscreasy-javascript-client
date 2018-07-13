@@ -1,4 +1,4 @@
-# ApiDocumentation.RecurrencePeriod
+# SubscreasyJsClient.RecurrencePeriod
 
 ## Properties
 Name | Type | Description | Notes

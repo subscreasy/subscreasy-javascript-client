@@ -1,4 +1,4 @@
-# ApiDocumentation.ProfileInfoResourceApi
+# SubscreasyJsClient.ProfileInfoResourceApi
 
 All URIs are relative to *https://localhost:8080*
 
@@ -15,8 +15,8 @@ getActiveProfiles
 
 ### Example
 ```javascript
-var ApiDocumentation = require('api_documentation');
-var defaultClient = ApiDocumentation.ApiClient.instance;
+var SubscreasyJsClient = require('subscreasy-js-client');
+var defaultClient = SubscreasyJsClient.ApiClient.instance;
 
 // Configure API key authorization: apiKey
 var apiKey = defaultClient.authentications['apiKey'];
@@ -24,7 +24,7 @@ apiKey.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //apiKey.apiKeyPrefix = 'Token';
 
-var apiInstance = new ApiDocumentation.ProfileInfoResourceApi();
+var apiInstance = new SubscreasyJsClient.ProfileInfoResourceApi();
 
 var callback = function(error, data, response) {
   if (error) {

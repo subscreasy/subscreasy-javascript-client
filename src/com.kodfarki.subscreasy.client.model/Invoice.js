@@ -22,10 +22,10 @@
     module.exports = factory(require('../ApiClient'));
   } else {
     // Browser globals (root is window)
-    if (!root.ApiDocumentation) {
-      root.ApiDocumentation = {};
+    if (!root.SubscreasyJsClient) {
+      root.SubscreasyJsClient = {};
     }
-    root.ApiDocumentation.Invoice = factory(root.ApiDocumentation.ApiClient);
+    root.SubscreasyJsClient.Invoice = factory(root.SubscreasyJsClient.ApiClient);
   }
 }(this, function(ApiClient) {
   'use strict';
@@ -36,7 +36,7 @@
   /**
    * The Invoice model module.
    * @module com.kodfarki.subscreasy.client.model/Invoice
-   * @version 1.0
+   * @version 1.0.0
    */
 
   /**

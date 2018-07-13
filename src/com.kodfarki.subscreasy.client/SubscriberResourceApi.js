@@ -22,10 +22,10 @@
     module.exports = factory(require('../ApiClient'), require('../com.kodfarki.subscreasy.client.model/Subscriber'));
   } else {
     // Browser globals (root is window)
-    if (!root.ApiDocumentation) {
-      root.ApiDocumentation = {};
+    if (!root.SubscreasyJsClient) {
+      root.SubscreasyJsClient = {};
     }
-    root.ApiDocumentation.SubscriberResourceApi = factory(root.ApiDocumentation.ApiClient, root.ApiDocumentation.Subscriber);
+    root.SubscreasyJsClient.SubscriberResourceApi = factory(root.SubscreasyJsClient.ApiClient, root.SubscreasyJsClient.Subscriber);
   }
 }(this, function(ApiClient, Subscriber) {
   'use strict';
@@ -33,7 +33,7 @@
   /**
    * SubscriberResource service.
    * @module com.kodfarki.subscreasy.client/SubscriberResourceApi
-   * @version 1.0
+   * @version 1.0.0
    */
 
   /**

@@ -1,4 +1,4 @@
-# ApiDocumentation.AuthorizedServicesResponse
+# SubscreasyJsClient.AuthorizedServicesResponse
 
 ## Properties
 Name | Type | Description | Notes

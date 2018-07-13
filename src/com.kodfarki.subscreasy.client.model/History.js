@@ -22,10 +22,10 @@
     module.exports = factory(require('../ApiClient'), require('./Subsription'));
   } else {
     // Browser globals (root is window)
-    if (!root.ApiDocumentation) {
-      root.ApiDocumentation = {};
+    if (!root.SubscreasyJsClient) {
+      root.SubscreasyJsClient = {};
     }
-    root.ApiDocumentation.History = factory(root.ApiDocumentation.ApiClient, root.ApiDocumentation.Subsription);
+    root.SubscreasyJsClient.History = factory(root.SubscreasyJsClient.ApiClient, root.SubscreasyJsClient.Subsription);
   }
 }(this, function(ApiClient, Subsription) {
   'use strict';
@@ -36,7 +36,7 @@
   /**
    * The History model module.
    * @module com.kodfarki.subscreasy.client.model/History
-   * @version 1.0
+   * @version 1.0.0
    */
 
   /**

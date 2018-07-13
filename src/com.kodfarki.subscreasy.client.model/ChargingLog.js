@@ -16,18 +16,18 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient', 'com.kodfarki.subscreasy.client.model/ChargingLog'], factory);
+    define(['ApiClient', 'com.kodfarki.subscreasy.client.model/ChargingLog', 'com.kodfarki.subscreasy.client.model/Subsription'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('./ChargingLog'));
+    module.exports = factory(require('../ApiClient'), require('./ChargingLog'), require('./Subsription'));
   } else {
     // Browser globals (root is window)
-    if (!root.ApiDocumentation) {
-      root.ApiDocumentation = {};
+    if (!root.SubscreasyJsClient) {
+      root.SubscreasyJsClient = {};
     }
-    root.ApiDocumentation.ChargingLog = factory(root.ApiDocumentation.ApiClient, root.ApiDocumentation.ChargingLog);
+    root.SubscreasyJsClient.ChargingLog = factory(root.SubscreasyJsClient.ApiClient, root.SubscreasyJsClient.ChargingLog, root.SubscreasyJsClient.Subsription);
   }
-}(this, function(ApiClient, ChargingLog) {
+}(this, function(ApiClient, ChargingLog, Subsription) {
   'use strict';
 
 
@@ -36,7 +36,7 @@
   /**
    * The ChargingLog model module.
    * @module com.kodfarki.subscreasy.client.model/ChargingLog
-   * @version 1.0
+   * @version 1.0.0
    */
 
   /**
@@ -46,6 +46,7 @@
    */
   var exports = function() {
     var _this = this;
+
 
 
 
@@ -110,6 +111,9 @@
       if (data.hasOwnProperty('jobId')) {
         obj['jobId'] = ApiClient.convertToType(data['jobId'], 'Number');
       }
+      if (data.hasOwnProperty('orderId')) {
+        obj['orderId'] = ApiClient.convertToType(data['orderId'], 'Number');
+      }
       if (data.hasOwnProperty('parent')) {
         obj['parent'] = ChargingLog.constructFromObject(data['parent']);
       }
@@ -134,8 +138,8 @@
       if (data.hasOwnProperty('subscriberSecureId')) {
         obj['subscriberSecureId'] = ApiClient.convertToType(data['subscriberSecureId'], 'String');
       }
-      if (data.hasOwnProperty('subscriptionId')) {
-        obj['subscriptionId'] = ApiClient.convertToType(data['subscriptionId'], 'Number');
+      if (data.hasOwnProperty('subscription')) {
+        obj['subscription'] = Subsription.constructFromObject(data['subscription']);
       }
       if (data.hasOwnProperty('transactionId')) {
         obj['transactionId'] = ApiClient.convertToType(data['transactionId'], 'String');
@@ -185,6 +189,10 @@
    */
   exports.prototype['jobId'] = undefined;
   /**
+   * @member {Number} orderId
+   */
+  exports.prototype['orderId'] = undefined;
+  /**
    * @member {module:com.kodfarki.subscreasy.client.model/ChargingLog} parent
    */
   exports.prototype['parent'] = undefined;
@@ -217,9 +225,9 @@
    */
   exports.prototype['subscriberSecureId'] = undefined;
   /**
-   * @member {Number} subscriptionId
+   * @member {module:com.kodfarki.subscreasy.client.model/Subsription} subscription
    */
-  exports.prototype['subscriptionId'] = undefined;
+  exports.prototype['subscription'] = undefined;
   /**
    * @member {String} transactionId
    */

@@ -1,4 +1,4 @@
-# ApiDocumentation.OrderItem
+# SubscreasyJsClient.OrderItem
 
 ## Properties
 Name | Type | Description | Notes

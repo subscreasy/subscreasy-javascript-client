@@ -1,4 +1,4 @@
-# ApiDocumentation.UserDTO
+# SubscreasyJsClient.UserDTO
 
 ## Properties
 Name | Type | Description | Notes

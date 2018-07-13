@@ -22,10 +22,10 @@
     module.exports = factory(require('../ApiClient'), require('./Company'), require('./Product'), require('./RecurrencePeriod'));
   } else {
     // Browser globals (root is window)
-    if (!root.ApiDocumentation) {
-      root.ApiDocumentation = {};
+    if (!root.SubscreasyJsClient) {
+      root.SubscreasyJsClient = {};
     }
-    root.ApiDocumentation.Offer = factory(root.ApiDocumentation.ApiClient, root.ApiDocumentation.Company, root.ApiDocumentation.Product, root.ApiDocumentation.RecurrencePeriod);
+    root.SubscreasyJsClient.Offer = factory(root.SubscreasyJsClient.ApiClient, root.SubscreasyJsClient.Company, root.SubscreasyJsClient.Product, root.SubscreasyJsClient.RecurrencePeriod);
   }
 }(this, function(ApiClient, Company, Product, RecurrencePeriod) {
   'use strict';
@@ -36,7 +36,7 @@
   /**
    * The Offer model module.
    * @module com.kodfarki.subscreasy.client.model/Offer
-   * @version 1.0
+   * @version 1.0.0
    */
 
   /**

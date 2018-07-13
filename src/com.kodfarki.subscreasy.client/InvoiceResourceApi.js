@@ -22,10 +22,10 @@
     module.exports = factory(require('../ApiClient'), require('../com.kodfarki.subscreasy.client.model/Invoice'));
   } else {
     // Browser globals (root is window)
-    if (!root.ApiDocumentation) {
-      root.ApiDocumentation = {};
+    if (!root.SubscreasyJsClient) {
+      root.SubscreasyJsClient = {};
     }
-    root.ApiDocumentation.InvoiceResourceApi = factory(root.ApiDocumentation.ApiClient, root.ApiDocumentation.Invoice);
+    root.SubscreasyJsClient.InvoiceResourceApi = factory(root.SubscreasyJsClient.ApiClient, root.SubscreasyJsClient.Invoice);
   }
 }(this, function(ApiClient, Invoice) {
   'use strict';
@@ -33,7 +33,7 @@
   /**
    * InvoiceResource service.
    * @module com.kodfarki.subscreasy.client/InvoiceResourceApi
-   * @version 1.0
+   * @version 1.0.0
    */
 
   /**

@@ -1,4 +1,4 @@
-# ApiDocumentation.ProfileInfoVM
+# SubscreasyJsClient.ProfileInfoVM
 
 ## Properties
 Name | Type | Description | Notes

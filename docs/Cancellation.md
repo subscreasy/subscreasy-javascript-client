@@ -1,4 +1,4 @@
-# ApiDocumentation.Cancellation
+# SubscreasyJsClient.Cancellation
 
 ## Properties
 Name | Type | Description | Notes

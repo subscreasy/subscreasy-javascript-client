@@ -22,10 +22,10 @@
     module.exports = factory(require('../ApiClient'), require('./Company'), require('./Offer'), require('./Service'));
   } else {
     // Browser globals (root is window)
-    if (!root.ApiDocumentation) {
-      root.ApiDocumentation = {};
+    if (!root.SubscreasyJsClient) {
+      root.SubscreasyJsClient = {};
     }
-    root.ApiDocumentation.ServiceOffering = factory(root.ApiDocumentation.ApiClient, root.ApiDocumentation.Company, root.ApiDocumentation.Offer, root.ApiDocumentation.Service);
+    root.SubscreasyJsClient.ServiceOffering = factory(root.SubscreasyJsClient.ApiClient, root.SubscreasyJsClient.Company, root.SubscreasyJsClient.Offer, root.SubscreasyJsClient.Service);
   }
 }(this, function(ApiClient, Company, Offer, Service) {
   'use strict';
@@ -36,7 +36,7 @@
   /**
    * The ServiceOffering model module.
    * @module com.kodfarki.subscreasy.client.model/ServiceOffering
-   * @version 1.0
+   * @version 1.0.0
    */
 
   /**

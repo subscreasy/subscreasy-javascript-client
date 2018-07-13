@@ -1,4 +1,4 @@
-# ApiDocumentation.Subsription
+# SubscreasyJsClient.Subsription
 
 ## Properties
 Name | Type | Description | Notes

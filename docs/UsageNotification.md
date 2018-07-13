@@ -1,4 +1,4 @@
-# ApiDocumentation.UsageNotification
+# SubscreasyJsClient.UsageNotification
 
 ## Properties
 Name | Type | Description | Notes

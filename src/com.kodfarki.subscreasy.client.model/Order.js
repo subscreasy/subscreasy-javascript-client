@@ -22,10 +22,10 @@
     module.exports = factory(require('../ApiClient'), require('./Address'), require('./OrderItem'), require('./User'));
   } else {
     // Browser globals (root is window)
-    if (!root.ApiDocumentation) {
-      root.ApiDocumentation = {};
+    if (!root.SubscreasyJsClient) {
+      root.SubscreasyJsClient = {};
     }
-    root.ApiDocumentation.Order = factory(root.ApiDocumentation.ApiClient, root.ApiDocumentation.Address, root.ApiDocumentation.OrderItem, root.ApiDocumentation.User);
+    root.SubscreasyJsClient.Order = factory(root.SubscreasyJsClient.ApiClient, root.SubscreasyJsClient.Address, root.SubscreasyJsClient.OrderItem, root.SubscreasyJsClient.User);
   }
 }(this, function(ApiClient, Address, OrderItem, User) {
   'use strict';
@@ -36,7 +36,7 @@
   /**
    * The Order model module.
    * @module com.kodfarki.subscreasy.client.model/Order
-   * @version 1.0
+   * @version 1.0.0
    */
 
   /**
@@ -44,17 +44,18 @@
    * @alias module:com.kodfarki.subscreasy.client.model/Order
    * @class
    * @param address {module:com.kodfarki.subscreasy.client.model/Address} 
+   * @param buyer {module:com.kodfarki.subscreasy.client.model/User} 
    * @param createDate {Date} 
-   * @param user {module:com.kodfarki.subscreasy.client.model/User} 
    */
-  var exports = function(address, createDate, user) {
+  var exports = function(address, buyer, createDate) {
     var _this = this;
 
     _this['address'] = address;
+    _this['buyer'] = buyer;
     _this['createDate'] = createDate;
 
 
-    _this['user'] = user;
+
   };
 
   /**
@@ -71,6 +72,9 @@
       if (data.hasOwnProperty('address')) {
         obj['address'] = Address.constructFromObject(data['address']);
       }
+      if (data.hasOwnProperty('buyer')) {
+        obj['buyer'] = User.constructFromObject(data['buyer']);
+      }
       if (data.hasOwnProperty('createDate')) {
         obj['createDate'] = ApiClient.convertToType(data['createDate'], 'Date');
       }
@@ -80,8 +84,8 @@
       if (data.hasOwnProperty('orderItems')) {
         obj['orderItems'] = ApiClient.convertToType(data['orderItems'], [OrderItem]);
       }
-      if (data.hasOwnProperty('user')) {
-        obj['user'] = User.constructFromObject(data['user']);
+      if (data.hasOwnProperty('status')) {
+        obj['status'] = ApiClient.convertToType(data['status'], 'String');
       }
     }
     return obj;
@@ -91,6 +95,10 @@
    * @member {module:com.kodfarki.subscreasy.client.model/Address} address
    */
   exports.prototype['address'] = undefined;
+  /**
+   * @member {module:com.kodfarki.subscreasy.client.model/User} buyer
+   */
+  exports.prototype['buyer'] = undefined;
   /**
    * @member {Date} createDate
    */
@@ -104,9 +112,9 @@
    */
   exports.prototype['orderItems'] = undefined;
   /**
-   * @member {module:com.kodfarki.subscreasy.client.model/User} user
+   * @member {String} status
    */
-  exports.prototype['user'] = undefined;
+  exports.prototype['status'] = undefined;
 
 
 

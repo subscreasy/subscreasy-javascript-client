@@ -1,4 +1,4 @@
-# ApiDocumentation.PaymentCard
+# SubscreasyJsClient.PaymentCard
 
 ## Properties
 Name | Type | Description | Notes

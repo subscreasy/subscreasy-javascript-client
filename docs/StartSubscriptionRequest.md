@@ -1,4 +1,4 @@
-# ApiDocumentation.StartSubscriptionRequest
+# SubscreasyJsClient.StartSubscriptionRequest
 
 ## Properties
 Name | Type | Description | Notes

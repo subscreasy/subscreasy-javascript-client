@@ -1,4 +1,4 @@
-# ApiDocumentation.SubscriberResourceApi
+# SubscreasyJsClient.SubscriberResourceApi
 
 All URIs are relative to *https://localhost:8080*
 
@@ -22,8 +22,8 @@ createSubscriber
 
 ### Example
 ```javascript
-var ApiDocumentation = require('api_documentation');
-var defaultClient = ApiDocumentation.ApiClient.instance;
+var SubscreasyJsClient = require('subscreasy-js-client');
+var defaultClient = SubscreasyJsClient.ApiClient.instance;
 
 // Configure API key authorization: apiKey
 var apiKey = defaultClient.authentications['apiKey'];
@@ -31,9 +31,9 @@ apiKey.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //apiKey.apiKeyPrefix = 'Token';
 
-var apiInstance = new ApiDocumentation.SubscriberResourceApi();
+var apiInstance = new SubscreasyJsClient.SubscriberResourceApi();
 
-var subscriber = new ApiDocumentation.Subscriber(); // Subscriber | subscriber
+var subscriber = new SubscreasyJsClient.Subscriber(); // Subscriber | subscriber
 
 
 var callback = function(error, data, response) {
@@ -73,8 +73,8 @@ deleteSubscriber
 
 ### Example
 ```javascript
-var ApiDocumentation = require('api_documentation');
-var defaultClient = ApiDocumentation.ApiClient.instance;
+var SubscreasyJsClient = require('subscreasy-js-client');
+var defaultClient = SubscreasyJsClient.ApiClient.instance;
 
 // Configure API key authorization: apiKey
 var apiKey = defaultClient.authentications['apiKey'];
@@ -82,7 +82,7 @@ apiKey.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //apiKey.apiKeyPrefix = 'Token';
 
-var apiInstance = new ApiDocumentation.SubscriberResourceApi();
+var apiInstance = new SubscreasyJsClient.SubscriberResourceApi();
 
 var id = 789; // Number | id
 
@@ -124,8 +124,8 @@ getAllSubscribers
 
 ### Example
 ```javascript
-var ApiDocumentation = require('api_documentation');
-var defaultClient = ApiDocumentation.ApiClient.instance;
+var SubscreasyJsClient = require('subscreasy-js-client');
+var defaultClient = SubscreasyJsClient.ApiClient.instance;
 
 // Configure API key authorization: apiKey
 var apiKey = defaultClient.authentications['apiKey'];
@@ -133,7 +133,7 @@ apiKey.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //apiKey.apiKeyPrefix = 'Token';
 
-var apiInstance = new ApiDocumentation.SubscriberResourceApi();
+var apiInstance = new SubscreasyJsClient.SubscriberResourceApi();
 
 var callback = function(error, data, response) {
   if (error) {
@@ -169,8 +169,8 @@ getSubscriberByEmail
 
 ### Example
 ```javascript
-var ApiDocumentation = require('api_documentation');
-var defaultClient = ApiDocumentation.ApiClient.instance;
+var SubscreasyJsClient = require('subscreasy-js-client');
+var defaultClient = SubscreasyJsClient.ApiClient.instance;
 
 // Configure API key authorization: apiKey
 var apiKey = defaultClient.authentications['apiKey'];
@@ -178,7 +178,7 @@ apiKey.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //apiKey.apiKeyPrefix = 'Token';
 
-var apiInstance = new ApiDocumentation.SubscriberResourceApi();
+var apiInstance = new SubscreasyJsClient.SubscriberResourceApi();
 
 var email = "email_example"; // String | email
 
@@ -220,8 +220,8 @@ getSubscriberByName
 
 ### Example
 ```javascript
-var ApiDocumentation = require('api_documentation');
-var defaultClient = ApiDocumentation.ApiClient.instance;
+var SubscreasyJsClient = require('subscreasy-js-client');
+var defaultClient = SubscreasyJsClient.ApiClient.instance;
 
 // Configure API key authorization: apiKey
 var apiKey = defaultClient.authentications['apiKey'];
@@ -229,7 +229,7 @@ apiKey.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //apiKey.apiKeyPrefix = 'Token';
 
-var apiInstance = new ApiDocumentation.SubscriberResourceApi();
+var apiInstance = new SubscreasyJsClient.SubscriberResourceApi();
 
 var name = "name_example"; // String | name
 
@@ -271,8 +271,8 @@ getSubscriberBySecureId
 
 ### Example
 ```javascript
-var ApiDocumentation = require('api_documentation');
-var defaultClient = ApiDocumentation.ApiClient.instance;
+var SubscreasyJsClient = require('subscreasy-js-client');
+var defaultClient = SubscreasyJsClient.ApiClient.instance;
 
 // Configure API key authorization: apiKey
 var apiKey = defaultClient.authentications['apiKey'];
@@ -280,7 +280,7 @@ apiKey.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //apiKey.apiKeyPrefix = 'Token';
 
-var apiInstance = new ApiDocumentation.SubscriberResourceApi();
+var apiInstance = new SubscreasyJsClient.SubscriberResourceApi();
 
 var secureId = "secureId_example"; // String | secureId
 
@@ -322,8 +322,8 @@ getSubscriber
 
 ### Example
 ```javascript
-var ApiDocumentation = require('api_documentation');
-var defaultClient = ApiDocumentation.ApiClient.instance;
+var SubscreasyJsClient = require('subscreasy-js-client');
+var defaultClient = SubscreasyJsClient.ApiClient.instance;
 
 // Configure API key authorization: apiKey
 var apiKey = defaultClient.authentications['apiKey'];
@@ -331,7 +331,7 @@ apiKey.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //apiKey.apiKeyPrefix = 'Token';
 
-var apiInstance = new ApiDocumentation.SubscriberResourceApi();
+var apiInstance = new SubscreasyJsClient.SubscriberResourceApi();
 
 var id = 789; // Number | id
 
@@ -373,8 +373,8 @@ updateSubscriber
 
 ### Example
 ```javascript
-var ApiDocumentation = require('api_documentation');
-var defaultClient = ApiDocumentation.ApiClient.instance;
+var SubscreasyJsClient = require('subscreasy-js-client');
+var defaultClient = SubscreasyJsClient.ApiClient.instance;
 
 // Configure API key authorization: apiKey
 var apiKey = defaultClient.authentications['apiKey'];
@@ -382,9 +382,9 @@ apiKey.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //apiKey.apiKeyPrefix = 'Token';
 
-var apiInstance = new ApiDocumentation.SubscriberResourceApi();
+var apiInstance = new SubscreasyJsClient.SubscriberResourceApi();
 
-var subscriber = new ApiDocumentation.Subscriber(); // Subscriber | subscriber
+var subscriber = new SubscreasyJsClient.Subscriber(); // Subscriber | subscriber
 
 
 var callback = function(error, data, response) {

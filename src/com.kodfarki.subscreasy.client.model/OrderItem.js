@@ -22,10 +22,10 @@
     module.exports = factory(require('../ApiClient'), require('./Offer'), require('./Order'), require('./Product'));
   } else {
     // Browser globals (root is window)
-    if (!root.ApiDocumentation) {
-      root.ApiDocumentation = {};
+    if (!root.SubscreasyJsClient) {
+      root.SubscreasyJsClient = {};
     }
-    root.ApiDocumentation.OrderItem = factory(root.ApiDocumentation.ApiClient, root.ApiDocumentation.Offer, root.ApiDocumentation.Order, root.ApiDocumentation.Product);
+    root.SubscreasyJsClient.OrderItem = factory(root.SubscreasyJsClient.ApiClient, root.SubscreasyJsClient.Offer, root.SubscreasyJsClient.Order, root.SubscreasyJsClient.Product);
   }
 }(this, function(ApiClient, Offer, Order, Product) {
   'use strict';
@@ -36,7 +36,7 @@
   /**
    * The OrderItem model module.
    * @module com.kodfarki.subscreasy.client.model/OrderItem
-   * @version 1.0
+   * @version 1.0.0
    */
 
   /**

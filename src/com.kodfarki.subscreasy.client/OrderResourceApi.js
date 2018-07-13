@@ -16,24 +16,24 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient', 'com.kodfarki.subscreasy.client.model/CreateOrderRequest', 'com.kodfarki.subscreasy.client.model/Order'], factory);
+    define(['ApiClient', 'com.kodfarki.subscreasy.client.model/Order'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('../com.kodfarki.subscreasy.client.model/CreateOrderRequest'), require('../com.kodfarki.subscreasy.client.model/Order'));
+    module.exports = factory(require('../ApiClient'), require('../com.kodfarki.subscreasy.client.model/Order'));
   } else {
     // Browser globals (root is window)
-    if (!root.ApiDocumentation) {
-      root.ApiDocumentation = {};
+    if (!root.SubscreasyJsClient) {
+      root.SubscreasyJsClient = {};
     }
-    root.ApiDocumentation.OrderResourceApi = factory(root.ApiDocumentation.ApiClient, root.ApiDocumentation.CreateOrderRequest, root.ApiDocumentation.Order);
+    root.SubscreasyJsClient.OrderResourceApi = factory(root.SubscreasyJsClient.ApiClient, root.SubscreasyJsClient.Order);
   }
-}(this, function(ApiClient, CreateOrderRequest, Order) {
+}(this, function(ApiClient, Order) {
   'use strict';
 
   /**
    * OrderResource service.
    * @module com.kodfarki.subscreasy.client/OrderResourceApi
-   * @version 1.0
+   * @version 1.0.0
    */
 
   /**
@@ -57,22 +57,318 @@
 
     /**
      * createOrder
-     * @param {module:com.kodfarki.subscreasy.client.model/CreateOrderRequest} orderRequest orderRequest
+     * @param {Object} opts Optional parameters
+     * @param {Number} opts.orderAddressId 
+     * @param {String} opts.orderAddressName 
+     * @param {String} opts.orderAddressStreetAddress 
+     * @param {String} opts.orderAddressPostalCode 
+     * @param {String} opts.orderAddressCity 
+     * @param {String} opts.orderAddressStateProvince 
+     * @param {String} opts.orderAddressCountry 
+     * @param {Number} opts.orderBuyerBillingAddressId 
+     * @param {String} opts.orderBuyerBillingAddressName 
+     * @param {String} opts.orderBuyerBillingAddressStreetAddress 
+     * @param {String} opts.orderBuyerBillingAddressPostalCode 
+     * @param {String} opts.orderBuyerBillingAddressCity 
+     * @param {String} opts.orderBuyerBillingAddressStateProvince 
+     * @param {String} opts.orderBuyerBillingAddressCountry 
+     * @param {Number} opts.orderBuyerShippingAddressId 
+     * @param {String} opts.orderBuyerShippingAddressName 
+     * @param {String} opts.orderBuyerShippingAddressStreetAddress 
+     * @param {String} opts.orderBuyerShippingAddressPostalCode 
+     * @param {String} opts.orderBuyerShippingAddressCity 
+     * @param {String} opts.orderBuyerShippingAddressStateProvince 
+     * @param {String} opts.orderBuyerShippingAddressCountry 
+     * @param {Number} opts.orderBuyerCompanyAddressId 
+     * @param {String} opts.orderBuyerCompanyAddressName 
+     * @param {String} opts.orderBuyerCompanyAddressStreetAddress 
+     * @param {String} opts.orderBuyerCompanyAddressPostalCode 
+     * @param {String} opts.orderBuyerCompanyAddressCity 
+     * @param {String} opts.orderBuyerCompanyAddressStateProvince 
+     * @param {String} opts.orderBuyerCompanyAddressCountry 
+     * @param {Number} opts.orderBuyerCompanyId 
+     * @param {String} opts.orderBuyerCompanyName 
+     * @param {String} opts.orderBuyerAuthorities0Name 
+     * @param {String} opts.orderBuyerCreatedBy 
+     * @param {Date} opts.orderBuyerCreatedDate 
+     * @param {String} opts.orderBuyerLastModifiedBy 
+     * @param {Date} opts.orderBuyerLastModifiedDate 
+     * @param {Number} opts.orderBuyerId 
+     * @param {String} opts.orderBuyerLogin 
+     * @param {String} opts.orderBuyerPassword 
+     * @param {String} opts.orderBuyerFirstName 
+     * @param {String} opts.orderBuyerLastName 
+     * @param {String} opts.orderBuyerEmail 
+     * @param {Boolean} opts.orderBuyerActivated 
+     * @param {String} opts.orderBuyerLangKey 
+     * @param {String} opts.orderBuyerImageUrl 
+     * @param {String} opts.orderBuyerActivationKey 
+     * @param {String} opts.orderBuyerResetKey 
+     * @param {Date} opts.orderBuyerResetDate 
+     * @param {Number} opts.orderOrderItems0ProductCompanyAddressId 
+     * @param {String} opts.orderOrderItems0ProductCompanyAddressName 
+     * @param {String} opts.orderOrderItems0ProductCompanyAddressStreetAddress 
+     * @param {String} opts.orderOrderItems0ProductCompanyAddressPostalCode 
+     * @param {String} opts.orderOrderItems0ProductCompanyAddressCity 
+     * @param {String} opts.orderOrderItems0ProductCompanyAddressStateProvince 
+     * @param {String} opts.orderOrderItems0ProductCompanyAddressCountry 
+     * @param {Number} opts.orderOrderItems0ProductCompanyId 
+     * @param {String} opts.orderOrderItems0ProductCompanyName 
+     * @param {Number} opts.orderOrderItems0ProductOffers0RecurrenceId 
+     * @param {module:com.kodfarki.subscreasy.client.model/String} opts.orderOrderItems0ProductOffers0RecurrenceRecurrenceType 
+     * @param {Number} opts.orderOrderItems0ProductOffers0RecurrenceLength 
+     * @param {Number} opts.orderOrderItems0ProductOffers0CompanyAddressId 
+     * @param {String} opts.orderOrderItems0ProductOffers0CompanyAddressName 
+     * @param {String} opts.orderOrderItems0ProductOffers0CompanyAddressStreetAddress 
+     * @param {String} opts.orderOrderItems0ProductOffers0CompanyAddressPostalCode 
+     * @param {String} opts.orderOrderItems0ProductOffers0CompanyAddressCity 
+     * @param {String} opts.orderOrderItems0ProductOffers0CompanyAddressStateProvince 
+     * @param {String} opts.orderOrderItems0ProductOffers0CompanyAddressCountry 
+     * @param {Number} opts.orderOrderItems0ProductOffers0CompanyId 
+     * @param {String} opts.orderOrderItems0ProductOffers0CompanyName 
+     * @param {Number} opts.orderOrderItems0ProductOffers0Id 
+     * @param {String} opts.orderOrderItems0ProductOffers0SecureId 
+     * @param {String} opts.orderOrderItems0ProductOffers0Name 
+     * @param {module:com.kodfarki.subscreasy.client.model/String} opts.orderOrderItems0ProductOffers0PurchaseType 
+     * @param {Number} opts.orderOrderItems0ProductOffers0Price 
+     * @param {Number} opts.orderOrderItems0ProductOffers0RecurrenceCount 
+     * @param {Number} opts.orderOrderItems0ProductOffers0TrialPeriod 
+     * @param {Number} opts.orderOrderItems0ProductId 
+     * @param {String} opts.orderOrderItems0ProductName 
+     * @param {String} opts.orderOrderItems0ProductDescription 
+     * @param {String} opts.orderOrderItems0ProductImagePath 
+     * @param {module:com.kodfarki.subscreasy.client.model/String} opts.orderOrderItems0ProductProductType 
+     * @param {Number} opts.orderOrderItems0OfferRecurrenceId 
+     * @param {module:com.kodfarki.subscreasy.client.model/String} opts.orderOrderItems0OfferRecurrenceRecurrenceType 
+     * @param {Number} opts.orderOrderItems0OfferRecurrenceLength 
+     * @param {Number} opts.orderOrderItems0OfferProductCompanyAddressId 
+     * @param {String} opts.orderOrderItems0OfferProductCompanyAddressName 
+     * @param {String} opts.orderOrderItems0OfferProductCompanyAddressStreetAddress 
+     * @param {String} opts.orderOrderItems0OfferProductCompanyAddressPostalCode 
+     * @param {String} opts.orderOrderItems0OfferProductCompanyAddressCity 
+     * @param {String} opts.orderOrderItems0OfferProductCompanyAddressStateProvince 
+     * @param {String} opts.orderOrderItems0OfferProductCompanyAddressCountry 
+     * @param {Number} opts.orderOrderItems0OfferProductCompanyId 
+     * @param {String} opts.orderOrderItems0OfferProductCompanyName 
+     * @param {Number} opts.orderOrderItems0OfferProductOffers0RecurrenceId 
+     * @param {module:com.kodfarki.subscreasy.client.model/String} opts.orderOrderItems0OfferProductOffers0RecurrenceRecurrenceType 
+     * @param {Number} opts.orderOrderItems0OfferProductOffers0RecurrenceLength 
+     * @param {Number} opts.orderOrderItems0OfferProductOffers0CompanyAddressId 
+     * @param {String} opts.orderOrderItems0OfferProductOffers0CompanyAddressName 
+     * @param {String} opts.orderOrderItems0OfferProductOffers0CompanyAddressStreetAddress 
+     * @param {String} opts.orderOrderItems0OfferProductOffers0CompanyAddressPostalCode 
+     * @param {String} opts.orderOrderItems0OfferProductOffers0CompanyAddressCity 
+     * @param {String} opts.orderOrderItems0OfferProductOffers0CompanyAddressStateProvince 
+     * @param {String} opts.orderOrderItems0OfferProductOffers0CompanyAddressCountry 
+     * @param {Number} opts.orderOrderItems0OfferProductOffers0CompanyId 
+     * @param {String} opts.orderOrderItems0OfferProductOffers0CompanyName 
+     * @param {Number} opts.orderOrderItems0OfferProductOffers0Id 
+     * @param {String} opts.orderOrderItems0OfferProductOffers0SecureId 
+     * @param {String} opts.orderOrderItems0OfferProductOffers0Name 
+     * @param {module:com.kodfarki.subscreasy.client.model/String} opts.orderOrderItems0OfferProductOffers0PurchaseType 
+     * @param {Number} opts.orderOrderItems0OfferProductOffers0Price 
+     * @param {Number} opts.orderOrderItems0OfferProductOffers0RecurrenceCount 
+     * @param {Number} opts.orderOrderItems0OfferProductOffers0TrialPeriod 
+     * @param {Number} opts.orderOrderItems0OfferProductId 
+     * @param {String} opts.orderOrderItems0OfferProductName 
+     * @param {String} opts.orderOrderItems0OfferProductDescription 
+     * @param {String} opts.orderOrderItems0OfferProductImagePath 
+     * @param {module:com.kodfarki.subscreasy.client.model/String} opts.orderOrderItems0OfferProductProductType 
+     * @param {Number} opts.orderOrderItems0OfferCompanyAddressId 
+     * @param {String} opts.orderOrderItems0OfferCompanyAddressName 
+     * @param {String} opts.orderOrderItems0OfferCompanyAddressStreetAddress 
+     * @param {String} opts.orderOrderItems0OfferCompanyAddressPostalCode 
+     * @param {String} opts.orderOrderItems0OfferCompanyAddressCity 
+     * @param {String} opts.orderOrderItems0OfferCompanyAddressStateProvince 
+     * @param {String} opts.orderOrderItems0OfferCompanyAddressCountry 
+     * @param {Number} opts.orderOrderItems0OfferCompanyId 
+     * @param {String} opts.orderOrderItems0OfferCompanyName 
+     * @param {Number} opts.orderOrderItems0OfferId 
+     * @param {String} opts.orderOrderItems0OfferSecureId 
+     * @param {String} opts.orderOrderItems0OfferName 
+     * @param {module:com.kodfarki.subscreasy.client.model/String} opts.orderOrderItems0OfferPurchaseType 
+     * @param {Number} opts.orderOrderItems0OfferPrice 
+     * @param {Number} opts.orderOrderItems0OfferRecurrenceCount 
+     * @param {Number} opts.orderOrderItems0OfferTrialPeriod 
+     * @param {Number} opts.orderOrderItems0Id 
+     * @param {Number} opts.orderOrderItems0ProductCount 
+     * @param {Number} opts.orderId 
+     * @param {Date} opts.orderCreateDate 
+     * @param {String} opts.orderStatus 
+     * @param {String} opts.paymentCardCardHolderName 
+     * @param {String} opts.paymentCardCardNumber 
+     * @param {String} opts.paymentCardExpireYear 
+     * @param {String} opts.paymentCardExpireMonth 
+     * @param {String} opts.paymentCardCardExpiry 
+     * @param {String} opts.paymentCardCvc 
+     * @param {Number} opts.paymentCardRegisterCard 
+     * @param {String} opts.paymentCardCardAlias 
+     * @param {String} opts.paymentCardCardToken 
+     * @param {String} opts.paymentCardCardUserKey 
+     * @param {Number} opts.price 
+     * @param {String} opts.companyName 
+     * @param {String} opts.callbackUrl 
      * @param {module:com.kodfarki.subscreasy.client/OrderResourceApi~createOrderUsingPOSTCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:com.kodfarki.subscreasy.client.model/Order}
      */
-    this.createOrderUsingPOST = function(orderRequest, callback) {
-      var postBody = orderRequest;
-
-      // verify the required parameter 'orderRequest' is set
-      if (orderRequest === undefined || orderRequest === null) {
-        throw new Error("Missing the required parameter 'orderRequest' when calling createOrderUsingPOST");
-      }
+    this.createOrderUsingPOST = function(opts, callback) {
+      opts = opts || {};
+      var postBody = null;
 
 
       var pathParams = {
       };
       var queryParams = {
+        'order.address.id': opts['orderAddressId'],
+        'order.address.name': opts['orderAddressName'],
+        'order.address.streetAddress': opts['orderAddressStreetAddress'],
+        'order.address.postalCode': opts['orderAddressPostalCode'],
+        'order.address.city': opts['orderAddressCity'],
+        'order.address.stateProvince': opts['orderAddressStateProvince'],
+        'order.address.country': opts['orderAddressCountry'],
+        'order.buyer.billingAddress.id': opts['orderBuyerBillingAddressId'],
+        'order.buyer.billingAddress.name': opts['orderBuyerBillingAddressName'],
+        'order.buyer.billingAddress.streetAddress': opts['orderBuyerBillingAddressStreetAddress'],
+        'order.buyer.billingAddress.postalCode': opts['orderBuyerBillingAddressPostalCode'],
+        'order.buyer.billingAddress.city': opts['orderBuyerBillingAddressCity'],
+        'order.buyer.billingAddress.stateProvince': opts['orderBuyerBillingAddressStateProvince'],
+        'order.buyer.billingAddress.country': opts['orderBuyerBillingAddressCountry'],
+        'order.buyer.shippingAddress.id': opts['orderBuyerShippingAddressId'],
+        'order.buyer.shippingAddress.name': opts['orderBuyerShippingAddressName'],
+        'order.buyer.shippingAddress.streetAddress': opts['orderBuyerShippingAddressStreetAddress'],
+        'order.buyer.shippingAddress.postalCode': opts['orderBuyerShippingAddressPostalCode'],
+        'order.buyer.shippingAddress.city': opts['orderBuyerShippingAddressCity'],
+        'order.buyer.shippingAddress.stateProvince': opts['orderBuyerShippingAddressStateProvince'],
+        'order.buyer.shippingAddress.country': opts['orderBuyerShippingAddressCountry'],
+        'order.buyer.company.address.id': opts['orderBuyerCompanyAddressId'],
+        'order.buyer.company.address.name': opts['orderBuyerCompanyAddressName'],
+        'order.buyer.company.address.streetAddress': opts['orderBuyerCompanyAddressStreetAddress'],
+        'order.buyer.company.address.postalCode': opts['orderBuyerCompanyAddressPostalCode'],
+        'order.buyer.company.address.city': opts['orderBuyerCompanyAddressCity'],
+        'order.buyer.company.address.stateProvince': opts['orderBuyerCompanyAddressStateProvince'],
+        'order.buyer.company.address.country': opts['orderBuyerCompanyAddressCountry'],
+        'order.buyer.company.id': opts['orderBuyerCompanyId'],
+        'order.buyer.company.name': opts['orderBuyerCompanyName'],
+        'order.buyer.authorities[0].name': opts['orderBuyerAuthorities0Name'],
+        'order.buyer.createdBy': opts['orderBuyerCreatedBy'],
+        'order.buyer.createdDate': opts['orderBuyerCreatedDate'],
+        'order.buyer.lastModifiedBy': opts['orderBuyerLastModifiedBy'],
+        'order.buyer.lastModifiedDate': opts['orderBuyerLastModifiedDate'],
+        'order.buyer.id': opts['orderBuyerId'],
+        'order.buyer.login': opts['orderBuyerLogin'],
+        'order.buyer.password': opts['orderBuyerPassword'],
+        'order.buyer.firstName': opts['orderBuyerFirstName'],
+        'order.buyer.lastName': opts['orderBuyerLastName'],
+        'order.buyer.email': opts['orderBuyerEmail'],
+        'order.buyer.activated': opts['orderBuyerActivated'],
+        'order.buyer.langKey': opts['orderBuyerLangKey'],
+        'order.buyer.imageUrl': opts['orderBuyerImageUrl'],
+        'order.buyer.activationKey': opts['orderBuyerActivationKey'],
+        'order.buyer.resetKey': opts['orderBuyerResetKey'],
+        'order.buyer.resetDate': opts['orderBuyerResetDate'],
+        'order.orderItems[0].product.company.address.id': opts['orderOrderItems0ProductCompanyAddressId'],
+        'order.orderItems[0].product.company.address.name': opts['orderOrderItems0ProductCompanyAddressName'],
+        'order.orderItems[0].product.company.address.streetAddress': opts['orderOrderItems0ProductCompanyAddressStreetAddress'],
+        'order.orderItems[0].product.company.address.postalCode': opts['orderOrderItems0ProductCompanyAddressPostalCode'],
+        'order.orderItems[0].product.company.address.city': opts['orderOrderItems0ProductCompanyAddressCity'],
+        'order.orderItems[0].product.company.address.stateProvince': opts['orderOrderItems0ProductCompanyAddressStateProvince'],
+        'order.orderItems[0].product.company.address.country': opts['orderOrderItems0ProductCompanyAddressCountry'],
+        'order.orderItems[0].product.company.id': opts['orderOrderItems0ProductCompanyId'],
+        'order.orderItems[0].product.company.name': opts['orderOrderItems0ProductCompanyName'],
+        'order.orderItems[0].product.offers[0].recurrence.id': opts['orderOrderItems0ProductOffers0RecurrenceId'],
+        'order.orderItems[0].product.offers[0].recurrence.recurrenceType': opts['orderOrderItems0ProductOffers0RecurrenceRecurrenceType'],
+        'order.orderItems[0].product.offers[0].recurrence.length': opts['orderOrderItems0ProductOffers0RecurrenceLength'],
+        'order.orderItems[0].product.offers[0].company.address.id': opts['orderOrderItems0ProductOffers0CompanyAddressId'],
+        'order.orderItems[0].product.offers[0].company.address.name': opts['orderOrderItems0ProductOffers0CompanyAddressName'],
+        'order.orderItems[0].product.offers[0].company.address.streetAddress': opts['orderOrderItems0ProductOffers0CompanyAddressStreetAddress'],
+        'order.orderItems[0].product.offers[0].company.address.postalCode': opts['orderOrderItems0ProductOffers0CompanyAddressPostalCode'],
+        'order.orderItems[0].product.offers[0].company.address.city': opts['orderOrderItems0ProductOffers0CompanyAddressCity'],
+        'order.orderItems[0].product.offers[0].company.address.stateProvince': opts['orderOrderItems0ProductOffers0CompanyAddressStateProvince'],
+        'order.orderItems[0].product.offers[0].company.address.country': opts['orderOrderItems0ProductOffers0CompanyAddressCountry'],
+        'order.orderItems[0].product.offers[0].company.id': opts['orderOrderItems0ProductOffers0CompanyId'],
+        'order.orderItems[0].product.offers[0].company.name': opts['orderOrderItems0ProductOffers0CompanyName'],
+        'order.orderItems[0].product.offers[0].id': opts['orderOrderItems0ProductOffers0Id'],
+        'order.orderItems[0].product.offers[0].secureId': opts['orderOrderItems0ProductOffers0SecureId'],
+        'order.orderItems[0].product.offers[0].name': opts['orderOrderItems0ProductOffers0Name'],
+        'order.orderItems[0].product.offers[0].purchaseType': opts['orderOrderItems0ProductOffers0PurchaseType'],
+        'order.orderItems[0].product.offers[0].price': opts['orderOrderItems0ProductOffers0Price'],
+        'order.orderItems[0].product.offers[0].recurrenceCount': opts['orderOrderItems0ProductOffers0RecurrenceCount'],
+        'order.orderItems[0].product.offers[0].trialPeriod': opts['orderOrderItems0ProductOffers0TrialPeriod'],
+        'order.orderItems[0].product.id': opts['orderOrderItems0ProductId'],
+        'order.orderItems[0].product.name': opts['orderOrderItems0ProductName'],
+        'order.orderItems[0].product.description': opts['orderOrderItems0ProductDescription'],
+        'order.orderItems[0].product.imagePath': opts['orderOrderItems0ProductImagePath'],
+        'order.orderItems[0].product.productType': opts['orderOrderItems0ProductProductType'],
+        'order.orderItems[0].offer.recurrence.id': opts['orderOrderItems0OfferRecurrenceId'],
+        'order.orderItems[0].offer.recurrence.recurrenceType': opts['orderOrderItems0OfferRecurrenceRecurrenceType'],
+        'order.orderItems[0].offer.recurrence.length': opts['orderOrderItems0OfferRecurrenceLength'],
+        'order.orderItems[0].offer.product.company.address.id': opts['orderOrderItems0OfferProductCompanyAddressId'],
+        'order.orderItems[0].offer.product.company.address.name': opts['orderOrderItems0OfferProductCompanyAddressName'],
+        'order.orderItems[0].offer.product.company.address.streetAddress': opts['orderOrderItems0OfferProductCompanyAddressStreetAddress'],
+        'order.orderItems[0].offer.product.company.address.postalCode': opts['orderOrderItems0OfferProductCompanyAddressPostalCode'],
+        'order.orderItems[0].offer.product.company.address.city': opts['orderOrderItems0OfferProductCompanyAddressCity'],
+        'order.orderItems[0].offer.product.company.address.stateProvince': opts['orderOrderItems0OfferProductCompanyAddressStateProvince'],
+        'order.orderItems[0].offer.product.company.address.country': opts['orderOrderItems0OfferProductCompanyAddressCountry'],
+        'order.orderItems[0].offer.product.company.id': opts['orderOrderItems0OfferProductCompanyId'],
+        'order.orderItems[0].offer.product.company.name': opts['orderOrderItems0OfferProductCompanyName'],
+        'order.orderItems[0].offer.product.offers[0].recurrence.id': opts['orderOrderItems0OfferProductOffers0RecurrenceId'],
+        'order.orderItems[0].offer.product.offers[0].recurrence.recurrenceType': opts['orderOrderItems0OfferProductOffers0RecurrenceRecurrenceType'],
+        'order.orderItems[0].offer.product.offers[0].recurrence.length': opts['orderOrderItems0OfferProductOffers0RecurrenceLength'],
+        'order.orderItems[0].offer.product.offers[0].company.address.id': opts['orderOrderItems0OfferProductOffers0CompanyAddressId'],
+        'order.orderItems[0].offer.product.offers[0].company.address.name': opts['orderOrderItems0OfferProductOffers0CompanyAddressName'],
+        'order.orderItems[0].offer.product.offers[0].company.address.streetAddress': opts['orderOrderItems0OfferProductOffers0CompanyAddressStreetAddress'],
+        'order.orderItems[0].offer.product.offers[0].company.address.postalCode': opts['orderOrderItems0OfferProductOffers0CompanyAddressPostalCode'],
+        'order.orderItems[0].offer.product.offers[0].company.address.city': opts['orderOrderItems0OfferProductOffers0CompanyAddressCity'],
+        'order.orderItems[0].offer.product.offers[0].company.address.stateProvince': opts['orderOrderItems0OfferProductOffers0CompanyAddressStateProvince'],
+        'order.orderItems[0].offer.product.offers[0].company.address.country': opts['orderOrderItems0OfferProductOffers0CompanyAddressCountry'],
+        'order.orderItems[0].offer.product.offers[0].company.id': opts['orderOrderItems0OfferProductOffers0CompanyId'],
+        'order.orderItems[0].offer.product.offers[0].company.name': opts['orderOrderItems0OfferProductOffers0CompanyName'],
+        'order.orderItems[0].offer.product.offers[0].id': opts['orderOrderItems0OfferProductOffers0Id'],
+        'order.orderItems[0].offer.product.offers[0].secureId': opts['orderOrderItems0OfferProductOffers0SecureId'],
+        'order.orderItems[0].offer.product.offers[0].name': opts['orderOrderItems0OfferProductOffers0Name'],
+        'order.orderItems[0].offer.product.offers[0].purchaseType': opts['orderOrderItems0OfferProductOffers0PurchaseType'],
+        'order.orderItems[0].offer.product.offers[0].price': opts['orderOrderItems0OfferProductOffers0Price'],
+        'order.orderItems[0].offer.product.offers[0].recurrenceCount': opts['orderOrderItems0OfferProductOffers0RecurrenceCount'],
+        'order.orderItems[0].offer.product.offers[0].trialPeriod': opts['orderOrderItems0OfferProductOffers0TrialPeriod'],
+        'order.orderItems[0].offer.product.id': opts['orderOrderItems0OfferProductId'],
+        'order.orderItems[0].offer.product.name': opts['orderOrderItems0OfferProductName'],
+        'order.orderItems[0].offer.product.description': opts['orderOrderItems0OfferProductDescription'],
+        'order.orderItems[0].offer.product.imagePath': opts['orderOrderItems0OfferProductImagePath'],
+        'order.orderItems[0].offer.product.productType': opts['orderOrderItems0OfferProductProductType'],
+        'order.orderItems[0].offer.company.address.id': opts['orderOrderItems0OfferCompanyAddressId'],
+        'order.orderItems[0].offer.company.address.name': opts['orderOrderItems0OfferCompanyAddressName'],
+        'order.orderItems[0].offer.company.address.streetAddress': opts['orderOrderItems0OfferCompanyAddressStreetAddress'],
+        'order.orderItems[0].offer.company.address.postalCode': opts['orderOrderItems0OfferCompanyAddressPostalCode'],
+        'order.orderItems[0].offer.company.address.city': opts['orderOrderItems0OfferCompanyAddressCity'],
+        'order.orderItems[0].offer.company.address.stateProvince': opts['orderOrderItems0OfferCompanyAddressStateProvince'],
+        'order.orderItems[0].offer.company.address.country': opts['orderOrderItems0OfferCompanyAddressCountry'],
+        'order.orderItems[0].offer.company.id': opts['orderOrderItems0OfferCompanyId'],
+        'order.orderItems[0].offer.company.name': opts['orderOrderItems0OfferCompanyName'],
+        'order.orderItems[0].offer.id': opts['orderOrderItems0OfferId'],
+        'order.orderItems[0].offer.secureId': opts['orderOrderItems0OfferSecureId'],
+        'order.orderItems[0].offer.name': opts['orderOrderItems0OfferName'],
+        'order.orderItems[0].offer.purchaseType': opts['orderOrderItems0OfferPurchaseType'],
+        'order.orderItems[0].offer.price': opts['orderOrderItems0OfferPrice'],
+        'order.orderItems[0].offer.recurrenceCount': opts['orderOrderItems0OfferRecurrenceCount'],
+        'order.orderItems[0].offer.trialPeriod': opts['orderOrderItems0OfferTrialPeriod'],
+        'order.orderItems[0].id': opts['orderOrderItems0Id'],
+        'order.orderItems[0].productCount': opts['orderOrderItems0ProductCount'],
+        'order.id': opts['orderId'],
+        'order.createDate': opts['orderCreateDate'],
+        'order.status': opts['orderStatus'],
+        'paymentCard.cardHolderName': opts['paymentCardCardHolderName'],
+        'paymentCard.cardNumber': opts['paymentCardCardNumber'],
+        'paymentCard.expireYear': opts['paymentCardExpireYear'],
+        'paymentCard.expireMonth': opts['paymentCardExpireMonth'],
+        'paymentCard.cardExpiry': opts['paymentCardCardExpiry'],
+        'paymentCard.cvc': opts['paymentCardCvc'],
+        'paymentCard.registerCard': opts['paymentCardRegisterCard'],
+        'paymentCard.cardAlias': opts['paymentCardCardAlias'],
+        'paymentCard.cardToken': opts['paymentCardCardToken'],
+        'paymentCard.cardUserKey': opts['paymentCardCardUserKey'],
+        'price': opts['price'],
+        'companyName': opts['companyName'],
+        'callbackUrl': opts['callbackUrl'],
       };
       var collectionQueryParams = {
       };
@@ -82,7 +378,7 @@
       };
 
       var authNames = ['apiKey'];
-      var contentTypes = ['application/json'];
+      var contentTypes = ['application/x-www-form-urlencoded;charset=UTF-8'];
       var accepts = ['*/*'];
       var returnType = Order;
 

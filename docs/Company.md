@@ -1,4 +1,4 @@
-# ApiDocumentation.Company
+# SubscreasyJsClient.Company
 
 ## Properties
 Name | Type | Description | Notes

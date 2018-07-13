@@ -1,4 +1,4 @@
-# ApiDocumentation.Address
+# SubscreasyJsClient.Address
 
 ## Properties
 Name | Type | Description | Notes

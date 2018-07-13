@@ -22,10 +22,10 @@
     module.exports = factory(require('../ApiClient'), require('../com.kodfarki.subscreasy.client.model/Product'));
   } else {
     // Browser globals (root is window)
-    if (!root.ApiDocumentation) {
-      root.ApiDocumentation = {};
+    if (!root.SubscreasyJsClient) {
+      root.SubscreasyJsClient = {};
     }
-    root.ApiDocumentation.ProductResourceApi = factory(root.ApiDocumentation.ApiClient, root.ApiDocumentation.Product);
+    root.SubscreasyJsClient.ProductResourceApi = factory(root.SubscreasyJsClient.ApiClient, root.SubscreasyJsClient.Product);
   }
 }(this, function(ApiClient, Product) {
   'use strict';
@@ -33,7 +33,7 @@
   /**
    * ProductResource service.
    * @module com.kodfarki.subscreasy.client/ProductResourceApi
-   * @version 1.0
+   * @version 1.0.0
    */
 
   /**
@@ -322,6 +322,67 @@
 
       return this.apiClient.callApi(
         '/api/products', 'PUT',
+        pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the uploadFileUsingPOST operation.
+     * @callback module:com.kodfarki.subscreasy.client/ProductResourceApi~uploadFileUsingPOSTCallback
+     * @param {String} error Error message, if any.
+     * @param {'String'} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * uploadFile
+     * @param {File} file file
+     * @param {String} companyId companyId
+     * @param {String} productId productId
+     * @param {module:com.kodfarki.subscreasy.client/ProductResourceApi~uploadFileUsingPOSTCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link 'String'}
+     */
+    this.uploadFileUsingPOST = function(file, companyId, productId, callback) {
+      var postBody = null;
+
+      // verify the required parameter 'file' is set
+      if (file === undefined || file === null) {
+        throw new Error("Missing the required parameter 'file' when calling uploadFileUsingPOST");
+      }
+
+      // verify the required parameter 'companyId' is set
+      if (companyId === undefined || companyId === null) {
+        throw new Error("Missing the required parameter 'companyId' when calling uploadFileUsingPOST");
+      }
+
+      // verify the required parameter 'productId' is set
+      if (productId === undefined || productId === null) {
+        throw new Error("Missing the required parameter 'productId' when calling uploadFileUsingPOST");
+      }
+
+
+      var pathParams = {
+      };
+      var queryParams = {
+      };
+      var collectionQueryParams = {
+      };
+      var headerParams = {
+      };
+      var formParams = {
+        'file': file,
+        'companyId': companyId,
+        'productId': productId
+      };
+
+      var authNames = ['apiKey'];
+      var contentTypes = ['multipart/form-data'];
+      var accepts = ['*/*'];
+      var returnType = 'String';
+
+      return this.apiClient.callApi(
+        '/api/products/uploadFile', 'POST',
         pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, callback
       );

@@ -1,4 +1,4 @@
-# ApiDocumentation.ManagedUserVM
+# SubscreasyJsClient.ManagedUserVM
 
 ## Properties
 Name | Type | Description | Notes

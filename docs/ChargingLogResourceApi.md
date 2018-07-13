@@ -1,4 +1,4 @@
-# ApiDocumentation.ChargingLogResourceApi
+# SubscreasyJsClient.ChargingLogResourceApi
 
 All URIs are relative to *https://localhost:8080*
 
@@ -20,8 +20,8 @@ createChargingLog
 
 ### Example
 ```javascript
-var ApiDocumentation = require('api_documentation');
-var defaultClient = ApiDocumentation.ApiClient.instance;
+var SubscreasyJsClient = require('subscreasy-js-client');
+var defaultClient = SubscreasyJsClient.ApiClient.instance;
 
 // Configure API key authorization: apiKey
 var apiKey = defaultClient.authentications['apiKey'];
@@ -29,9 +29,9 @@ apiKey.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //apiKey.apiKeyPrefix = 'Token';
 
-var apiInstance = new ApiDocumentation.ChargingLogResourceApi();
+var apiInstance = new SubscreasyJsClient.ChargingLogResourceApi();
 
-var chargingLog = new ApiDocumentation.ChargingLog(); // ChargingLog | chargingLog
+var chargingLog = new SubscreasyJsClient.ChargingLog(); // ChargingLog | chargingLog
 
 
 var callback = function(error, data, response) {
@@ -71,8 +71,8 @@ deleteChargingLog
 
 ### Example
 ```javascript
-var ApiDocumentation = require('api_documentation');
-var defaultClient = ApiDocumentation.ApiClient.instance;
+var SubscreasyJsClient = require('subscreasy-js-client');
+var defaultClient = SubscreasyJsClient.ApiClient.instance;
 
 // Configure API key authorization: apiKey
 var apiKey = defaultClient.authentications['apiKey'];
@@ -80,7 +80,7 @@ apiKey.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //apiKey.apiKeyPrefix = 'Token';
 
-var apiInstance = new ApiDocumentation.ChargingLogResourceApi();
+var apiInstance = new SubscreasyJsClient.ChargingLogResourceApi();
 
 var id = 789; // Number | id
 
@@ -122,8 +122,8 @@ getAllChargingLogs
 
 ### Example
 ```javascript
-var ApiDocumentation = require('api_documentation');
-var defaultClient = ApiDocumentation.ApiClient.instance;
+var SubscreasyJsClient = require('subscreasy-js-client');
+var defaultClient = SubscreasyJsClient.ApiClient.instance;
 
 // Configure API key authorization: apiKey
 var apiKey = defaultClient.authentications['apiKey'];
@@ -131,7 +131,7 @@ apiKey.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //apiKey.apiKeyPrefix = 'Token';
 
-var apiInstance = new ApiDocumentation.ChargingLogResourceApi();
+var apiInstance = new SubscreasyJsClient.ChargingLogResourceApi();
 
 var opts = { 
   'page': 56, // Number | Page number of the requested page
@@ -178,8 +178,8 @@ getChargingLog
 
 ### Example
 ```javascript
-var ApiDocumentation = require('api_documentation');
-var defaultClient = ApiDocumentation.ApiClient.instance;
+var SubscreasyJsClient = require('subscreasy-js-client');
+var defaultClient = SubscreasyJsClient.ApiClient.instance;
 
 // Configure API key authorization: apiKey
 var apiKey = defaultClient.authentications['apiKey'];
@@ -187,7 +187,7 @@ apiKey.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //apiKey.apiKeyPrefix = 'Token';
 
-var apiInstance = new ApiDocumentation.ChargingLogResourceApi();
+var apiInstance = new SubscreasyJsClient.ChargingLogResourceApi();
 
 var id = 789; // Number | id
 
@@ -229,8 +229,8 @@ refund
 
 ### Example
 ```javascript
-var ApiDocumentation = require('api_documentation');
-var defaultClient = ApiDocumentation.ApiClient.instance;
+var SubscreasyJsClient = require('subscreasy-js-client');
+var defaultClient = SubscreasyJsClient.ApiClient.instance;
 
 // Configure API key authorization: apiKey
 var apiKey = defaultClient.authentications['apiKey'];
@@ -238,7 +238,7 @@ apiKey.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //apiKey.apiKeyPrefix = 'Token';
 
-var apiInstance = new ApiDocumentation.ChargingLogResourceApi();
+var apiInstance = new SubscreasyJsClient.ChargingLogResourceApi();
 
 var chargingLogId = 789; // Number | chargingLogId
 
@@ -280,8 +280,8 @@ updateChargingLog
 
 ### Example
 ```javascript
-var ApiDocumentation = require('api_documentation');
-var defaultClient = ApiDocumentation.ApiClient.instance;
+var SubscreasyJsClient = require('subscreasy-js-client');
+var defaultClient = SubscreasyJsClient.ApiClient.instance;
 
 // Configure API key authorization: apiKey
 var apiKey = defaultClient.authentications['apiKey'];
@@ -289,9 +289,9 @@ apiKey.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //apiKey.apiKeyPrefix = 'Token';
 
-var apiInstance = new ApiDocumentation.ChargingLogResourceApi();
+var apiInstance = new SubscreasyJsClient.ChargingLogResourceApi();
 
-var chargingLog = new ApiDocumentation.ChargingLog(); // ChargingLog | chargingLog
+var chargingLog = new SubscreasyJsClient.ChargingLog(); // ChargingLog | chargingLog
 
 
 var callback = function(error, data, response) {

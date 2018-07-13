@@ -22,10 +22,10 @@
     module.exports = factory(require('../ApiClient'), require('./Address'), require('./Company'));
   } else {
     // Browser globals (root is window)
-    if (!root.ApiDocumentation) {
-      root.ApiDocumentation = {};
+    if (!root.SubscreasyJsClient) {
+      root.SubscreasyJsClient = {};
     }
-    root.ApiDocumentation.Subscriber = factory(root.ApiDocumentation.ApiClient, root.ApiDocumentation.Address, root.ApiDocumentation.Company);
+    root.SubscreasyJsClient.Subscriber = factory(root.SubscreasyJsClient.ApiClient, root.SubscreasyJsClient.Address, root.SubscreasyJsClient.Company);
   }
 }(this, function(ApiClient, Address, Company) {
   'use strict';
@@ -36,7 +36,7 @@
   /**
    * The Subscriber model module.
    * @module com.kodfarki.subscreasy.client.model/Subscriber
-   * @version 1.0
+   * @version 1.0.0
    */
 
   /**

@@ -22,10 +22,10 @@
     module.exports = factory(require('../ApiClient'), require('../com.kodfarki.subscreasy.client.model/Service'));
   } else {
     // Browser globals (root is window)
-    if (!root.ApiDocumentation) {
-      root.ApiDocumentation = {};
+    if (!root.SubscreasyJsClient) {
+      root.SubscreasyJsClient = {};
     }
-    root.ApiDocumentation.ServiceResourceApi = factory(root.ApiDocumentation.ApiClient, root.ApiDocumentation.Service);
+    root.SubscreasyJsClient.ServiceResourceApi = factory(root.SubscreasyJsClient.ApiClient, root.SubscreasyJsClient.Service);
   }
 }(this, function(ApiClient, Service) {
   'use strict';
@@ -33,7 +33,7 @@
   /**
    * ServiceResource service.
    * @module com.kodfarki.subscreasy.client/ServiceResourceApi
-   * @version 1.0
+   * @version 1.0.0
    */
 
   /**

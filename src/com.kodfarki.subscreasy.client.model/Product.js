@@ -22,10 +22,10 @@
     module.exports = factory(require('../ApiClient'), require('./Company'), require('./Offer'));
   } else {
     // Browser globals (root is window)
-    if (!root.ApiDocumentation) {
-      root.ApiDocumentation = {};
+    if (!root.SubscreasyJsClient) {
+      root.SubscreasyJsClient = {};
     }
-    root.ApiDocumentation.Product = factory(root.ApiDocumentation.ApiClient, root.ApiDocumentation.Company, root.ApiDocumentation.Offer);
+    root.SubscreasyJsClient.Product = factory(root.SubscreasyJsClient.ApiClient, root.SubscreasyJsClient.Company, root.SubscreasyJsClient.Offer);
   }
 }(this, function(ApiClient, Company, Offer) {
   'use strict';
@@ -36,7 +36,7 @@
   /**
    * The Product model module.
    * @module com.kodfarki.subscreasy.client.model/Product
-   * @version 1.0
+   * @version 1.0.0
    */
 
   /**
@@ -52,6 +52,7 @@
 
     _this['company'] = company;
     _this['description'] = description;
+
 
     _this['name'] = name;
 
@@ -78,6 +79,9 @@
       if (data.hasOwnProperty('id')) {
         obj['id'] = ApiClient.convertToType(data['id'], 'Number');
       }
+      if (data.hasOwnProperty('imagePath')) {
+        obj['imagePath'] = ApiClient.convertToType(data['imagePath'], 'String');
+      }
       if (data.hasOwnProperty('name')) {
         obj['name'] = ApiClient.convertToType(data['name'], 'String');
       }
@@ -103,6 +107,10 @@
    * @member {Number} id
    */
   exports.prototype['id'] = undefined;
+  /**
+   * @member {String} imagePath
+   */
+  exports.prototype['imagePath'] = undefined;
   /**
    * @member {String} name
    */

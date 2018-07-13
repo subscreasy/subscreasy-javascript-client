@@ -22,10 +22,10 @@
     module.exports = factory(require('../ApiClient'), require('../com.kodfarki.subscreasy.client.model/Company'));
   } else {
     // Browser globals (root is window)
-    if (!root.ApiDocumentation) {
-      root.ApiDocumentation = {};
+    if (!root.SubscreasyJsClient) {
+      root.SubscreasyJsClient = {};
     }
-    root.ApiDocumentation.CompanyResourceApi = factory(root.ApiDocumentation.ApiClient, root.ApiDocumentation.Company);
+    root.SubscreasyJsClient.CompanyResourceApi = factory(root.SubscreasyJsClient.ApiClient, root.SubscreasyJsClient.Company);
   }
 }(this, function(ApiClient, Company) {
   'use strict';
@@ -33,7 +33,7 @@
   /**
    * CompanyResource service.
    * @module com.kodfarki.subscreasy.client/CompanyResourceApi
-   * @version 1.0
+   * @version 1.0.0
    */
 
   /**

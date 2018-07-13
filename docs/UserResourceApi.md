@@ -1,4 +1,4 @@
-# ApiDocumentation.UserResourceApi
+# SubscreasyJsClient.UserResourceApi
 
 All URIs are relative to *https://localhost:8080*
 
@@ -20,8 +20,8 @@ createUser
 
 ### Example
 ```javascript
-var ApiDocumentation = require('api_documentation');
-var defaultClient = ApiDocumentation.ApiClient.instance;
+var SubscreasyJsClient = require('subscreasy-js-client');
+var defaultClient = SubscreasyJsClient.ApiClient.instance;
 
 // Configure API key authorization: apiKey
 var apiKey = defaultClient.authentications['apiKey'];
@@ -29,9 +29,9 @@ apiKey.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //apiKey.apiKeyPrefix = 'Token';
 
-var apiInstance = new ApiDocumentation.UserResourceApi();
+var apiInstance = new SubscreasyJsClient.UserResourceApi();
 
-var managedUserVM = new ApiDocumentation.ManagedUserVM(); // ManagedUserVM | managedUserVM
+var managedUserVM = new SubscreasyJsClient.ManagedUserVM(); // ManagedUserVM | managedUserVM
 
 
 var callback = function(error, data, response) {
@@ -71,8 +71,8 @@ deleteUser
 
 ### Example
 ```javascript
-var ApiDocumentation = require('api_documentation');
-var defaultClient = ApiDocumentation.ApiClient.instance;
+var SubscreasyJsClient = require('subscreasy-js-client');
+var defaultClient = SubscreasyJsClient.ApiClient.instance;
 
 // Configure API key authorization: apiKey
 var apiKey = defaultClient.authentications['apiKey'];
@@ -80,7 +80,7 @@ apiKey.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //apiKey.apiKeyPrefix = 'Token';
 
-var apiInstance = new ApiDocumentation.UserResourceApi();
+var apiInstance = new SubscreasyJsClient.UserResourceApi();
 
 var login = "login_example"; // String | login
 
@@ -122,8 +122,8 @@ getAllUsers
 
 ### Example
 ```javascript
-var ApiDocumentation = require('api_documentation');
-var defaultClient = ApiDocumentation.ApiClient.instance;
+var SubscreasyJsClient = require('subscreasy-js-client');
+var defaultClient = SubscreasyJsClient.ApiClient.instance;
 
 // Configure API key authorization: apiKey
 var apiKey = defaultClient.authentications['apiKey'];
@@ -131,7 +131,7 @@ apiKey.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //apiKey.apiKeyPrefix = 'Token';
 
-var apiInstance = new ApiDocumentation.UserResourceApi();
+var apiInstance = new SubscreasyJsClient.UserResourceApi();
 
 var opts = { 
   'page': 56, // Number | Page number of the requested page
@@ -178,8 +178,8 @@ getAuthorities
 
 ### Example
 ```javascript
-var ApiDocumentation = require('api_documentation');
-var defaultClient = ApiDocumentation.ApiClient.instance;
+var SubscreasyJsClient = require('subscreasy-js-client');
+var defaultClient = SubscreasyJsClient.ApiClient.instance;
 
 // Configure API key authorization: apiKey
 var apiKey = defaultClient.authentications['apiKey'];
@@ -187,7 +187,7 @@ apiKey.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //apiKey.apiKeyPrefix = 'Token';
 
-var apiInstance = new ApiDocumentation.UserResourceApi();
+var apiInstance = new SubscreasyJsClient.UserResourceApi();
 
 var callback = function(error, data, response) {
   if (error) {
@@ -223,8 +223,8 @@ getUser
 
 ### Example
 ```javascript
-var ApiDocumentation = require('api_documentation');
-var defaultClient = ApiDocumentation.ApiClient.instance;
+var SubscreasyJsClient = require('subscreasy-js-client');
+var defaultClient = SubscreasyJsClient.ApiClient.instance;
 
 // Configure API key authorization: apiKey
 var apiKey = defaultClient.authentications['apiKey'];
@@ -232,7 +232,7 @@ apiKey.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //apiKey.apiKeyPrefix = 'Token';
 
-var apiInstance = new ApiDocumentation.UserResourceApi();
+var apiInstance = new SubscreasyJsClient.UserResourceApi();
 
 var login = "login_example"; // String | login
 
@@ -274,8 +274,8 @@ updateUser
 
 ### Example
 ```javascript
-var ApiDocumentation = require('api_documentation');
-var defaultClient = ApiDocumentation.ApiClient.instance;
+var SubscreasyJsClient = require('subscreasy-js-client');
+var defaultClient = SubscreasyJsClient.ApiClient.instance;
 
 // Configure API key authorization: apiKey
 var apiKey = defaultClient.authentications['apiKey'];
@@ -283,9 +283,9 @@ apiKey.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //apiKey.apiKeyPrefix = 'Token';
 
-var apiInstance = new ApiDocumentation.UserResourceApi();
+var apiInstance = new SubscreasyJsClient.UserResourceApi();
 
-var managedUserVM = new ApiDocumentation.ManagedUserVM(); // ManagedUserVM | managedUserVM
+var managedUserVM = new SubscreasyJsClient.ManagedUserVM(); // ManagedUserVM | managedUserVM
 
 
 var callback = function(error, data, response) {
