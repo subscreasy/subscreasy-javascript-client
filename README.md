@@ -237,7 +237,9 @@ Class | Method | HTTP request | Description
 *SubscreasyJsClient.UserResourceApi* | [**deleteUserUsingDELETE**](docs/UserResourceApi.md#deleteUserUsingDELETE) | **DELETE** /api/users/{login} | deleteUser
 *SubscreasyJsClient.UserResourceApi* | [**getAllUsersUsingGET**](docs/UserResourceApi.md#getAllUsersUsingGET) | **GET** /api/users | getAllUsers
 *SubscreasyJsClient.UserResourceApi* | [**getAuthoritiesUsingGET**](docs/UserResourceApi.md#getAuthoritiesUsingGET) | **GET** /api/users/authorities | getAuthorities
+*SubscreasyJsClient.UserResourceApi* | [**getUserProfileUsingGET**](docs/UserResourceApi.md#getUserProfileUsingGET) | **GET** /api/users/profile | getUserProfile
 *SubscreasyJsClient.UserResourceApi* | [**getUserUsingGET**](docs/UserResourceApi.md#getUserUsingGET) | **GET** /api/users/{login} | getUser
+*SubscreasyJsClient.UserResourceApi* | [**updateCurrentUserUsingPUT**](docs/UserResourceApi.md#updateCurrentUserUsingPUT) | **PUT** /api/users/current | updateCurrentUser
 *SubscreasyJsClient.UserResourceApi* | [**updateUserUsingPUT**](docs/UserResourceApi.md#updateUserUsingPUT) | **PUT** /api/users | updateUser
 
 

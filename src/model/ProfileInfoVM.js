@@ -22,10 +22,10 @@
     module.exports = factory(require('../ApiClient'));
   } else {
     // Browser globals (root is window)
-    if (!root.SubscreasyJsClient) {
-      root.SubscreasyJsClient = {};
+    if (!root.ApiDocumentation) {
+      root.ApiDocumentation = {};
     }
-    root.SubscreasyJsClient.Company = factory(root.SubscreasyJsClient.ApiClient);
+    root.ApiDocumentation.ProfileInfoVM = factory(root.ApiDocumentation.ApiClient);
   }
 }(this, function(ApiClient) {
   'use strict';
@@ -34,53 +34,52 @@
 
 
   /**
-   * The Company model module.
-   * @module com.kodfarki.subscreasy.client.model/Company
-   * @version 1.0.0
+   * The ProfileInfoVM model module.
+   * @module model/ProfileInfoVM
+   * @version 1.0
    */
 
   /**
-   * Constructs a new <code>Company</code>.
-   * @alias module:com.kodfarki.subscreasy.client.model/Company
+   * Constructs a new <code>ProfileInfoVM</code>.
+   * @alias module:model/ProfileInfoVM
    * @class
-   * @param name {String} 
    */
-  var exports = function(name) {
+  var exports = function() {
     var _this = this;
 
 
-    _this['name'] = name;
+
   };
 
   /**
-   * Constructs a <code>Company</code> from a plain JavaScript object, optionally creating a new instance.
+   * Constructs a <code>ProfileInfoVM</code> from a plain JavaScript object, optionally creating a new instance.
    * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
    * @param {Object} data The plain JavaScript object bearing properties of interest.
-   * @param {module:com.kodfarki.subscreasy.client.model/Company} obj Optional instance to populate.
-   * @return {module:com.kodfarki.subscreasy.client.model/Company} The populated <code>Company</code> instance.
+   * @param {module:model/ProfileInfoVM} obj Optional instance to populate.
+   * @return {module:model/ProfileInfoVM} The populated <code>ProfileInfoVM</code> instance.
    */
   exports.constructFromObject = function(data, obj) {
     if (data) {
       obj = obj || new exports();
 
-      if (data.hasOwnProperty('id')) {
-        obj['id'] = ApiClient.convertToType(data['id'], 'Number');
+      if (data.hasOwnProperty('activeProfiles')) {
+        obj['activeProfiles'] = ApiClient.convertToType(data['activeProfiles'], ['String']);
       }
-      if (data.hasOwnProperty('name')) {
-        obj['name'] = ApiClient.convertToType(data['name'], 'String');
+      if (data.hasOwnProperty('ribbonEnv')) {
+        obj['ribbonEnv'] = ApiClient.convertToType(data['ribbonEnv'], 'String');
       }
     }
     return obj;
   }
 
   /**
-   * @member {Number} id
+   * @member {Array.<String>} activeProfiles
    */
-  exports.prototype['id'] = undefined;
+  exports.prototype['activeProfiles'] = undefined;
   /**
-   * @member {String} name
+   * @member {String} ribbonEnv
    */
-  exports.prototype['name'] = undefined;
+  exports.prototype['ribbonEnv'] = undefined;
 
 
 

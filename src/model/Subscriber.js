@@ -16,16 +16,16 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient', 'com.kodfarki.subscreasy.client.model/Company'], factory);
+    define(['ApiClient', 'model/Company'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
     module.exports = factory(require('../ApiClient'), require('./Company'));
   } else {
     // Browser globals (root is window)
-    if (!root.SubscreasyJsClient) {
-      root.SubscreasyJsClient = {};
+    if (!root.ApiDocumentation) {
+      root.ApiDocumentation = {};
     }
-    root.SubscreasyJsClient.Subscriber = factory(root.SubscreasyJsClient.ApiClient, root.SubscreasyJsClient.Company);
+    root.ApiDocumentation.Subscriber = factory(root.ApiDocumentation.ApiClient, root.ApiDocumentation.Company);
   }
 }(this, function(ApiClient, Company) {
   'use strict';
@@ -35,13 +35,13 @@
 
   /**
    * The Subscriber model module.
-   * @module com.kodfarki.subscreasy.client.model/Subscriber
-   * @version 1.0.0
+   * @module model/Subscriber
+   * @version 1.0
    */
 
   /**
    * Constructs a new <code>Subscriber</code>.
-   * @alias module:com.kodfarki.subscreasy.client.model/Subscriber
+   * @alias module:model/Subscriber
    * @class
    */
   var exports = function() {
@@ -78,8 +78,8 @@
    * Constructs a <code>Subscriber</code> from a plain JavaScript object, optionally creating a new instance.
    * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
    * @param {Object} data The plain JavaScript object bearing properties of interest.
-   * @param {module:com.kodfarki.subscreasy.client.model/Subscriber} obj Optional instance to populate.
-   * @return {module:com.kodfarki.subscreasy.client.model/Subscriber} The populated <code>Subscriber</code> instance.
+   * @param {module:model/Subscriber} obj Optional instance to populate.
+   * @return {module:model/Subscriber} The populated <code>Subscriber</code> instance.
    */
   exports.constructFromObject = function(data, obj) {
     if (data) {
@@ -181,7 +181,7 @@
    */
   exports.prototype['city'] = undefined;
   /**
-   * @member {module:com.kodfarki.subscreasy.client.model/Company} company
+   * @member {module:model/Company} company
    */
   exports.prototype['company'] = undefined;
   /**

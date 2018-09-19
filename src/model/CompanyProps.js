@@ -16,16 +16,16 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient', 'com.kodfarki.subscreasy.client.model/Address', 'com.kodfarki.subscreasy.client.model/Company'], factory);
+    define(['ApiClient', 'model/Address', 'model/Company'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
     module.exports = factory(require('../ApiClient'), require('./Address'), require('./Company'));
   } else {
     // Browser globals (root is window)
-    if (!root.SubscreasyJsClient) {
-      root.SubscreasyJsClient = {};
+    if (!root.ApiDocumentation) {
+      root.ApiDocumentation = {};
     }
-    root.SubscreasyJsClient.CompanyProps = factory(root.SubscreasyJsClient.ApiClient, root.SubscreasyJsClient.Address, root.SubscreasyJsClient.Company);
+    root.ApiDocumentation.CompanyProps = factory(root.ApiDocumentation.ApiClient, root.ApiDocumentation.Address, root.ApiDocumentation.Company);
   }
 }(this, function(ApiClient, Address, Company) {
   'use strict';
@@ -35,13 +35,13 @@
 
   /**
    * The CompanyProps model module.
-   * @module com.kodfarki.subscreasy.client.model/CompanyProps
-   * @version 1.0.0
+   * @module model/CompanyProps
+   * @version 1.0
    */
 
   /**
    * Constructs a new <code>CompanyProps</code>.
-   * @alias module:com.kodfarki.subscreasy.client.model/CompanyProps
+   * @alias module:model/CompanyProps
    * @class
    */
   var exports = function() {
@@ -63,8 +63,8 @@
    * Constructs a <code>CompanyProps</code> from a plain JavaScript object, optionally creating a new instance.
    * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
    * @param {Object} data The plain JavaScript object bearing properties of interest.
-   * @param {module:com.kodfarki.subscreasy.client.model/CompanyProps} obj Optional instance to populate.
-   * @return {module:com.kodfarki.subscreasy.client.model/CompanyProps} The populated <code>CompanyProps</code> instance.
+   * @param {module:model/CompanyProps} obj Optional instance to populate.
+   * @return {module:model/CompanyProps} The populated <code>CompanyProps</code> instance.
    */
   exports.constructFromObject = function(data, obj) {
     if (data) {
@@ -105,7 +105,7 @@
   }
 
   /**
-   * @member {module:com.kodfarki.subscreasy.client.model/Address} address
+   * @member {module:model/Address} address
    */
   exports.prototype['address'] = undefined;
   /**
@@ -113,7 +113,7 @@
    */
   exports.prototype['apiKey'] = undefined;
   /**
-   * @member {module:com.kodfarki.subscreasy.client.model/Address} billingAddress
+   * @member {module:model/Address} billingAddress
    */
   exports.prototype['billingAddress'] = undefined;
   /**
@@ -121,7 +121,7 @@
    */
   exports.prototype['callbackUrl'] = undefined;
   /**
-   * @member {module:com.kodfarki.subscreasy.client.model/Company} company
+   * @member {module:model/Company} company
    */
   exports.prototype['company'] = undefined;
   /**
@@ -137,7 +137,7 @@
    */
   exports.prototype['paymentGatewaySecurityKey'] = undefined;
   /**
-   * @member {module:com.kodfarki.subscreasy.client.model/CompanyProps.PaymentMethodEnum} paymentMethod
+   * @member {module:model/CompanyProps.PaymentMethodEnum} paymentMethod
    */
   exports.prototype['paymentMethod'] = undefined;
   /**

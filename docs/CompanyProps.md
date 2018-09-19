@@ -3,7 +3,9 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**address** | [**Address**](Address.md) |  | [optional] 
 **apiKey** | **String** |  | [optional] 
+**billingAddress** | [**Address**](Address.md) |  | [optional] 
 **callbackUrl** | **String** |  | [optional] 
 **company** | [**Company**](Company.md) |  | [optional] 
 **id** | **Number** |  | [optional] 

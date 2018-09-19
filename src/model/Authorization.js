@@ -22,10 +22,10 @@
     module.exports = factory(require('../ApiClient'));
   } else {
     // Browser globals (root is window)
-    if (!root.SubscreasyJsClient) {
-      root.SubscreasyJsClient = {};
+    if (!root.ApiDocumentation) {
+      root.ApiDocumentation = {};
     }
-    root.SubscreasyJsClient.Company = factory(root.SubscreasyJsClient.ApiClient);
+    root.ApiDocumentation.Authorization = factory(root.ApiDocumentation.ApiClient);
   }
 }(this, function(ApiClient) {
   'use strict';
@@ -34,53 +34,52 @@
 
 
   /**
-   * The Company model module.
-   * @module com.kodfarki.subscreasy.client.model/Company
-   * @version 1.0.0
+   * The Authorization model module.
+   * @module model/Authorization
+   * @version 1.0
    */
 
   /**
-   * Constructs a new <code>Company</code>.
-   * @alias module:com.kodfarki.subscreasy.client.model/Company
+   * Constructs a new <code>Authorization</code>.
+   * @alias module:model/Authorization
    * @class
-   * @param name {String} 
    */
-  var exports = function(name) {
+  var exports = function() {
     var _this = this;
 
 
-    _this['name'] = name;
+
   };
 
   /**
-   * Constructs a <code>Company</code> from a plain JavaScript object, optionally creating a new instance.
+   * Constructs a <code>Authorization</code> from a plain JavaScript object, optionally creating a new instance.
    * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
    * @param {Object} data The plain JavaScript object bearing properties of interest.
-   * @param {module:com.kodfarki.subscreasy.client.model/Company} obj Optional instance to populate.
-   * @return {module:com.kodfarki.subscreasy.client.model/Company} The populated <code>Company</code> instance.
+   * @param {module:model/Authorization} obj Optional instance to populate.
+   * @return {module:model/Authorization} The populated <code>Authorization</code> instance.
    */
   exports.constructFromObject = function(data, obj) {
     if (data) {
       obj = obj || new exports();
 
-      if (data.hasOwnProperty('id')) {
-        obj['id'] = ApiClient.convertToType(data['id'], 'Number');
+      if (data.hasOwnProperty('serviceId')) {
+        obj['serviceId'] = ApiClient.convertToType(data['serviceId'], 'Number');
       }
-      if (data.hasOwnProperty('name')) {
-        obj['name'] = ApiClient.convertToType(data['name'], 'String');
+      if (data.hasOwnProperty('serviceUserId')) {
+        obj['serviceUserId'] = ApiClient.convertToType(data['serviceUserId'], 'String');
       }
     }
     return obj;
   }
 
   /**
-   * @member {Number} id
+   * @member {Number} serviceId
    */
-  exports.prototype['id'] = undefined;
+  exports.prototype['serviceId'] = undefined;
   /**
-   * @member {String} name
+   * @member {String} serviceUserId
    */
-  exports.prototype['name'] = undefined;
+  exports.prototype['serviceUserId'] = undefined;
 
 
 

@@ -16,29 +16,29 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient', 'com.kodfarki.subscreasy.client.model/ManagedUserVM', 'com.kodfarki.subscreasy.client.model/ResponseEntity', 'com.kodfarki.subscreasy.client.model/User'], factory);
+    define(['ApiClient', 'model/ManagedUserVM', 'model/ResponseEntity', 'model/User'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('../com.kodfarki.subscreasy.client.model/ManagedUserVM'), require('../com.kodfarki.subscreasy.client.model/ResponseEntity'), require('../com.kodfarki.subscreasy.client.model/User'));
+    module.exports = factory(require('../ApiClient'), require('../model/ManagedUserVM'), require('../model/ResponseEntity'), require('../model/User'));
   } else {
     // Browser globals (root is window)
-    if (!root.SubscreasyJsClient) {
-      root.SubscreasyJsClient = {};
+    if (!root.ApiDocumentation) {
+      root.ApiDocumentation = {};
     }
-    root.SubscreasyJsClient.UserResourceApi = factory(root.SubscreasyJsClient.ApiClient, root.SubscreasyJsClient.ManagedUserVM, root.SubscreasyJsClient.ResponseEntity, root.SubscreasyJsClient.User);
+    root.ApiDocumentation.UserResourceApi = factory(root.ApiDocumentation.ApiClient, root.ApiDocumentation.ManagedUserVM, root.ApiDocumentation.ResponseEntity, root.ApiDocumentation.User);
   }
 }(this, function(ApiClient, ManagedUserVM, ResponseEntity, User) {
   'use strict';
 
   /**
    * UserResource service.
-   * @module com.kodfarki.subscreasy.client/UserResourceApi
-   * @version 1.0.0
+   * @module api/UserResourceApi
+   * @version 1.0
    */
 
   /**
    * Constructs a new UserResourceApi. 
-   * @alias module:com.kodfarki.subscreasy.client/UserResourceApi
+   * @alias module:api/UserResourceApi
    * @class
    * @param {module:ApiClient} [apiClient] Optional API client implementation to use,
    * default to {@link module:ApiClient#instance} if unspecified.
@@ -49,17 +49,17 @@
 
     /**
      * Callback function to receive the result of the createUserUsingPOST operation.
-     * @callback module:com.kodfarki.subscreasy.client/UserResourceApi~createUserUsingPOSTCallback
+     * @callback module:api/UserResourceApi~createUserUsingPOSTCallback
      * @param {String} error Error message, if any.
-     * @param {module:com.kodfarki.subscreasy.client.model/ResponseEntity} data The data returned by the service call.
+     * @param {module:model/ResponseEntity} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
     /**
      * createUser
-     * @param {module:com.kodfarki.subscreasy.client.model/ManagedUserVM} managedUserVM managedUserVM
-     * @param {module:com.kodfarki.subscreasy.client/UserResourceApi~createUserUsingPOSTCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:com.kodfarki.subscreasy.client.model/ResponseEntity}
+     * @param {module:model/ManagedUserVM} managedUserVM managedUserVM
+     * @param {module:api/UserResourceApi~createUserUsingPOSTCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/ResponseEntity}
      */
     this.createUserUsingPOST = function(managedUserVM, callback) {
       var postBody = managedUserVM;
@@ -95,7 +95,7 @@
 
     /**
      * Callback function to receive the result of the deleteUserUsingDELETE operation.
-     * @callback module:com.kodfarki.subscreasy.client/UserResourceApi~deleteUserUsingDELETECallback
+     * @callback module:api/UserResourceApi~deleteUserUsingDELETECallback
      * @param {String} error Error message, if any.
      * @param data This operation does not return a value.
      * @param {String} response The complete HTTP response.
@@ -104,7 +104,7 @@
     /**
      * deleteUser
      * @param {String} login login
-     * @param {module:com.kodfarki.subscreasy.client/UserResourceApi~deleteUserUsingDELETECallback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:api/UserResourceApi~deleteUserUsingDELETECallback} callback The callback function, accepting three arguments: error, data, response
      */
     this.deleteUserUsingDELETE = function(login, callback) {
       var postBody = null;
@@ -141,9 +141,9 @@
 
     /**
      * Callback function to receive the result of the getAllUsersUsingGET operation.
-     * @callback module:com.kodfarki.subscreasy.client/UserResourceApi~getAllUsersUsingGETCallback
+     * @callback module:api/UserResourceApi~getAllUsersUsingGETCallback
      * @param {String} error Error message, if any.
-     * @param {Array.<module:com.kodfarki.subscreasy.client.model/User>} data The data returned by the service call.
+     * @param {Array.<module:model/User>} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -153,8 +153,8 @@
      * @param {Number} opts.page Page number of the requested page
      * @param {Number} opts.size Size of a page
      * @param {Array.<String>} opts.sort Sorting criteria in the format: property(,asc|desc). Default sort order is ascending. Multiple sort criteria are supported.
-     * @param {module:com.kodfarki.subscreasy.client/UserResourceApi~getAllUsersUsingGETCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link Array.<module:com.kodfarki.subscreasy.client.model/User>}
+     * @param {module:api/UserResourceApi~getAllUsersUsingGETCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link Array.<module:model/User>}
      */
     this.getAllUsersUsingGET = function(opts, callback) {
       opts = opts || {};
@@ -192,7 +192,7 @@
 
     /**
      * Callback function to receive the result of the getAuthoritiesUsingGET operation.
-     * @callback module:com.kodfarki.subscreasy.client/UserResourceApi~getAuthoritiesUsingGETCallback
+     * @callback module:api/UserResourceApi~getAuthoritiesUsingGETCallback
      * @param {String} error Error message, if any.
      * @param {Array.<'String'>} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -200,7 +200,7 @@
 
     /**
      * getAuthorities
-     * @param {module:com.kodfarki.subscreasy.client/UserResourceApi~getAuthoritiesUsingGETCallback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:api/UserResourceApi~getAuthoritiesUsingGETCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link Array.<'String'>}
      */
     this.getAuthoritiesUsingGET = function(callback) {
@@ -232,16 +232,16 @@
 
     /**
      * Callback function to receive the result of the getUserProfileUsingGET operation.
-     * @callback module:com.kodfarki.subscreasy.client/UserResourceApi~getUserProfileUsingGETCallback
+     * @callback module:api/UserResourceApi~getUserProfileUsingGETCallback
      * @param {String} error Error message, if any.
-     * @param {module:com.kodfarki.subscreasy.client.model/User} data The data returned by the service call.
+     * @param {module:model/User} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
     /**
      * getUserProfile
-     * @param {module:com.kodfarki.subscreasy.client/UserResourceApi~getUserProfileUsingGETCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:com.kodfarki.subscreasy.client.model/User}
+     * @param {module:api/UserResourceApi~getUserProfileUsingGETCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/User}
      */
     this.getUserProfileUsingGET = function(callback) {
       var postBody = null;
@@ -272,17 +272,17 @@
 
     /**
      * Callback function to receive the result of the getUserUsingGET operation.
-     * @callback module:com.kodfarki.subscreasy.client/UserResourceApi~getUserUsingGETCallback
+     * @callback module:api/UserResourceApi~getUserUsingGETCallback
      * @param {String} error Error message, if any.
-     * @param {module:com.kodfarki.subscreasy.client.model/User} data The data returned by the service call.
+     * @param {module:model/User} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
     /**
      * getUser
      * @param {String} login login
-     * @param {module:com.kodfarki.subscreasy.client/UserResourceApi~getUserUsingGETCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:com.kodfarki.subscreasy.client.model/User}
+     * @param {module:api/UserResourceApi~getUserUsingGETCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/User}
      */
     this.getUserUsingGET = function(login, callback) {
       var postBody = null;
@@ -319,15 +319,15 @@
 
     /**
      * Callback function to receive the result of the updateCurrentUserUsingPUT operation.
-     * @callback module:com.kodfarki.subscreasy.client/UserResourceApi~updateCurrentUserUsingPUTCallback
+     * @callback module:api/UserResourceApi~updateCurrentUserUsingPUTCallback
      * @param {String} error Error message, if any.
-     * @param {module:com.kodfarki.subscreasy.client.model/User} data The data returned by the service call.
+     * @param {module:model/User} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
     /**
      * updateCurrentUser
-     * @param {module:com.kodfarki.subscreasy.client.model/ManagedUserVM} userDTO userDTO
+     * @param {module:model/ManagedUserVM} userDTO userDTO
      * @param {Object} opts Optional parameters
      * @param {Number} opts.id 
      * @param {String} opts.name 
@@ -343,8 +343,8 @@
      * @param {String} opts.city2 
      * @param {String} opts.stateProvince2 
      * @param {String} opts.country2 
-     * @param {module:com.kodfarki.subscreasy.client/UserResourceApi~updateCurrentUserUsingPUTCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:com.kodfarki.subscreasy.client.model/User}
+     * @param {module:api/UserResourceApi~updateCurrentUserUsingPUTCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/User}
      */
     this.updateCurrentUserUsingPUT = function(userDTO, opts, callback) {
       opts = opts || {};
@@ -395,17 +395,17 @@
 
     /**
      * Callback function to receive the result of the updateUserUsingPUT operation.
-     * @callback module:com.kodfarki.subscreasy.client/UserResourceApi~updateUserUsingPUTCallback
+     * @callback module:api/UserResourceApi~updateUserUsingPUTCallback
      * @param {String} error Error message, if any.
-     * @param {module:com.kodfarki.subscreasy.client.model/User} data The data returned by the service call.
+     * @param {module:model/User} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
     /**
      * updateUser
-     * @param {module:com.kodfarki.subscreasy.client.model/ManagedUserVM} managedUserVM managedUserVM
-     * @param {module:com.kodfarki.subscreasy.client/UserResourceApi~updateUserUsingPUTCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:com.kodfarki.subscreasy.client.model/User}
+     * @param {module:model/ManagedUserVM} managedUserVM managedUserVM
+     * @param {module:api/UserResourceApi~updateUserUsingPUTCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/User}
      */
     this.updateUserUsingPUT = function(managedUserVM, callback) {
       var postBody = managedUserVM;

@@ -16,29 +16,29 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient', 'com.kodfarki.subscreasy.client.model/Order'], factory);
+    define(['ApiClient', 'model/Order'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('../com.kodfarki.subscreasy.client.model/Order'));
+    module.exports = factory(require('../ApiClient'), require('../model/Order'));
   } else {
     // Browser globals (root is window)
-    if (!root.SubscreasyJsClient) {
-      root.SubscreasyJsClient = {};
+    if (!root.ApiDocumentation) {
+      root.ApiDocumentation = {};
     }
-    root.SubscreasyJsClient.OrderResourceApi = factory(root.SubscreasyJsClient.ApiClient, root.SubscreasyJsClient.Order);
+    root.ApiDocumentation.OrderResourceApi = factory(root.ApiDocumentation.ApiClient, root.ApiDocumentation.Order);
   }
 }(this, function(ApiClient, Order) {
   'use strict';
 
   /**
    * OrderResource service.
-   * @module com.kodfarki.subscreasy.client/OrderResourceApi
-   * @version 1.0.0
+   * @module api/OrderResourceApi
+   * @version 1.0
    */
 
   /**
    * Constructs a new OrderResourceApi. 
-   * @alias module:com.kodfarki.subscreasy.client/OrderResourceApi
+   * @alias module:api/OrderResourceApi
    * @class
    * @param {module:ApiClient} [apiClient] Optional API client implementation to use,
    * default to {@link module:ApiClient#instance} if unspecified.
@@ -49,9 +49,9 @@
 
     /**
      * Callback function to receive the result of the createOrderUsingPOST operation.
-     * @callback module:com.kodfarki.subscreasy.client/OrderResourceApi~createOrderUsingPOSTCallback
+     * @callback module:api/OrderResourceApi~createOrderUsingPOSTCallback
      * @param {String} error Error message, if any.
-     * @param {module:com.kodfarki.subscreasy.client.model/Order} data The data returned by the service call.
+     * @param {module:model/Order} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -101,14 +101,14 @@
      * @param {Number} opts.orderOrderItems0ProductCompanyId 
      * @param {String} opts.orderOrderItems0ProductCompanyName 
      * @param {Number} opts.orderOrderItems0ProductOffers0RecurrenceId 
-     * @param {module:com.kodfarki.subscreasy.client.model/String} opts.orderOrderItems0ProductOffers0RecurrenceRecurrenceType 
+     * @param {module:model/String} opts.orderOrderItems0ProductOffers0RecurrenceRecurrenceType 
      * @param {Number} opts.orderOrderItems0ProductOffers0RecurrenceLength 
      * @param {Number} opts.orderOrderItems0ProductOffers0CompanyId 
      * @param {String} opts.orderOrderItems0ProductOffers0CompanyName 
      * @param {Number} opts.orderOrderItems0ProductOffers0Id 
      * @param {String} opts.orderOrderItems0ProductOffers0SecureId 
      * @param {String} opts.orderOrderItems0ProductOffers0Name 
-     * @param {module:com.kodfarki.subscreasy.client.model/String} opts.orderOrderItems0ProductOffers0PurchaseType 
+     * @param {module:model/String} opts.orderOrderItems0ProductOffers0PurchaseType 
      * @param {Number} opts.orderOrderItems0ProductOffers0Price 
      * @param {Number} opts.orderOrderItems0ProductOffers0RecurrenceCount 
      * @param {Number} opts.orderOrderItems0ProductOffers0TrialPeriod 
@@ -116,21 +116,21 @@
      * @param {String} opts.orderOrderItems0ProductName 
      * @param {String} opts.orderOrderItems0ProductDescription 
      * @param {String} opts.orderOrderItems0ProductImagePath 
-     * @param {module:com.kodfarki.subscreasy.client.model/String} opts.orderOrderItems0ProductProductType 
+     * @param {module:model/String} opts.orderOrderItems0ProductProductType 
      * @param {Number} opts.orderOrderItems0OfferRecurrenceId 
-     * @param {module:com.kodfarki.subscreasy.client.model/String} opts.orderOrderItems0OfferRecurrenceRecurrenceType 
+     * @param {module:model/String} opts.orderOrderItems0OfferRecurrenceRecurrenceType 
      * @param {Number} opts.orderOrderItems0OfferRecurrenceLength 
      * @param {Number} opts.orderOrderItems0OfferProductCompanyId 
      * @param {String} opts.orderOrderItems0OfferProductCompanyName 
      * @param {Number} opts.orderOrderItems0OfferProductOffers0RecurrenceId 
-     * @param {module:com.kodfarki.subscreasy.client.model/String} opts.orderOrderItems0OfferProductOffers0RecurrenceRecurrenceType 
+     * @param {module:model/String} opts.orderOrderItems0OfferProductOffers0RecurrenceRecurrenceType 
      * @param {Number} opts.orderOrderItems0OfferProductOffers0RecurrenceLength 
      * @param {Number} opts.orderOrderItems0OfferProductOffers0CompanyId 
      * @param {String} opts.orderOrderItems0OfferProductOffers0CompanyName 
      * @param {Number} opts.orderOrderItems0OfferProductOffers0Id 
      * @param {String} opts.orderOrderItems0OfferProductOffers0SecureId 
      * @param {String} opts.orderOrderItems0OfferProductOffers0Name 
-     * @param {module:com.kodfarki.subscreasy.client.model/String} opts.orderOrderItems0OfferProductOffers0PurchaseType 
+     * @param {module:model/String} opts.orderOrderItems0OfferProductOffers0PurchaseType 
      * @param {Number} opts.orderOrderItems0OfferProductOffers0Price 
      * @param {Number} opts.orderOrderItems0OfferProductOffers0RecurrenceCount 
      * @param {Number} opts.orderOrderItems0OfferProductOffers0TrialPeriod 
@@ -138,13 +138,13 @@
      * @param {String} opts.orderOrderItems0OfferProductName 
      * @param {String} opts.orderOrderItems0OfferProductDescription 
      * @param {String} opts.orderOrderItems0OfferProductImagePath 
-     * @param {module:com.kodfarki.subscreasy.client.model/String} opts.orderOrderItems0OfferProductProductType 
+     * @param {module:model/String} opts.orderOrderItems0OfferProductProductType 
      * @param {Number} opts.orderOrderItems0OfferCompanyId 
      * @param {String} opts.orderOrderItems0OfferCompanyName 
      * @param {Number} opts.orderOrderItems0OfferId 
      * @param {String} opts.orderOrderItems0OfferSecureId 
      * @param {String} opts.orderOrderItems0OfferName 
-     * @param {module:com.kodfarki.subscreasy.client.model/String} opts.orderOrderItems0OfferPurchaseType 
+     * @param {module:model/String} opts.orderOrderItems0OfferPurchaseType 
      * @param {Number} opts.orderOrderItems0OfferPrice 
      * @param {Number} opts.orderOrderItems0OfferRecurrenceCount 
      * @param {Number} opts.orderOrderItems0OfferTrialPeriod 
@@ -166,8 +166,8 @@
      * @param {Number} opts.price 
      * @param {String} opts.companyName 
      * @param {String} opts.callbackUrl 
-     * @param {module:com.kodfarki.subscreasy.client/OrderResourceApi~createOrderUsingPOSTCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:com.kodfarki.subscreasy.client.model/Order}
+     * @param {module:api/OrderResourceApi~createOrderUsingPOSTCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/Order}
      */
     this.createOrderUsingPOST = function(opts, callback) {
       opts = opts || {};
@@ -307,16 +307,16 @@
 
     /**
      * Callback function to receive the result of the getAllOrdersUsingGET operation.
-     * @callback module:com.kodfarki.subscreasy.client/OrderResourceApi~getAllOrdersUsingGETCallback
+     * @callback module:api/OrderResourceApi~getAllOrdersUsingGETCallback
      * @param {String} error Error message, if any.
-     * @param {Array.<module:com.kodfarki.subscreasy.client.model/Order>} data The data returned by the service call.
+     * @param {Array.<module:model/Order>} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
     /**
      * getAllOrders
-     * @param {module:com.kodfarki.subscreasy.client/OrderResourceApi~getAllOrdersUsingGETCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link Array.<module:com.kodfarki.subscreasy.client.model/Order>}
+     * @param {module:api/OrderResourceApi~getAllOrdersUsingGETCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link Array.<module:model/Order>}
      */
     this.getAllOrdersUsingGET = function(callback) {
       var postBody = null;
@@ -347,17 +347,17 @@
 
     /**
      * Callback function to receive the result of the getOrderUsingGET operation.
-     * @callback module:com.kodfarki.subscreasy.client/OrderResourceApi~getOrderUsingGETCallback
+     * @callback module:api/OrderResourceApi~getOrderUsingGETCallback
      * @param {String} error Error message, if any.
-     * @param {module:com.kodfarki.subscreasy.client.model/Order} data The data returned by the service call.
+     * @param {module:model/Order} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
     /**
      * getOrder
      * @param {Number} id id
-     * @param {module:com.kodfarki.subscreasy.client/OrderResourceApi~getOrderUsingGETCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:com.kodfarki.subscreasy.client.model/Order}
+     * @param {module:api/OrderResourceApi~getOrderUsingGETCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/Order}
      */
     this.getOrderUsingGET = function(id, callback) {
       var postBody = null;
@@ -394,17 +394,17 @@
 
     /**
      * Callback function to receive the result of the updateOrderUsingPUT operation.
-     * @callback module:com.kodfarki.subscreasy.client/OrderResourceApi~updateOrderUsingPUTCallback
+     * @callback module:api/OrderResourceApi~updateOrderUsingPUTCallback
      * @param {String} error Error message, if any.
-     * @param {module:com.kodfarki.subscreasy.client.model/Order} data The data returned by the service call.
+     * @param {module:model/Order} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
     /**
      * updateOrder
-     * @param {module:com.kodfarki.subscreasy.client.model/Order} order order
-     * @param {module:com.kodfarki.subscreasy.client/OrderResourceApi~updateOrderUsingPUTCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:com.kodfarki.subscreasy.client.model/Order}
+     * @param {module:model/Order} order order
+     * @param {module:api/OrderResourceApi~updateOrderUsingPUTCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/Order}
      */
     this.updateOrderUsingPUT = function(order, callback) {
       var postBody = order;

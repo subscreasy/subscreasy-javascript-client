@@ -22,10 +22,10 @@
     module.exports = factory(require('../ApiClient'));
   } else {
     // Browser globals (root is window)
-    if (!root.SubscreasyJsClient) {
-      root.SubscreasyJsClient = {};
+    if (!root.ApiDocumentation) {
+      root.ApiDocumentation = {};
     }
-    root.SubscreasyJsClient.Company = factory(root.SubscreasyJsClient.ApiClient);
+    root.ApiDocumentation.Company = factory(root.ApiDocumentation.ApiClient);
   }
 }(this, function(ApiClient) {
   'use strict';
@@ -35,13 +35,13 @@
 
   /**
    * The Company model module.
-   * @module com.kodfarki.subscreasy.client.model/Company
-   * @version 1.0.0
+   * @module model/Company
+   * @version 1.0
    */
 
   /**
    * Constructs a new <code>Company</code>.
-   * @alias module:com.kodfarki.subscreasy.client.model/Company
+   * @alias module:model/Company
    * @class
    * @param name {String} 
    */
@@ -56,8 +56,8 @@
    * Constructs a <code>Company</code> from a plain JavaScript object, optionally creating a new instance.
    * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
    * @param {Object} data The plain JavaScript object bearing properties of interest.
-   * @param {module:com.kodfarki.subscreasy.client.model/Company} obj Optional instance to populate.
-   * @return {module:com.kodfarki.subscreasy.client.model/Company} The populated <code>Company</code> instance.
+   * @param {module:model/Company} obj Optional instance to populate.
+   * @return {module:model/Company} The populated <code>Company</code> instance.
    */
   exports.constructFromObject = function(data, obj) {
     if (data) {

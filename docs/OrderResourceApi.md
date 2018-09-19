@@ -51,13 +51,6 @@ var opts = {
   'orderBuyerShippingAddressCity': "orderBuyerShippingAddressCity_example", // String | 
   'orderBuyerShippingAddressStateProvince': "orderBuyerShippingAddressStateProvince_example", // String | 
   'orderBuyerShippingAddressCountry': "orderBuyerShippingAddressCountry_example", // String | 
-  'orderBuyerCompanyAddressId': 789, // Number | 
-  'orderBuyerCompanyAddressName': "orderBuyerCompanyAddressName_example", // String | 
-  'orderBuyerCompanyAddressStreetAddress': "orderBuyerCompanyAddressStreetAddress_example", // String | 
-  'orderBuyerCompanyAddressPostalCode': "orderBuyerCompanyAddressPostalCode_example", // String | 
-  'orderBuyerCompanyAddressCity': "orderBuyerCompanyAddressCity_example", // String | 
-  'orderBuyerCompanyAddressStateProvince': "orderBuyerCompanyAddressStateProvince_example", // String | 
-  'orderBuyerCompanyAddressCountry': "orderBuyerCompanyAddressCountry_example", // String | 
   'orderBuyerCompanyId': 789, // Number | 
   'orderBuyerCompanyName': "orderBuyerCompanyName_example", // String | 
   'orderBuyerAuthorities0Name': "orderBuyerAuthorities0Name_example", // String | 
@@ -77,25 +70,11 @@ var opts = {
   'orderBuyerActivationKey': "orderBuyerActivationKey_example", // String | 
   'orderBuyerResetKey': "orderBuyerResetKey_example", // String | 
   'orderBuyerResetDate': new Date("2013-10-20T19:20:30+01:00"), // Date | 
-  'orderOrderItems0ProductCompanyAddressId': 789, // Number | 
-  'orderOrderItems0ProductCompanyAddressName': "orderOrderItems0ProductCompanyAddressName_example", // String | 
-  'orderOrderItems0ProductCompanyAddressStreetAddress': "orderOrderItems0ProductCompanyAddressStreetAddress_example", // String | 
-  'orderOrderItems0ProductCompanyAddressPostalCode': "orderOrderItems0ProductCompanyAddressPostalCode_example", // String | 
-  'orderOrderItems0ProductCompanyAddressCity': "orderOrderItems0ProductCompanyAddressCity_example", // String | 
-  'orderOrderItems0ProductCompanyAddressStateProvince': "orderOrderItems0ProductCompanyAddressStateProvince_example", // String | 
-  'orderOrderItems0ProductCompanyAddressCountry': "orderOrderItems0ProductCompanyAddressCountry_example", // String | 
   'orderOrderItems0ProductCompanyId': 789, // Number | 
   'orderOrderItems0ProductCompanyName': "orderOrderItems0ProductCompanyName_example", // String | 
   'orderOrderItems0ProductOffers0RecurrenceId': 789, // Number | 
   'orderOrderItems0ProductOffers0RecurrenceRecurrenceType': "orderOrderItems0ProductOffers0RecurrenceRecurrenceType_example", // String | 
   'orderOrderItems0ProductOffers0RecurrenceLength': 789, // Number | 
-  'orderOrderItems0ProductOffers0CompanyAddressId': 789, // Number | 
-  'orderOrderItems0ProductOffers0CompanyAddressName': "orderOrderItems0ProductOffers0CompanyAddressName_example", // String | 
-  'orderOrderItems0ProductOffers0CompanyAddressStreetAddress': "orderOrderItems0ProductOffers0CompanyAddressStreetAddress_example", // String | 
-  'orderOrderItems0ProductOffers0CompanyAddressPostalCode': "orderOrderItems0ProductOffers0CompanyAddressPostalCode_example", // String | 
-  'orderOrderItems0ProductOffers0CompanyAddressCity': "orderOrderItems0ProductOffers0CompanyAddressCity_example", // String | 
-  'orderOrderItems0ProductOffers0CompanyAddressStateProvince': "orderOrderItems0ProductOffers0CompanyAddressStateProvince_example", // String | 
-  'orderOrderItems0ProductOffers0CompanyAddressCountry': "orderOrderItems0ProductOffers0CompanyAddressCountry_example", // String | 
   'orderOrderItems0ProductOffers0CompanyId': 789, // Number | 
   'orderOrderItems0ProductOffers0CompanyName': "orderOrderItems0ProductOffers0CompanyName_example", // String | 
   'orderOrderItems0ProductOffers0Id': 789, // Number | 
@@ -113,25 +92,11 @@ var opts = {
   'orderOrderItems0OfferRecurrenceId': 789, // Number | 
   'orderOrderItems0OfferRecurrenceRecurrenceType': "orderOrderItems0OfferRecurrenceRecurrenceType_example", // String | 
   'orderOrderItems0OfferRecurrenceLength': 789, // Number | 
-  'orderOrderItems0OfferProductCompanyAddressId': 789, // Number | 
-  'orderOrderItems0OfferProductCompanyAddressName': "orderOrderItems0OfferProductCompanyAddressName_example", // String | 
-  'orderOrderItems0OfferProductCompanyAddressStreetAddress': "orderOrderItems0OfferProductCompanyAddressStreetAddress_example", // String | 
-  'orderOrderItems0OfferProductCompanyAddressPostalCode': "orderOrderItems0OfferProductCompanyAddressPostalCode_example", // String | 
-  'orderOrderItems0OfferProductCompanyAddressCity': "orderOrderItems0OfferProductCompanyAddressCity_example", // String | 
-  'orderOrderItems0OfferProductCompanyAddressStateProvince': "orderOrderItems0OfferProductCompanyAddressStateProvince_example", // String | 
-  'orderOrderItems0OfferProductCompanyAddressCountry': "orderOrderItems0OfferProductCompanyAddressCountry_example", // String | 
   'orderOrderItems0OfferProductCompanyId': 789, // Number | 
   'orderOrderItems0OfferProductCompanyName': "orderOrderItems0OfferProductCompanyName_example", // String | 
   'orderOrderItems0OfferProductOffers0RecurrenceId': 789, // Number | 
   'orderOrderItems0OfferProductOffers0RecurrenceRecurrenceType': "orderOrderItems0OfferProductOffers0RecurrenceRecurrenceType_example", // String | 
   'orderOrderItems0OfferProductOffers0RecurrenceLength': 789, // Number | 
-  'orderOrderItems0OfferProductOffers0CompanyAddressId': 789, // Number | 
-  'orderOrderItems0OfferProductOffers0CompanyAddressName': "orderOrderItems0OfferProductOffers0CompanyAddressName_example", // String | 
-  'orderOrderItems0OfferProductOffers0CompanyAddressStreetAddress': "orderOrderItems0OfferProductOffers0CompanyAddressStreetAddress_example", // String | 
-  'orderOrderItems0OfferProductOffers0CompanyAddressPostalCode': "orderOrderItems0OfferProductOffers0CompanyAddressPostalCode_example", // String | 
-  'orderOrderItems0OfferProductOffers0CompanyAddressCity': "orderOrderItems0OfferProductOffers0CompanyAddressCity_example", // String | 
-  'orderOrderItems0OfferProductOffers0CompanyAddressStateProvince': "orderOrderItems0OfferProductOffers0CompanyAddressStateProvince_example", // String | 
-  'orderOrderItems0OfferProductOffers0CompanyAddressCountry': "orderOrderItems0OfferProductOffers0CompanyAddressCountry_example", // String | 
   'orderOrderItems0OfferProductOffers0CompanyId': 789, // Number | 
   'orderOrderItems0OfferProductOffers0CompanyName': "orderOrderItems0OfferProductOffers0CompanyName_example", // String | 
   'orderOrderItems0OfferProductOffers0Id': 789, // Number | 
@@ -146,13 +111,6 @@ var opts = {
   'orderOrderItems0OfferProductDescription': "orderOrderItems0OfferProductDescription_example", // String | 
   'orderOrderItems0OfferProductImagePath': "orderOrderItems0OfferProductImagePath_example", // String | 
   'orderOrderItems0OfferProductProductType': "orderOrderItems0OfferProductProductType_example", // String | 
-  'orderOrderItems0OfferCompanyAddressId': 789, // Number | 
-  'orderOrderItems0OfferCompanyAddressName': "orderOrderItems0OfferCompanyAddressName_example", // String | 
-  'orderOrderItems0OfferCompanyAddressStreetAddress': "orderOrderItems0OfferCompanyAddressStreetAddress_example", // String | 
-  'orderOrderItems0OfferCompanyAddressPostalCode': "orderOrderItems0OfferCompanyAddressPostalCode_example", // String | 
-  'orderOrderItems0OfferCompanyAddressCity': "orderOrderItems0OfferCompanyAddressCity_example", // String | 
-  'orderOrderItems0OfferCompanyAddressStateProvince': "orderOrderItems0OfferCompanyAddressStateProvince_example", // String | 
-  'orderOrderItems0OfferCompanyAddressCountry': "orderOrderItems0OfferCompanyAddressCountry_example", // String | 
   'orderOrderItems0OfferCompanyId': 789, // Number | 
   'orderOrderItems0OfferCompanyName': "orderOrderItems0OfferCompanyName_example", // String | 
   'orderOrderItems0OfferId': 789, // Number | 
@@ -217,13 +175,6 @@ Name | Type | Description  | Notes
  **orderBuyerShippingAddressCity** | **String**|  | [optional] 
  **orderBuyerShippingAddressStateProvince** | **String**|  | [optional] 
  **orderBuyerShippingAddressCountry** | **String**|  | [optional] 
- **orderBuyerCompanyAddressId** | **Number**|  | [optional] 
- **orderBuyerCompanyAddressName** | **String**|  | [optional] 
- **orderBuyerCompanyAddressStreetAddress** | **String**|  | [optional] 
- **orderBuyerCompanyAddressPostalCode** | **String**|  | [optional] 
- **orderBuyerCompanyAddressCity** | **String**|  | [optional] 
- **orderBuyerCompanyAddressStateProvince** | **String**|  | [optional] 
- **orderBuyerCompanyAddressCountry** | **String**|  | [optional] 
  **orderBuyerCompanyId** | **Number**|  | [optional] 
  **orderBuyerCompanyName** | **String**|  | [optional] 
  **orderBuyerAuthorities0Name** | **String**|  | [optional] 
@@ -243,25 +194,11 @@ Name | Type | Description  | Notes
  **orderBuyerActivationKey** | **String**|  | [optional] 
  **orderBuyerResetKey** | **String**|  | [optional] 
  **orderBuyerResetDate** | **Date**|  | [optional] 
- **orderOrderItems0ProductCompanyAddressId** | **Number**|  | [optional] 
- **orderOrderItems0ProductCompanyAddressName** | **String**|  | [optional] 
- **orderOrderItems0ProductCompanyAddressStreetAddress** | **String**|  | [optional] 
- **orderOrderItems0ProductCompanyAddressPostalCode** | **String**|  | [optional] 
- **orderOrderItems0ProductCompanyAddressCity** | **String**|  | [optional] 
- **orderOrderItems0ProductCompanyAddressStateProvince** | **String**|  | [optional] 
- **orderOrderItems0ProductCompanyAddressCountry** | **String**|  | [optional] 
  **orderOrderItems0ProductCompanyId** | **Number**|  | [optional] 
  **orderOrderItems0ProductCompanyName** | **String**|  | [optional] 
  **orderOrderItems0ProductOffers0RecurrenceId** | **Number**|  | [optional] 
  **orderOrderItems0ProductOffers0RecurrenceRecurrenceType** | **String**|  | [optional] 
  **orderOrderItems0ProductOffers0RecurrenceLength** | **Number**|  | [optional] 
- **orderOrderItems0ProductOffers0CompanyAddressId** | **Number**|  | [optional] 
- **orderOrderItems0ProductOffers0CompanyAddressName** | **String**|  | [optional] 
- **orderOrderItems0ProductOffers0CompanyAddressStreetAddress** | **String**|  | [optional] 
- **orderOrderItems0ProductOffers0CompanyAddressPostalCode** | **String**|  | [optional] 
- **orderOrderItems0ProductOffers0CompanyAddressCity** | **String**|  | [optional] 
- **orderOrderItems0ProductOffers0CompanyAddressStateProvince** | **String**|  | [optional] 
- **orderOrderItems0ProductOffers0CompanyAddressCountry** | **String**|  | [optional] 
  **orderOrderItems0ProductOffers0CompanyId** | **Number**|  | [optional] 
  **orderOrderItems0ProductOffers0CompanyName** | **String**|  | [optional] 
  **orderOrderItems0ProductOffers0Id** | **Number**|  | [optional] 
@@ -279,25 +216,11 @@ Name | Type | Description  | Notes
  **orderOrderItems0OfferRecurrenceId** | **Number**|  | [optional] 
  **orderOrderItems0OfferRecurrenceRecurrenceType** | **String**|  | [optional] 
  **orderOrderItems0OfferRecurrenceLength** | **Number**|  | [optional] 
- **orderOrderItems0OfferProductCompanyAddressId** | **Number**|  | [optional] 
- **orderOrderItems0OfferProductCompanyAddressName** | **String**|  | [optional] 
- **orderOrderItems0OfferProductCompanyAddressStreetAddress** | **String**|  | [optional] 
- **orderOrderItems0OfferProductCompanyAddressPostalCode** | **String**|  | [optional] 
- **orderOrderItems0OfferProductCompanyAddressCity** | **String**|  | [optional] 
- **orderOrderItems0OfferProductCompanyAddressStateProvince** | **String**|  | [optional] 
- **orderOrderItems0OfferProductCompanyAddressCountry** | **String**|  | [optional] 
  **orderOrderItems0OfferProductCompanyId** | **Number**|  | [optional] 
  **orderOrderItems0OfferProductCompanyName** | **String**|  | [optional] 
  **orderOrderItems0OfferProductOffers0RecurrenceId** | **Number**|  | [optional] 
  **orderOrderItems0OfferProductOffers0RecurrenceRecurrenceType** | **String**|  | [optional] 
  **orderOrderItems0OfferProductOffers0RecurrenceLength** | **Number**|  | [optional] 
- **orderOrderItems0OfferProductOffers0CompanyAddressId** | **Number**|  | [optional] 
- **orderOrderItems0OfferProductOffers0CompanyAddressName** | **String**|  | [optional] 
- **orderOrderItems0OfferProductOffers0CompanyAddressStreetAddress** | **String**|  | [optional] 
- **orderOrderItems0OfferProductOffers0CompanyAddressPostalCode** | **String**|  | [optional] 
- **orderOrderItems0OfferProductOffers0CompanyAddressCity** | **String**|  | [optional] 
- **orderOrderItems0OfferProductOffers0CompanyAddressStateProvince** | **String**|  | [optional] 
- **orderOrderItems0OfferProductOffers0CompanyAddressCountry** | **String**|  | [optional] 
  **orderOrderItems0OfferProductOffers0CompanyId** | **Number**|  | [optional] 
  **orderOrderItems0OfferProductOffers0CompanyName** | **String**|  | [optional] 
  **orderOrderItems0OfferProductOffers0Id** | **Number**|  | [optional] 
@@ -312,13 +235,6 @@ Name | Type | Description  | Notes
  **orderOrderItems0OfferProductDescription** | **String**|  | [optional] 
  **orderOrderItems0OfferProductImagePath** | **String**|  | [optional] 
  **orderOrderItems0OfferProductProductType** | **String**|  | [optional] 
- **orderOrderItems0OfferCompanyAddressId** | **Number**|  | [optional] 
- **orderOrderItems0OfferCompanyAddressName** | **String**|  | [optional] 
- **orderOrderItems0OfferCompanyAddressStreetAddress** | **String**|  | [optional] 
- **orderOrderItems0OfferCompanyAddressPostalCode** | **String**|  | [optional] 
- **orderOrderItems0OfferCompanyAddressCity** | **String**|  | [optional] 
- **orderOrderItems0OfferCompanyAddressStateProvince** | **String**|  | [optional] 
- **orderOrderItems0OfferCompanyAddressCountry** | **String**|  | [optional] 
  **orderOrderItems0OfferCompanyId** | **Number**|  | [optional] 
  **orderOrderItems0OfferCompanyName** | **String**|  | [optional] 
  **orderOrderItems0OfferId** | **Number**|  | [optional] 

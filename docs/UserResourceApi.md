@@ -8,7 +8,9 @@ Method | HTTP request | Description
 [**deleteUserUsingDELETE**](UserResourceApi.md#deleteUserUsingDELETE) | **DELETE** /api/users/{login} | deleteUser
 [**getAllUsersUsingGET**](UserResourceApi.md#getAllUsersUsingGET) | **GET** /api/users | getAllUsers
 [**getAuthoritiesUsingGET**](UserResourceApi.md#getAuthoritiesUsingGET) | **GET** /api/users/authorities | getAuthorities
+[**getUserProfileUsingGET**](UserResourceApi.md#getUserProfileUsingGET) | **GET** /api/users/profile | getUserProfile
 [**getUserUsingGET**](UserResourceApi.md#getUserUsingGET) | **GET** /api/users/{login} | getUser
+[**updateCurrentUserUsingPUT**](UserResourceApi.md#updateCurrentUserUsingPUT) | **PUT** /api/users/current | updateCurrentUser
 [**updateUserUsingPUT**](UserResourceApi.md#updateUserUsingPUT) | **PUT** /api/users | updateUser
 
 
@@ -215,6 +217,51 @@ This endpoint does not need any parameter.
  - **Content-Type**: Not defined
  - **Accept**: */*
 
+<a name="getUserProfileUsingGET"></a>
+# **getUserProfileUsingGET**
+> User getUserProfileUsingGET()
+
+getUserProfile
+
+### Example
+```javascript
+var SubscreasyJsClient = require('subscreasy-js-client');
+var defaultClient = SubscreasyJsClient.ApiClient.instance;
+
+// Configure API key authorization: apiKey
+var apiKey = defaultClient.authentications['apiKey'];
+apiKey.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//apiKey.apiKeyPrefix = 'Token';
+
+var apiInstance = new SubscreasyJsClient.UserResourceApi();
+
+var callback = function(error, data, response) {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+};
+apiInstance.getUserProfileUsingGET(callback);
+```
+
+### Parameters
+This endpoint does not need any parameter.
+
+### Return type
+
+[**User**](User.md)
+
+### Authorization
+
+[apiKey](../README.md#apiKey)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: */*
+
 <a name="getUserUsingGET"></a>
 # **getUserUsingGET**
 > User getUserUsingGET(login)
@@ -264,6 +311,87 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
  - **Content-Type**: Not defined
+ - **Accept**: */*
+
+<a name="updateCurrentUserUsingPUT"></a>
+# **updateCurrentUserUsingPUT**
+> User updateCurrentUserUsingPUT(userDTO, opts)
+
+updateCurrentUser
+
+### Example
+```javascript
+var SubscreasyJsClient = require('subscreasy-js-client');
+var defaultClient = SubscreasyJsClient.ApiClient.instance;
+
+// Configure API key authorization: apiKey
+var apiKey = defaultClient.authentications['apiKey'];
+apiKey.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//apiKey.apiKeyPrefix = 'Token';
+
+var apiInstance = new SubscreasyJsClient.UserResourceApi();
+
+var userDTO = new SubscreasyJsClient.ManagedUserVM(); // ManagedUserVM | userDTO
+
+var opts = { 
+  'id': 789, // Number | 
+  'name': "name_example", // String | 
+  'streetAddress': "streetAddress_example", // String | 
+  'postalCode': "postalCode_example", // String | 
+  'city': "city_example", // String | 
+  'stateProvince': "stateProvince_example", // String | 
+  'country': "country_example", // String | 
+  'id2': 789, // Number | 
+  'name2': "name_example", // String | 
+  'streetAddress2': "streetAddress_example", // String | 
+  'postalCode2': "postalCode_example", // String | 
+  'city2': "city_example", // String | 
+  'stateProvince2': "stateProvince_example", // String | 
+  'country2': "country_example" // String | 
+};
+
+var callback = function(error, data, response) {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+};
+apiInstance.updateCurrentUserUsingPUT(userDTO, opts, callback);
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **userDTO** | [**ManagedUserVM**](ManagedUserVM.md)| userDTO | 
+ **id** | **Number**|  | [optional] 
+ **name** | **String**|  | [optional] 
+ **streetAddress** | **String**|  | [optional] 
+ **postalCode** | **String**|  | [optional] 
+ **city** | **String**|  | [optional] 
+ **stateProvince** | **String**|  | [optional] 
+ **country** | **String**|  | [optional] 
+ **id2** | **Number**|  | [optional] 
+ **name2** | **String**|  | [optional] 
+ **streetAddress2** | **String**|  | [optional] 
+ **postalCode2** | **String**|  | [optional] 
+ **city2** | **String**|  | [optional] 
+ **stateProvince2** | **String**|  | [optional] 
+ **country2** | **String**|  | [optional] 
+
+### Return type
+
+[**User**](User.md)
+
+### Authorization
+
+[apiKey](../README.md#apiKey)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
  - **Accept**: */*
 
 <a name="updateUserUsingPUT"></a>
