@@ -1,6 +1,6 @@
 # SubscreasyJsClient.AccountResourceApi
 
-All URIs are relative to *https://localhost:8080*
+All URIs are relative to *http://sandbox.subscreasy.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -8,41 +8,41 @@ Method | HTTP request | Description
 [**registerAccountUsingPOST**](AccountResourceApi.md#registerAccountUsingPOST) | **POST** /api/register | registerAccount
 
 
-<a name="isAuthenticatedUsingGET"></a>
-# **isAuthenticatedUsingGET**
-> &#39;String&#39; isAuthenticatedUsingGET()
+
+## isAuthenticatedUsingGET
+
+> String isAuthenticatedUsingGET()
 
 isAuthenticated
 
 ### Example
-```javascript
-var SubscreasyJsClient = require('subscreasy-js-client');
-var defaultClient = SubscreasyJsClient.ApiClient.instance;
 
+```javascript
+import SubscreasyJsClient from 'subscreasy-js-client';
+let defaultClient = SubscreasyJsClient.ApiClient.instance;
 // Configure API key authorization: apiKey
-var apiKey = defaultClient.authentications['apiKey'];
+let apiKey = defaultClient.authentications['apiKey'];
 apiKey.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //apiKey.apiKeyPrefix = 'Token';
 
-var apiInstance = new SubscreasyJsClient.AccountResourceApi();
-
-var callback = function(error, data, response) {
+let apiInstance = new SubscreasyJsClient.AccountResourceApi();
+apiInstance.isAuthenticatedUsingGET((error, data, response) => {
   if (error) {
     console.error(error);
   } else {
     console.log('API called successfully. Returned data: ' + data);
   }
-};
-apiInstance.isAuthenticatedUsingGET(callback);
+});
 ```
 
 ### Parameters
+
 This endpoint does not need any parameter.
 
 ### Return type
 
-**&#39;String&#39;**
+**String**
 
 ### Authorization
 
@@ -50,42 +50,40 @@ This endpoint does not need any parameter.
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: */*
+- **Content-Type**: Not defined
+- **Accept**: */*
 
-<a name="registerAccountUsingPOST"></a>
-# **registerAccountUsingPOST**
+
+## registerAccountUsingPOST
+
 > ResponseEntity registerAccountUsingPOST(managedUserVM)
 
 registerAccount
 
 ### Example
-```javascript
-var SubscreasyJsClient = require('subscreasy-js-client');
-var defaultClient = SubscreasyJsClient.ApiClient.instance;
 
+```javascript
+import SubscreasyJsClient from 'subscreasy-js-client';
+let defaultClient = SubscreasyJsClient.ApiClient.instance;
 // Configure API key authorization: apiKey
-var apiKey = defaultClient.authentications['apiKey'];
+let apiKey = defaultClient.authentications['apiKey'];
 apiKey.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //apiKey.apiKeyPrefix = 'Token';
 
-var apiInstance = new SubscreasyJsClient.AccountResourceApi();
-
-var managedUserVM = new SubscreasyJsClient.UserDTO(); // UserDTO | managedUserVM
-
-
-var callback = function(error, data, response) {
+let apiInstance = new SubscreasyJsClient.AccountResourceApi();
+let managedUserVM = new SubscreasyJsClient.UserDTO(); // UserDTO | managedUserVM
+apiInstance.registerAccountUsingPOST(managedUserVM, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
     console.log('API called successfully. Returned data: ' + data);
   }
-};
-apiInstance.registerAccountUsingPOST(managedUserVM, callback);
+});
 ```
 
 ### Parameters
+
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -101,6 +99,6 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json, text/plain
+- **Content-Type**: application/json
+- **Accept**: application/json, text/plain
 

@@ -1,6 +1,7 @@
 # SubscreasyJsClient.ResponseEntity
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **body** | **Object** |  | [optional] 
@@ -8,7 +9,7 @@ Name | Type | Description | Notes
 **statusCodeValue** | **Number** |  | [optional] 
 
 
-<a name="StatusCodeEnum"></a>
+
 ## Enum: StatusCodeEnum
 
 

@@ -1,13 +1,15 @@
 # SubscreasyJsClient.Cancellation
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **cancellationType** | **String** |  | [optional] 
+**subscriberId** | **Number** |  | [optional] 
 **subscriptionId** | **Number** |  | [optional] 
 
 
-<a name="CancellationTypeEnum"></a>
+
 ## Enum: CancellationTypeEnum
 
 

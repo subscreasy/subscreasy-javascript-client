@@ -1,45 +1,43 @@
 # SubscreasyJsClient.UserJwtControllerApi
 
-All URIs are relative to *https://localhost:8080*
+All URIs are relative to *http://sandbox.subscreasy.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**authorizeUsingPOST**](UserJwtControllerApi.md#authorizeUsingPOST) | **POST** /api/authenticate | authorize
 
 
-<a name="authorizeUsingPOST"></a>
-# **authorizeUsingPOST**
+
+## authorizeUsingPOST
+
 > ResponseEntity authorizeUsingPOST(loginVM)
 
 authorize
 
 ### Example
-```javascript
-var SubscreasyJsClient = require('subscreasy-js-client');
-var defaultClient = SubscreasyJsClient.ApiClient.instance;
 
+```javascript
+import SubscreasyJsClient from 'subscreasy-js-client';
+let defaultClient = SubscreasyJsClient.ApiClient.instance;
 // Configure API key authorization: apiKey
-var apiKey = defaultClient.authentications['apiKey'];
+let apiKey = defaultClient.authentications['apiKey'];
 apiKey.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //apiKey.apiKeyPrefix = 'Token';
 
-var apiInstance = new SubscreasyJsClient.UserJwtControllerApi();
-
-var loginVM = new SubscreasyJsClient.LoginVM(); // LoginVM | loginVM
-
-
-var callback = function(error, data, response) {
+let apiInstance = new SubscreasyJsClient.UserJwtControllerApi();
+let loginVM = new SubscreasyJsClient.LoginVM(); // LoginVM | loginVM
+apiInstance.authorizeUsingPOST(loginVM, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
     console.log('API called successfully. Returned data: ' + data);
   }
-};
-apiInstance.authorizeUsingPOST(loginVM, callback);
+});
 ```
 
 ### Parameters
+
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -55,6 +53,6 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: */*
+- **Content-Type**: application/json
+- **Accept**: */*
 

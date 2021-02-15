@@ -1,6 +1,7 @@
 # SubscreasyJsClient.ChargingLog
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **appliedCoupon** | **Number** |  | [optional] 
@@ -13,20 +14,25 @@ Name | Type | Description | Notes
 **id** | **Number** |  | [optional] 
 **invoiceId** | **Number** |  | [optional] 
 **jobId** | **Number** |  | [optional] 
-**orderId** | **Number** |  | [optional] 
-**parent** | [**ChargingLog**](ChargingLog.md) |  | [optional] 
+**offerId** | **Number** |  | [optional] 
+**parentId** | **Number** |  | [optional] 
 **paymentGateway** | **String** |  | [optional] 
 **paymentId** | **String** |  | [optional] 
 **price** | **Number** |  | [optional] 
 **reason** | **String** |  | [optional] 
+**refundDate** | **Date** |  | [optional] 
+**savedCard** | [**SavedCard**](SavedCard.md) |  | [optional] 
+**savedCardId** | **Number** |  | [optional] 
 **serviceInstanceId** | **Number** |  | [optional] 
 **status** | **String** |  | [optional] 
+**subscriberId** | **Number** |  | [optional] 
 **subscriberSecureId** | **String** |  | [optional] 
-**subscription** | [**Subsription**](Subsription.md) |  | [optional] 
+**subscriptionId** | **Number** |  | [optional] 
+**threeds** | **Boolean** |  | [optional] 
 **transactionId** | **String** |  | [optional] 
 
 
-<a name="PaymentGatewayEnum"></a>
+
 ## Enum: PaymentGatewayEnum
 
 
@@ -36,10 +42,16 @@ Name | Type | Description | Notes
 
 * `PAYU` (value: `"PAYU"`)
 
+* `PAYTR` (value: `"PAYTR"`)
+
+* `MOBILEXPRESS` (value: `"MOBILEXPRESS"`)
+
+* `AKTIFBANK` (value: `"AKTIFBANK"`)
 
 
 
-<a name="ReasonEnum"></a>
+
+
 ## Enum: ReasonEnum
 
 
@@ -51,16 +63,22 @@ Name | Type | Description | Notes
 
 * `REFUND` (value: `"REFUND"`)
 
+* `SAVE_CARD` (value: `"SAVE_CARD"`)
+
+* `TRIAL_PERIOD` (value: `"TRIAL_PERIOD"`)
+
+* `PAYMENT` (value: `"PAYMENT"`)
 
 
 
-<a name="StatusEnum"></a>
+
+
 ## Enum: StatusEnum
 
 
 * `NOT_PAID` (value: `"NOT_PAID"`)
 
-* `SUCCESS` (value: `"SUCCESS"`)
+* `PAID` (value: `"PAID"`)
 
 * `FAIL` (value: `"FAIL"`)
 

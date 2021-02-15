@@ -1,6 +1,7 @@
 # SubscreasyJsClient.UserDTO
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **activated** | **Boolean** |  | [optional] 
@@ -19,5 +20,7 @@ Name | Type | Description | Notes
 **login** | **String** |  | 
 **password** | **String** |  | [optional] 
 **resetDate** | **String** |  | [optional] 
+**siteName** | **String** |  | [optional] 
+**subscriber** | **Boolean** |  | [optional] 
 
 

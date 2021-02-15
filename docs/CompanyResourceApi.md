@@ -1,6 +1,6 @@
 # SubscreasyJsClient.CompanyResourceApi
 
-All URIs are relative to *https://localhost:8080*
+All URIs are relative to *http://sandbox.subscreasy.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -11,39 +11,37 @@ Method | HTTP request | Description
 [**updateCompanyUsingPUT**](CompanyResourceApi.md#updateCompanyUsingPUT) | **PUT** /api/companies | updateCompany
 
 
-<a name="createCompanyUsingPOST"></a>
-# **createCompanyUsingPOST**
+
+## createCompanyUsingPOST
+
 > Company createCompanyUsingPOST(company)
 
 createCompany
 
 ### Example
-```javascript
-var SubscreasyJsClient = require('subscreasy-js-client');
-var defaultClient = SubscreasyJsClient.ApiClient.instance;
 
+```javascript
+import SubscreasyJsClient from 'subscreasy-js-client';
+let defaultClient = SubscreasyJsClient.ApiClient.instance;
 // Configure API key authorization: apiKey
-var apiKey = defaultClient.authentications['apiKey'];
+let apiKey = defaultClient.authentications['apiKey'];
 apiKey.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //apiKey.apiKeyPrefix = 'Token';
 
-var apiInstance = new SubscreasyJsClient.CompanyResourceApi();
-
-var company = new SubscreasyJsClient.Company(); // Company | company
-
-
-var callback = function(error, data, response) {
+let apiInstance = new SubscreasyJsClient.CompanyResourceApi();
+let company = new SubscreasyJsClient.Company(); // Company | company
+apiInstance.createCompanyUsingPOST(company, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
     console.log('API called successfully. Returned data: ' + data);
   }
-};
-apiInstance.createCompanyUsingPOST(company, callback);
+});
 ```
 
 ### Parameters
+
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -59,42 +57,40 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: */*
+- **Content-Type**: application/json
+- **Accept**: */*
 
-<a name="deleteCompanyUsingDELETE"></a>
-# **deleteCompanyUsingDELETE**
+
+## deleteCompanyUsingDELETE
+
 > deleteCompanyUsingDELETE(id)
 
 deleteCompany
 
 ### Example
-```javascript
-var SubscreasyJsClient = require('subscreasy-js-client');
-var defaultClient = SubscreasyJsClient.ApiClient.instance;
 
+```javascript
+import SubscreasyJsClient from 'subscreasy-js-client';
+let defaultClient = SubscreasyJsClient.ApiClient.instance;
 // Configure API key authorization: apiKey
-var apiKey = defaultClient.authentications['apiKey'];
+let apiKey = defaultClient.authentications['apiKey'];
 apiKey.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //apiKey.apiKeyPrefix = 'Token';
 
-var apiInstance = new SubscreasyJsClient.CompanyResourceApi();
-
-var id = 789; // Number | id
-
-
-var callback = function(error, data, response) {
+let apiInstance = new SubscreasyJsClient.CompanyResourceApi();
+let id = 789; // Number | id
+apiInstance.deleteCompanyUsingDELETE(id, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
     console.log('API called successfully.');
   }
-};
-apiInstance.deleteCompanyUsingDELETE(id, callback);
+});
 ```
 
 ### Parameters
+
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -110,39 +106,39 @@ null (empty response body)
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: */*
+- **Content-Type**: Not defined
+- **Accept**: Not defined
 
-<a name="getAllCompaniesUsingGET"></a>
-# **getAllCompaniesUsingGET**
+
+## getAllCompaniesUsingGET
+
 > [Company] getAllCompaniesUsingGET()
 
 getAllCompanies
 
 ### Example
-```javascript
-var SubscreasyJsClient = require('subscreasy-js-client');
-var defaultClient = SubscreasyJsClient.ApiClient.instance;
 
+```javascript
+import SubscreasyJsClient from 'subscreasy-js-client';
+let defaultClient = SubscreasyJsClient.ApiClient.instance;
 // Configure API key authorization: apiKey
-var apiKey = defaultClient.authentications['apiKey'];
+let apiKey = defaultClient.authentications['apiKey'];
 apiKey.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //apiKey.apiKeyPrefix = 'Token';
 
-var apiInstance = new SubscreasyJsClient.CompanyResourceApi();
-
-var callback = function(error, data, response) {
+let apiInstance = new SubscreasyJsClient.CompanyResourceApi();
+apiInstance.getAllCompaniesUsingGET((error, data, response) => {
   if (error) {
     console.error(error);
   } else {
     console.log('API called successfully. Returned data: ' + data);
   }
-};
-apiInstance.getAllCompaniesUsingGET(callback);
+});
 ```
 
 ### Parameters
+
 This endpoint does not need any parameter.
 
 ### Return type
@@ -155,42 +151,40 @@ This endpoint does not need any parameter.
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: */*
+- **Content-Type**: Not defined
+- **Accept**: */*
 
-<a name="getCompanyUsingGET"></a>
-# **getCompanyUsingGET**
+
+## getCompanyUsingGET
+
 > Company getCompanyUsingGET(id)
 
 getCompany
 
 ### Example
-```javascript
-var SubscreasyJsClient = require('subscreasy-js-client');
-var defaultClient = SubscreasyJsClient.ApiClient.instance;
 
+```javascript
+import SubscreasyJsClient from 'subscreasy-js-client';
+let defaultClient = SubscreasyJsClient.ApiClient.instance;
 // Configure API key authorization: apiKey
-var apiKey = defaultClient.authentications['apiKey'];
+let apiKey = defaultClient.authentications['apiKey'];
 apiKey.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //apiKey.apiKeyPrefix = 'Token';
 
-var apiInstance = new SubscreasyJsClient.CompanyResourceApi();
-
-var id = 789; // Number | id
-
-
-var callback = function(error, data, response) {
+let apiInstance = new SubscreasyJsClient.CompanyResourceApi();
+let id = 789; // Number | id
+apiInstance.getCompanyUsingGET(id, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
     console.log('API called successfully. Returned data: ' + data);
   }
-};
-apiInstance.getCompanyUsingGET(id, callback);
+});
 ```
 
 ### Parameters
+
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -206,42 +200,40 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: */*
+- **Content-Type**: Not defined
+- **Accept**: */*
 
-<a name="updateCompanyUsingPUT"></a>
-# **updateCompanyUsingPUT**
+
+## updateCompanyUsingPUT
+
 > Company updateCompanyUsingPUT(company)
 
 updateCompany
 
 ### Example
-```javascript
-var SubscreasyJsClient = require('subscreasy-js-client');
-var defaultClient = SubscreasyJsClient.ApiClient.instance;
 
+```javascript
+import SubscreasyJsClient from 'subscreasy-js-client';
+let defaultClient = SubscreasyJsClient.ApiClient.instance;
 // Configure API key authorization: apiKey
-var apiKey = defaultClient.authentications['apiKey'];
+let apiKey = defaultClient.authentications['apiKey'];
 apiKey.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //apiKey.apiKeyPrefix = 'Token';
 
-var apiInstance = new SubscreasyJsClient.CompanyResourceApi();
-
-var company = new SubscreasyJsClient.Company(); // Company | company
-
-
-var callback = function(error, data, response) {
+let apiInstance = new SubscreasyJsClient.CompanyResourceApi();
+let company = new SubscreasyJsClient.Company(); // Company | company
+apiInstance.updateCompanyUsingPUT(company, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
     console.log('API called successfully. Returned data: ' + data);
   }
-};
-apiInstance.updateCompanyUsingPUT(company, callback);
+});
 ```
 
 ### Parameters
+
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -257,6 +249,6 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: */*
+- **Content-Type**: application/json
+- **Accept**: */*
 

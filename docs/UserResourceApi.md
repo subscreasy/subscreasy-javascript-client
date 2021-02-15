@@ -1,52 +1,51 @@
 # SubscreasyJsClient.UserResourceApi
 
-All URIs are relative to *https://localhost:8080*
+All URIs are relative to *http://sandbox.subscreasy.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
+[**createCompanyUserUsingPOST**](UserResourceApi.md#createCompanyUserUsingPOST) | **POST** /api/users/company | createCompanyUser
 [**createUserUsingPOST**](UserResourceApi.md#createUserUsingPOST) | **POST** /api/users | createUser
 [**deleteUserUsingDELETE**](UserResourceApi.md#deleteUserUsingDELETE) | **DELETE** /api/users/{login} | deleteUser
+[**getAllUsersByAuthenticatedCompanyUsingGET**](UserResourceApi.md#getAllUsersByAuthenticatedCompanyUsingGET) | **GET** /api/users/company | getAllUsersByAuthenticatedCompany
+[**getAllUsersByCompanyIdUsingGET**](UserResourceApi.md#getAllUsersByCompanyIdUsingGET) | **GET** /api/users/company/{companyId} | getAllUsersByCompanyId
 [**getAllUsersUsingGET**](UserResourceApi.md#getAllUsersUsingGET) | **GET** /api/users | getAllUsers
 [**getAuthoritiesUsingGET**](UserResourceApi.md#getAuthoritiesUsingGET) | **GET** /api/users/authorities | getAuthorities
-[**getUserProfileUsingGET**](UserResourceApi.md#getUserProfileUsingGET) | **GET** /api/users/profile | getUserProfile
 [**getUserUsingGET**](UserResourceApi.md#getUserUsingGET) | **GET** /api/users/{login} | getUser
-[**updateCurrentUserUsingPUT**](UserResourceApi.md#updateCurrentUserUsingPUT) | **PUT** /api/users/current | updateCurrentUser
 [**updateUserUsingPUT**](UserResourceApi.md#updateUserUsingPUT) | **PUT** /api/users | updateUser
 
 
-<a name="createUserUsingPOST"></a>
-# **createUserUsingPOST**
-> ResponseEntity createUserUsingPOST(managedUserVM)
 
-createUser
+## createCompanyUserUsingPOST
+
+> ResponseEntity createCompanyUserUsingPOST(managedUserVM)
+
+createCompanyUser
 
 ### Example
-```javascript
-var SubscreasyJsClient = require('subscreasy-js-client');
-var defaultClient = SubscreasyJsClient.ApiClient.instance;
 
+```javascript
+import SubscreasyJsClient from 'subscreasy-js-client';
+let defaultClient = SubscreasyJsClient.ApiClient.instance;
 // Configure API key authorization: apiKey
-var apiKey = defaultClient.authentications['apiKey'];
+let apiKey = defaultClient.authentications['apiKey'];
 apiKey.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //apiKey.apiKeyPrefix = 'Token';
 
-var apiInstance = new SubscreasyJsClient.UserResourceApi();
-
-var managedUserVM = new SubscreasyJsClient.ManagedUserVM(); // ManagedUserVM | managedUserVM
-
-
-var callback = function(error, data, response) {
+let apiInstance = new SubscreasyJsClient.UserResourceApi();
+let managedUserVM = new SubscreasyJsClient.ManagedUserVM(); // ManagedUserVM | managedUserVM
+apiInstance.createCompanyUserUsingPOST(managedUserVM, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
     console.log('API called successfully. Returned data: ' + data);
   }
-};
-apiInstance.createUserUsingPOST(managedUserVM, callback);
+});
 ```
 
 ### Parameters
+
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -62,42 +61,89 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: */*
+- **Content-Type**: application/json
+- **Accept**: */*
 
-<a name="deleteUserUsingDELETE"></a>
-# **deleteUserUsingDELETE**
+
+## createUserUsingPOST
+
+> ResponseEntity createUserUsingPOST(managedUserVM)
+
+createUser
+
+### Example
+
+```javascript
+import SubscreasyJsClient from 'subscreasy-js-client';
+let defaultClient = SubscreasyJsClient.ApiClient.instance;
+// Configure API key authorization: apiKey
+let apiKey = defaultClient.authentications['apiKey'];
+apiKey.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//apiKey.apiKeyPrefix = 'Token';
+
+let apiInstance = new SubscreasyJsClient.UserResourceApi();
+let managedUserVM = new SubscreasyJsClient.ManagedUserVM(); // ManagedUserVM | managedUserVM
+apiInstance.createUserUsingPOST(managedUserVM, (error, data, response) => {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+});
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **managedUserVM** | [**ManagedUserVM**](ManagedUserVM.md)| managedUserVM | 
+
+### Return type
+
+[**ResponseEntity**](ResponseEntity.md)
+
+### Authorization
+
+[apiKey](../README.md#apiKey)
+
+### HTTP request headers
+
+- **Content-Type**: application/json
+- **Accept**: */*
+
+
+## deleteUserUsingDELETE
+
 > deleteUserUsingDELETE(login)
 
 deleteUser
 
 ### Example
-```javascript
-var SubscreasyJsClient = require('subscreasy-js-client');
-var defaultClient = SubscreasyJsClient.ApiClient.instance;
 
+```javascript
+import SubscreasyJsClient from 'subscreasy-js-client';
+let defaultClient = SubscreasyJsClient.ApiClient.instance;
 // Configure API key authorization: apiKey
-var apiKey = defaultClient.authentications['apiKey'];
+let apiKey = defaultClient.authentications['apiKey'];
 apiKey.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //apiKey.apiKeyPrefix = 'Token';
 
-var apiInstance = new SubscreasyJsClient.UserResourceApi();
-
-var login = "login_example"; // String | login
-
-
-var callback = function(error, data, response) {
+let apiInstance = new SubscreasyJsClient.UserResourceApi();
+let login = "login_example"; // String | login
+apiInstance.deleteUserUsingDELETE(login, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
     console.log('API called successfully.');
   }
-};
-apiInstance.deleteUserUsingDELETE(login, callback);
+});
 ```
 
 ### Parameters
+
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -113,45 +159,138 @@ null (empty response body)
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: */*
+- **Content-Type**: Not defined
+- **Accept**: Not defined
 
-<a name="getAllUsersUsingGET"></a>
-# **getAllUsersUsingGET**
-> [User] getAllUsersUsingGET(opts)
 
-getAllUsers
+## getAllUsersByAuthenticatedCompanyUsingGET
+
+> [User] getAllUsersByAuthenticatedCompanyUsingGET()
+
+getAllUsersByAuthenticatedCompany
 
 ### Example
-```javascript
-var SubscreasyJsClient = require('subscreasy-js-client');
-var defaultClient = SubscreasyJsClient.ApiClient.instance;
 
+```javascript
+import SubscreasyJsClient from 'subscreasy-js-client';
+let defaultClient = SubscreasyJsClient.ApiClient.instance;
 // Configure API key authorization: apiKey
-var apiKey = defaultClient.authentications['apiKey'];
+let apiKey = defaultClient.authentications['apiKey'];
 apiKey.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //apiKey.apiKeyPrefix = 'Token';
 
-var apiInstance = new SubscreasyJsClient.UserResourceApi();
-
-var opts = { 
-  'page': 56, // Number | Page number of the requested page
-  'size': 56, // Number | Size of a page
-  'sort': ["sort_example"] // [String] | Sorting criteria in the format: property(,asc|desc). Default sort order is ascending. Multiple sort criteria are supported.
-};
-
-var callback = function(error, data, response) {
+let apiInstance = new SubscreasyJsClient.UserResourceApi();
+apiInstance.getAllUsersByAuthenticatedCompanyUsingGET((error, data, response) => {
   if (error) {
     console.error(error);
   } else {
     console.log('API called successfully. Returned data: ' + data);
   }
-};
-apiInstance.getAllUsersUsingGET(opts, callback);
+});
 ```
 
 ### Parameters
+
+This endpoint does not need any parameter.
+
+### Return type
+
+[**[User]**](User.md)
+
+### Authorization
+
+[apiKey](../README.md#apiKey)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: */*
+
+
+## getAllUsersByCompanyIdUsingGET
+
+> [User] getAllUsersByCompanyIdUsingGET(companyId)
+
+getAllUsersByCompanyId
+
+### Example
+
+```javascript
+import SubscreasyJsClient from 'subscreasy-js-client';
+let defaultClient = SubscreasyJsClient.ApiClient.instance;
+// Configure API key authorization: apiKey
+let apiKey = defaultClient.authentications['apiKey'];
+apiKey.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//apiKey.apiKeyPrefix = 'Token';
+
+let apiInstance = new SubscreasyJsClient.UserResourceApi();
+let companyId = 789; // Number | companyId
+apiInstance.getAllUsersByCompanyIdUsingGET(companyId, (error, data, response) => {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+});
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **companyId** | **Number**| companyId | 
+
+### Return type
+
+[**[User]**](User.md)
+
+### Authorization
+
+[apiKey](../README.md#apiKey)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: */*
+
+
+## getAllUsersUsingGET
+
+> [User] getAllUsersUsingGET(opts)
+
+getAllUsers
+
+### Example
+
+```javascript
+import SubscreasyJsClient from 'subscreasy-js-client';
+let defaultClient = SubscreasyJsClient.ApiClient.instance;
+// Configure API key authorization: apiKey
+let apiKey = defaultClient.authentications['apiKey'];
+apiKey.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//apiKey.apiKeyPrefix = 'Token';
+
+let apiInstance = new SubscreasyJsClient.UserResourceApi();
+let opts = {
+  'page': 56, // Number | Page number of the requested page
+  'size': 56, // Number | Size of a page
+  'sort': ["null"] // [String] | Sorting criteria in the format: property(,asc|desc). Default sort order is ascending. Multiple sort criteria are supported.
+};
+apiInstance.getAllUsersUsingGET(opts, (error, data, response) => {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+});
+```
+
+### Parameters
+
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -169,44 +308,44 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: */*
+- **Content-Type**: Not defined
+- **Accept**: */*
 
-<a name="getAuthoritiesUsingGET"></a>
-# **getAuthoritiesUsingGET**
-> [&#39;String&#39;] getAuthoritiesUsingGET()
+
+## getAuthoritiesUsingGET
+
+> [String] getAuthoritiesUsingGET()
 
 getAuthorities
 
 ### Example
-```javascript
-var SubscreasyJsClient = require('subscreasy-js-client');
-var defaultClient = SubscreasyJsClient.ApiClient.instance;
 
+```javascript
+import SubscreasyJsClient from 'subscreasy-js-client';
+let defaultClient = SubscreasyJsClient.ApiClient.instance;
 // Configure API key authorization: apiKey
-var apiKey = defaultClient.authentications['apiKey'];
+let apiKey = defaultClient.authentications['apiKey'];
 apiKey.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //apiKey.apiKeyPrefix = 'Token';
 
-var apiInstance = new SubscreasyJsClient.UserResourceApi();
-
-var callback = function(error, data, response) {
+let apiInstance = new SubscreasyJsClient.UserResourceApi();
+apiInstance.getAuthoritiesUsingGET((error, data, response) => {
   if (error) {
     console.error(error);
   } else {
     console.log('API called successfully. Returned data: ' + data);
   }
-};
-apiInstance.getAuthoritiesUsingGET(callback);
+});
 ```
 
 ### Parameters
+
 This endpoint does not need any parameter.
 
 ### Return type
 
-**[&#39;String&#39;]**
+**[String]**
 
 ### Authorization
 
@@ -214,87 +353,40 @@ This endpoint does not need any parameter.
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: */*
+- **Content-Type**: Not defined
+- **Accept**: */*
 
-<a name="getUserProfileUsingGET"></a>
-# **getUserProfileUsingGET**
-> User getUserProfileUsingGET()
 
-getUserProfile
+## getUserUsingGET
 
-### Example
-```javascript
-var SubscreasyJsClient = require('subscreasy-js-client');
-var defaultClient = SubscreasyJsClient.ApiClient.instance;
-
-// Configure API key authorization: apiKey
-var apiKey = defaultClient.authentications['apiKey'];
-apiKey.apiKey = 'YOUR API KEY';
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//apiKey.apiKeyPrefix = 'Token';
-
-var apiInstance = new SubscreasyJsClient.UserResourceApi();
-
-var callback = function(error, data, response) {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-};
-apiInstance.getUserProfileUsingGET(callback);
-```
-
-### Parameters
-This endpoint does not need any parameter.
-
-### Return type
-
-[**User**](User.md)
-
-### Authorization
-
-[apiKey](../README.md#apiKey)
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: */*
-
-<a name="getUserUsingGET"></a>
-# **getUserUsingGET**
-> User getUserUsingGET(login)
+> UserDTO getUserUsingGET(login)
 
 getUser
 
 ### Example
-```javascript
-var SubscreasyJsClient = require('subscreasy-js-client');
-var defaultClient = SubscreasyJsClient.ApiClient.instance;
 
+```javascript
+import SubscreasyJsClient from 'subscreasy-js-client';
+let defaultClient = SubscreasyJsClient.ApiClient.instance;
 // Configure API key authorization: apiKey
-var apiKey = defaultClient.authentications['apiKey'];
+let apiKey = defaultClient.authentications['apiKey'];
 apiKey.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //apiKey.apiKeyPrefix = 'Token';
 
-var apiInstance = new SubscreasyJsClient.UserResourceApi();
-
-var login = "login_example"; // String | login
-
-
-var callback = function(error, data, response) {
+let apiInstance = new SubscreasyJsClient.UserResourceApi();
+let login = "login_example"; // String | login
+apiInstance.getUserUsingGET(login, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
     console.log('API called successfully. Returned data: ' + data);
   }
-};
-apiInstance.getUserUsingGET(login, callback);
+});
 ```
 
 ### Parameters
+
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -302,7 +394,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**User**](User.md)
+[**UserDTO**](UserDTO.md)
 
 ### Authorization
 
@@ -310,123 +402,40 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: */*
+- **Content-Type**: Not defined
+- **Accept**: */*
 
-<a name="updateCurrentUserUsingPUT"></a>
-# **updateCurrentUserUsingPUT**
-> User updateCurrentUserUsingPUT(userDTO, opts)
 
-updateCurrentUser
+## updateUserUsingPUT
 
-### Example
-```javascript
-var SubscreasyJsClient = require('subscreasy-js-client');
-var defaultClient = SubscreasyJsClient.ApiClient.instance;
-
-// Configure API key authorization: apiKey
-var apiKey = defaultClient.authentications['apiKey'];
-apiKey.apiKey = 'YOUR API KEY';
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//apiKey.apiKeyPrefix = 'Token';
-
-var apiInstance = new SubscreasyJsClient.UserResourceApi();
-
-var userDTO = new SubscreasyJsClient.ManagedUserVM(); // ManagedUserVM | userDTO
-
-var opts = { 
-  'id': 789, // Number | 
-  'name': "name_example", // String | 
-  'streetAddress': "streetAddress_example", // String | 
-  'postalCode': "postalCode_example", // String | 
-  'city': "city_example", // String | 
-  'stateProvince': "stateProvince_example", // String | 
-  'country': "country_example", // String | 
-  'id2': 789, // Number | 
-  'name2': "name_example", // String | 
-  'streetAddress2': "streetAddress_example", // String | 
-  'postalCode2': "postalCode_example", // String | 
-  'city2': "city_example", // String | 
-  'stateProvince2': "stateProvince_example", // String | 
-  'country2': "country_example" // String | 
-};
-
-var callback = function(error, data, response) {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-};
-apiInstance.updateCurrentUserUsingPUT(userDTO, opts, callback);
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **userDTO** | [**ManagedUserVM**](ManagedUserVM.md)| userDTO | 
- **id** | **Number**|  | [optional] 
- **name** | **String**|  | [optional] 
- **streetAddress** | **String**|  | [optional] 
- **postalCode** | **String**|  | [optional] 
- **city** | **String**|  | [optional] 
- **stateProvince** | **String**|  | [optional] 
- **country** | **String**|  | [optional] 
- **id2** | **Number**|  | [optional] 
- **name2** | **String**|  | [optional] 
- **streetAddress2** | **String**|  | [optional] 
- **postalCode2** | **String**|  | [optional] 
- **city2** | **String**|  | [optional] 
- **stateProvince2** | **String**|  | [optional] 
- **country2** | **String**|  | [optional] 
-
-### Return type
-
-[**User**](User.md)
-
-### Authorization
-
-[apiKey](../README.md#apiKey)
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: */*
-
-<a name="updateUserUsingPUT"></a>
-# **updateUserUsingPUT**
 > User updateUserUsingPUT(managedUserVM)
 
 updateUser
 
 ### Example
-```javascript
-var SubscreasyJsClient = require('subscreasy-js-client');
-var defaultClient = SubscreasyJsClient.ApiClient.instance;
 
+```javascript
+import SubscreasyJsClient from 'subscreasy-js-client';
+let defaultClient = SubscreasyJsClient.ApiClient.instance;
 // Configure API key authorization: apiKey
-var apiKey = defaultClient.authentications['apiKey'];
+let apiKey = defaultClient.authentications['apiKey'];
 apiKey.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //apiKey.apiKeyPrefix = 'Token';
 
-var apiInstance = new SubscreasyJsClient.UserResourceApi();
-
-var managedUserVM = new SubscreasyJsClient.ManagedUserVM(); // ManagedUserVM | managedUserVM
-
-
-var callback = function(error, data, response) {
+let apiInstance = new SubscreasyJsClient.UserResourceApi();
+let managedUserVM = new SubscreasyJsClient.ManagedUserVM(); // ManagedUserVM | managedUserVM
+apiInstance.updateUserUsingPUT(managedUserVM, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
     console.log('API called successfully. Returned data: ' + data);
   }
-};
-apiInstance.updateUserUsingPUT(managedUserVM, callback);
+});
 ```
 
 ### Parameters
+
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -442,6 +451,6 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: */*
+- **Content-Type**: application/json
+- **Accept**: */*
 

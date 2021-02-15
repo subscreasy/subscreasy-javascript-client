@@ -1,6 +1,6 @@
 # SubscreasyJsClient.HistoryResourceApi
 
-All URIs are relative to *https://localhost:8080*
+All URIs are relative to *http://sandbox.subscreasy.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -11,39 +11,37 @@ Method | HTTP request | Description
 [**updateHistoryUsingPUT**](HistoryResourceApi.md#updateHistoryUsingPUT) | **PUT** /api/histories | updateHistory
 
 
-<a name="createHistoryUsingPOST"></a>
-# **createHistoryUsingPOST**
+
+## createHistoryUsingPOST
+
 > History createHistoryUsingPOST(history)
 
 createHistory
 
 ### Example
-```javascript
-var SubscreasyJsClient = require('subscreasy-js-client');
-var defaultClient = SubscreasyJsClient.ApiClient.instance;
 
+```javascript
+import SubscreasyJsClient from 'subscreasy-js-client';
+let defaultClient = SubscreasyJsClient.ApiClient.instance;
 // Configure API key authorization: apiKey
-var apiKey = defaultClient.authentications['apiKey'];
+let apiKey = defaultClient.authentications['apiKey'];
 apiKey.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //apiKey.apiKeyPrefix = 'Token';
 
-var apiInstance = new SubscreasyJsClient.HistoryResourceApi();
-
-var history = new SubscreasyJsClient.History(); // History | history
-
-
-var callback = function(error, data, response) {
+let apiInstance = new SubscreasyJsClient.HistoryResourceApi();
+let history = new SubscreasyJsClient.History(); // History | history
+apiInstance.createHistoryUsingPOST(history, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
     console.log('API called successfully. Returned data: ' + data);
   }
-};
-apiInstance.createHistoryUsingPOST(history, callback);
+});
 ```
 
 ### Parameters
+
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -59,42 +57,40 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: */*
+- **Content-Type**: application/json
+- **Accept**: */*
 
-<a name="deleteHistoryUsingDELETE"></a>
-# **deleteHistoryUsingDELETE**
+
+## deleteHistoryUsingDELETE
+
 > deleteHistoryUsingDELETE(id)
 
 deleteHistory
 
 ### Example
-```javascript
-var SubscreasyJsClient = require('subscreasy-js-client');
-var defaultClient = SubscreasyJsClient.ApiClient.instance;
 
+```javascript
+import SubscreasyJsClient from 'subscreasy-js-client';
+let defaultClient = SubscreasyJsClient.ApiClient.instance;
 // Configure API key authorization: apiKey
-var apiKey = defaultClient.authentications['apiKey'];
+let apiKey = defaultClient.authentications['apiKey'];
 apiKey.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //apiKey.apiKeyPrefix = 'Token';
 
-var apiInstance = new SubscreasyJsClient.HistoryResourceApi();
-
-var id = 789; // Number | id
-
-
-var callback = function(error, data, response) {
+let apiInstance = new SubscreasyJsClient.HistoryResourceApi();
+let id = 789; // Number | id
+apiInstance.deleteHistoryUsingDELETE(id, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
     console.log('API called successfully.');
   }
-};
-apiInstance.deleteHistoryUsingDELETE(id, callback);
+});
 ```
 
 ### Parameters
+
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -110,39 +106,39 @@ null (empty response body)
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: */*
+- **Content-Type**: Not defined
+- **Accept**: Not defined
 
-<a name="getAllHistoriesUsingGET"></a>
-# **getAllHistoriesUsingGET**
+
+## getAllHistoriesUsingGET
+
 > [History] getAllHistoriesUsingGET()
 
 getAllHistories
 
 ### Example
-```javascript
-var SubscreasyJsClient = require('subscreasy-js-client');
-var defaultClient = SubscreasyJsClient.ApiClient.instance;
 
+```javascript
+import SubscreasyJsClient from 'subscreasy-js-client';
+let defaultClient = SubscreasyJsClient.ApiClient.instance;
 // Configure API key authorization: apiKey
-var apiKey = defaultClient.authentications['apiKey'];
+let apiKey = defaultClient.authentications['apiKey'];
 apiKey.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //apiKey.apiKeyPrefix = 'Token';
 
-var apiInstance = new SubscreasyJsClient.HistoryResourceApi();
-
-var callback = function(error, data, response) {
+let apiInstance = new SubscreasyJsClient.HistoryResourceApi();
+apiInstance.getAllHistoriesUsingGET((error, data, response) => {
   if (error) {
     console.error(error);
   } else {
     console.log('API called successfully. Returned data: ' + data);
   }
-};
-apiInstance.getAllHistoriesUsingGET(callback);
+});
 ```
 
 ### Parameters
+
 This endpoint does not need any parameter.
 
 ### Return type
@@ -155,42 +151,40 @@ This endpoint does not need any parameter.
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: */*
+- **Content-Type**: Not defined
+- **Accept**: */*
 
-<a name="getHistoryUsingGET"></a>
-# **getHistoryUsingGET**
+
+## getHistoryUsingGET
+
 > History getHistoryUsingGET(id)
 
 getHistory
 
 ### Example
-```javascript
-var SubscreasyJsClient = require('subscreasy-js-client');
-var defaultClient = SubscreasyJsClient.ApiClient.instance;
 
+```javascript
+import SubscreasyJsClient from 'subscreasy-js-client';
+let defaultClient = SubscreasyJsClient.ApiClient.instance;
 // Configure API key authorization: apiKey
-var apiKey = defaultClient.authentications['apiKey'];
+let apiKey = defaultClient.authentications['apiKey'];
 apiKey.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //apiKey.apiKeyPrefix = 'Token';
 
-var apiInstance = new SubscreasyJsClient.HistoryResourceApi();
-
-var id = 789; // Number | id
-
-
-var callback = function(error, data, response) {
+let apiInstance = new SubscreasyJsClient.HistoryResourceApi();
+let id = 789; // Number | id
+apiInstance.getHistoryUsingGET(id, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
     console.log('API called successfully. Returned data: ' + data);
   }
-};
-apiInstance.getHistoryUsingGET(id, callback);
+});
 ```
 
 ### Parameters
+
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -206,42 +200,40 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: */*
+- **Content-Type**: Not defined
+- **Accept**: */*
 
-<a name="updateHistoryUsingPUT"></a>
-# **updateHistoryUsingPUT**
+
+## updateHistoryUsingPUT
+
 > History updateHistoryUsingPUT(history)
 
 updateHistory
 
 ### Example
-```javascript
-var SubscreasyJsClient = require('subscreasy-js-client');
-var defaultClient = SubscreasyJsClient.ApiClient.instance;
 
+```javascript
+import SubscreasyJsClient from 'subscreasy-js-client';
+let defaultClient = SubscreasyJsClient.ApiClient.instance;
 // Configure API key authorization: apiKey
-var apiKey = defaultClient.authentications['apiKey'];
+let apiKey = defaultClient.authentications['apiKey'];
 apiKey.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //apiKey.apiKeyPrefix = 'Token';
 
-var apiInstance = new SubscreasyJsClient.HistoryResourceApi();
-
-var history = new SubscreasyJsClient.History(); // History | history
-
-
-var callback = function(error, data, response) {
+let apiInstance = new SubscreasyJsClient.HistoryResourceApi();
+let history = new SubscreasyJsClient.History(); // History | history
+apiInstance.updateHistoryUsingPUT(history, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
     console.log('API called successfully. Returned data: ' + data);
   }
-};
-apiInstance.updateHistoryUsingPUT(history, callback);
+});
 ```
 
 ### Parameters
+
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -257,6 +249,6 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: */*
+- **Content-Type**: application/json
+- **Accept**: */*
 

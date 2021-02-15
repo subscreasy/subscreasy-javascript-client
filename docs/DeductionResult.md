@@ -1,6 +1,7 @@
 # SubscreasyJsClient.DeductionResult
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **capacity** | **Number** |  | [optional] 

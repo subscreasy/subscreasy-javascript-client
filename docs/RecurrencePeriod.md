@@ -1,6 +1,7 @@
 # SubscreasyJsClient.RecurrencePeriod
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **id** | **Number** |  | [optional] 
@@ -8,7 +9,7 @@ Name | Type | Description | Notes
 **recurrenceType** | **String** |  | 
 
 
-<a name="RecurrenceTypeEnum"></a>
+
 ## Enum: RecurrenceTypeEnum
 
 

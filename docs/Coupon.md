@@ -1,6 +1,7 @@
 # SubscreasyJsClient.Coupon
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **code** | **String** |  | [optional] 
@@ -13,7 +14,7 @@ Name | Type | Description | Notes
 **maxLimit** | **Number** |  | 
 
 
-<a name="DiscountTypeEnum"></a>
+
 ## Enum: DiscountTypeEnum
 
 

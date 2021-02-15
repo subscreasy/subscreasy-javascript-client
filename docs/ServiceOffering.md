@@ -1,12 +1,13 @@
 # SubscreasyJsClient.ServiceOffering
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **company** | [**Company**](Company.md) |  | [optional] 
 **description** | **String** |  | [optional] 
 **id** | **Number** |  | [optional] 
-**offer** | [**Offer**](Offer.md) |  | 
+**offer** | [**Offer**](Offer.md) |  | [optional] 
 **overUsagePrice** | **Number** |  | [optional] 
 **overUsageQuota** | **Number** |  | [optional] 
 **price** | **Number** |  | [optional] 

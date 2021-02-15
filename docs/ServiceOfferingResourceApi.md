@@ -1,6 +1,6 @@
 # SubscreasyJsClient.ServiceOfferingResourceApi
 
-All URIs are relative to *https://localhost:8080*
+All URIs are relative to *http://sandbox.subscreasy.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -11,39 +11,37 @@ Method | HTTP request | Description
 [**updateServiceOfferingUsingPUT**](ServiceOfferingResourceApi.md#updateServiceOfferingUsingPUT) | **PUT** /api/service-offerings | updateServiceOffering
 
 
-<a name="createServiceOfferingUsingPOST"></a>
-# **createServiceOfferingUsingPOST**
+
+## createServiceOfferingUsingPOST
+
 > ServiceOffering createServiceOfferingUsingPOST(serviceOffering)
 
 createServiceOffering
 
 ### Example
-```javascript
-var SubscreasyJsClient = require('subscreasy-js-client');
-var defaultClient = SubscreasyJsClient.ApiClient.instance;
 
+```javascript
+import SubscreasyJsClient from 'subscreasy-js-client';
+let defaultClient = SubscreasyJsClient.ApiClient.instance;
 // Configure API key authorization: apiKey
-var apiKey = defaultClient.authentications['apiKey'];
+let apiKey = defaultClient.authentications['apiKey'];
 apiKey.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //apiKey.apiKeyPrefix = 'Token';
 
-var apiInstance = new SubscreasyJsClient.ServiceOfferingResourceApi();
-
-var serviceOffering = new SubscreasyJsClient.ServiceOffering(); // ServiceOffering | serviceOffering
-
-
-var callback = function(error, data, response) {
+let apiInstance = new SubscreasyJsClient.ServiceOfferingResourceApi();
+let serviceOffering = new SubscreasyJsClient.ServiceOffering(); // ServiceOffering | serviceOffering
+apiInstance.createServiceOfferingUsingPOST(serviceOffering, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
     console.log('API called successfully. Returned data: ' + data);
   }
-};
-apiInstance.createServiceOfferingUsingPOST(serviceOffering, callback);
+});
 ```
 
 ### Parameters
+
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -59,42 +57,40 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: */*
+- **Content-Type**: application/json
+- **Accept**: */*
 
-<a name="deleteServiceOfferingUsingDELETE"></a>
-# **deleteServiceOfferingUsingDELETE**
+
+## deleteServiceOfferingUsingDELETE
+
 > deleteServiceOfferingUsingDELETE(id)
 
 deleteServiceOffering
 
 ### Example
-```javascript
-var SubscreasyJsClient = require('subscreasy-js-client');
-var defaultClient = SubscreasyJsClient.ApiClient.instance;
 
+```javascript
+import SubscreasyJsClient from 'subscreasy-js-client';
+let defaultClient = SubscreasyJsClient.ApiClient.instance;
 // Configure API key authorization: apiKey
-var apiKey = defaultClient.authentications['apiKey'];
+let apiKey = defaultClient.authentications['apiKey'];
 apiKey.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //apiKey.apiKeyPrefix = 'Token';
 
-var apiInstance = new SubscreasyJsClient.ServiceOfferingResourceApi();
-
-var id = 789; // Number | id
-
-
-var callback = function(error, data, response) {
+let apiInstance = new SubscreasyJsClient.ServiceOfferingResourceApi();
+let id = 789; // Number | id
+apiInstance.deleteServiceOfferingUsingDELETE(id, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
     console.log('API called successfully.');
   }
-};
-apiInstance.deleteServiceOfferingUsingDELETE(id, callback);
+});
 ```
 
 ### Parameters
+
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -110,39 +106,39 @@ null (empty response body)
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: */*
+- **Content-Type**: Not defined
+- **Accept**: Not defined
 
-<a name="getAllServiceOfferingsUsingGET"></a>
-# **getAllServiceOfferingsUsingGET**
+
+## getAllServiceOfferingsUsingGET
+
 > [ServiceOffering] getAllServiceOfferingsUsingGET()
 
 getAllServiceOfferings
 
 ### Example
-```javascript
-var SubscreasyJsClient = require('subscreasy-js-client');
-var defaultClient = SubscreasyJsClient.ApiClient.instance;
 
+```javascript
+import SubscreasyJsClient from 'subscreasy-js-client';
+let defaultClient = SubscreasyJsClient.ApiClient.instance;
 // Configure API key authorization: apiKey
-var apiKey = defaultClient.authentications['apiKey'];
+let apiKey = defaultClient.authentications['apiKey'];
 apiKey.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //apiKey.apiKeyPrefix = 'Token';
 
-var apiInstance = new SubscreasyJsClient.ServiceOfferingResourceApi();
-
-var callback = function(error, data, response) {
+let apiInstance = new SubscreasyJsClient.ServiceOfferingResourceApi();
+apiInstance.getAllServiceOfferingsUsingGET((error, data, response) => {
   if (error) {
     console.error(error);
   } else {
     console.log('API called successfully. Returned data: ' + data);
   }
-};
-apiInstance.getAllServiceOfferingsUsingGET(callback);
+});
 ```
 
 ### Parameters
+
 This endpoint does not need any parameter.
 
 ### Return type
@@ -155,42 +151,40 @@ This endpoint does not need any parameter.
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: */*
+- **Content-Type**: Not defined
+- **Accept**: */*
 
-<a name="getServiceOfferingUsingGET"></a>
-# **getServiceOfferingUsingGET**
+
+## getServiceOfferingUsingGET
+
 > ServiceOffering getServiceOfferingUsingGET(id)
 
 getServiceOffering
 
 ### Example
-```javascript
-var SubscreasyJsClient = require('subscreasy-js-client');
-var defaultClient = SubscreasyJsClient.ApiClient.instance;
 
+```javascript
+import SubscreasyJsClient from 'subscreasy-js-client';
+let defaultClient = SubscreasyJsClient.ApiClient.instance;
 // Configure API key authorization: apiKey
-var apiKey = defaultClient.authentications['apiKey'];
+let apiKey = defaultClient.authentications['apiKey'];
 apiKey.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //apiKey.apiKeyPrefix = 'Token';
 
-var apiInstance = new SubscreasyJsClient.ServiceOfferingResourceApi();
-
-var id = 789; // Number | id
-
-
-var callback = function(error, data, response) {
+let apiInstance = new SubscreasyJsClient.ServiceOfferingResourceApi();
+let id = 789; // Number | id
+apiInstance.getServiceOfferingUsingGET(id, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
     console.log('API called successfully. Returned data: ' + data);
   }
-};
-apiInstance.getServiceOfferingUsingGET(id, callback);
+});
 ```
 
 ### Parameters
+
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -206,42 +200,40 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: */*
+- **Content-Type**: Not defined
+- **Accept**: */*
 
-<a name="updateServiceOfferingUsingPUT"></a>
-# **updateServiceOfferingUsingPUT**
+
+## updateServiceOfferingUsingPUT
+
 > ServiceOffering updateServiceOfferingUsingPUT(serviceOffering)
 
 updateServiceOffering
 
 ### Example
-```javascript
-var SubscreasyJsClient = require('subscreasy-js-client');
-var defaultClient = SubscreasyJsClient.ApiClient.instance;
 
+```javascript
+import SubscreasyJsClient from 'subscreasy-js-client';
+let defaultClient = SubscreasyJsClient.ApiClient.instance;
 // Configure API key authorization: apiKey
-var apiKey = defaultClient.authentications['apiKey'];
+let apiKey = defaultClient.authentications['apiKey'];
 apiKey.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //apiKey.apiKeyPrefix = 'Token';
 
-var apiInstance = new SubscreasyJsClient.ServiceOfferingResourceApi();
-
-var serviceOffering = new SubscreasyJsClient.ServiceOffering(); // ServiceOffering | serviceOffering
-
-
-var callback = function(error, data, response) {
+let apiInstance = new SubscreasyJsClient.ServiceOfferingResourceApi();
+let serviceOffering = new SubscreasyJsClient.ServiceOffering(); // ServiceOffering | serviceOffering
+apiInstance.updateServiceOfferingUsingPUT(serviceOffering, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
     console.log('API called successfully. Returned data: ' + data);
   }
-};
-apiInstance.updateServiceOfferingUsingPUT(serviceOffering, callback);
+});
 ```
 
 ### Parameters
+
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -257,6 +249,6 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: */*
+- **Content-Type**: application/json
+- **Accept**: */*
 

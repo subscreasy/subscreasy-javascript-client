@@ -1,11 +1,12 @@
 # SubscreasyJsClient.SubscriberResourceApi
 
-All URIs are relative to *https://localhost:8080*
+All URIs are relative to *http://sandbox.subscreasy.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**createSubscriberUsingPOST**](SubscriberResourceApi.md#createSubscriberUsingPOST) | **POST** /api/subscribers | createSubscriber
 [**deleteSubscriberUsingDELETE**](SubscriberResourceApi.md#deleteSubscriberUsingDELETE) | **DELETE** /api/subscribers/{id} | deleteSubscriber
+[**findAllSubscribersUsingGET**](SubscriberResourceApi.md#findAllSubscribersUsingGET) | **GET** /api/subscribers/find-all | findAllSubscribers
 [**getAllSubscribersUsingGET**](SubscriberResourceApi.md#getAllSubscribersUsingGET) | **GET** /api/subscribers | getAllSubscribers
 [**getSubscriberByEmailUsingGET**](SubscriberResourceApi.md#getSubscriberByEmailUsingGET) | **GET** /api/subscribers/email/{email} | getSubscriberByEmail
 [**getSubscriberByNameUsingGET**](SubscriberResourceApi.md#getSubscriberByNameUsingGET) | **GET** /api/subscribers/name/{name} | getSubscriberByName
@@ -14,39 +15,37 @@ Method | HTTP request | Description
 [**updateSubscriberUsingPUT**](SubscriberResourceApi.md#updateSubscriberUsingPUT) | **PUT** /api/subscribers | updateSubscriber
 
 
-<a name="createSubscriberUsingPOST"></a>
-# **createSubscriberUsingPOST**
+
+## createSubscriberUsingPOST
+
 > Subscriber createSubscriberUsingPOST(subscriber)
 
 createSubscriber
 
 ### Example
-```javascript
-var SubscreasyJsClient = require('subscreasy-js-client');
-var defaultClient = SubscreasyJsClient.ApiClient.instance;
 
+```javascript
+import SubscreasyJsClient from 'subscreasy-js-client';
+let defaultClient = SubscreasyJsClient.ApiClient.instance;
 // Configure API key authorization: apiKey
-var apiKey = defaultClient.authentications['apiKey'];
+let apiKey = defaultClient.authentications['apiKey'];
 apiKey.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //apiKey.apiKeyPrefix = 'Token';
 
-var apiInstance = new SubscreasyJsClient.SubscriberResourceApi();
-
-var subscriber = new SubscreasyJsClient.Subscriber(); // Subscriber | subscriber
-
-
-var callback = function(error, data, response) {
+let apiInstance = new SubscreasyJsClient.SubscriberResourceApi();
+let subscriber = new SubscreasyJsClient.Subscriber(); // Subscriber | subscriber
+apiInstance.createSubscriberUsingPOST(subscriber, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
     console.log('API called successfully. Returned data: ' + data);
   }
-};
-apiInstance.createSubscriberUsingPOST(subscriber, callback);
+});
 ```
 
 ### Parameters
+
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -62,42 +61,40 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: */*
+- **Content-Type**: application/json
+- **Accept**: */*
 
-<a name="deleteSubscriberUsingDELETE"></a>
-# **deleteSubscriberUsingDELETE**
+
+## deleteSubscriberUsingDELETE
+
 > deleteSubscriberUsingDELETE(id)
 
 deleteSubscriber
 
 ### Example
-```javascript
-var SubscreasyJsClient = require('subscreasy-js-client');
-var defaultClient = SubscreasyJsClient.ApiClient.instance;
 
+```javascript
+import SubscreasyJsClient from 'subscreasy-js-client';
+let defaultClient = SubscreasyJsClient.ApiClient.instance;
 // Configure API key authorization: apiKey
-var apiKey = defaultClient.authentications['apiKey'];
+let apiKey = defaultClient.authentications['apiKey'];
 apiKey.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //apiKey.apiKeyPrefix = 'Token';
 
-var apiInstance = new SubscreasyJsClient.SubscriberResourceApi();
-
-var id = 789; // Number | id
-
-
-var callback = function(error, data, response) {
+let apiInstance = new SubscreasyJsClient.SubscriberResourceApi();
+let id = 789; // Number | id
+apiInstance.deleteSubscriberUsingDELETE(id, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
     console.log('API called successfully.');
   }
-};
-apiInstance.deleteSubscriberUsingDELETE(id, callback);
+});
 ```
 
 ### Parameters
+
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -113,39 +110,39 @@ null (empty response body)
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: */*
+- **Content-Type**: Not defined
+- **Accept**: Not defined
 
-<a name="getAllSubscribersUsingGET"></a>
-# **getAllSubscribersUsingGET**
-> [Subscriber] getAllSubscribersUsingGET()
 
-getAllSubscribers
+## findAllSubscribersUsingGET
+
+> [Subscriber] findAllSubscribersUsingGET()
+
+findAllSubscribers
 
 ### Example
-```javascript
-var SubscreasyJsClient = require('subscreasy-js-client');
-var defaultClient = SubscreasyJsClient.ApiClient.instance;
 
+```javascript
+import SubscreasyJsClient from 'subscreasy-js-client';
+let defaultClient = SubscreasyJsClient.ApiClient.instance;
 // Configure API key authorization: apiKey
-var apiKey = defaultClient.authentications['apiKey'];
+let apiKey = defaultClient.authentications['apiKey'];
 apiKey.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //apiKey.apiKeyPrefix = 'Token';
 
-var apiInstance = new SubscreasyJsClient.SubscriberResourceApi();
-
-var callback = function(error, data, response) {
+let apiInstance = new SubscreasyJsClient.SubscriberResourceApi();
+apiInstance.findAllSubscribersUsingGET((error, data, response) => {
   if (error) {
     console.error(error);
   } else {
     console.log('API called successfully. Returned data: ' + data);
   }
-};
-apiInstance.getAllSubscribersUsingGET(callback);
+});
 ```
 
 ### Parameters
+
 This endpoint does not need any parameter.
 
 ### Return type
@@ -158,46 +155,107 @@ This endpoint does not need any parameter.
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: */*
+- **Content-Type**: Not defined
+- **Accept**: */*
 
-<a name="getSubscriberByEmailUsingGET"></a>
-# **getSubscriberByEmailUsingGET**
-> [Subscriber] getSubscriberByEmailUsingGET(email)
+
+## getAllSubscribersUsingGET
+
+> [Subscriber] getAllSubscribersUsingGET(opts)
+
+getAllSubscribers
+
+### Example
+
+```javascript
+import SubscreasyJsClient from 'subscreasy-js-client';
+let defaultClient = SubscreasyJsClient.ApiClient.instance;
+// Configure API key authorization: apiKey
+let apiKey = defaultClient.authentications['apiKey'];
+apiKey.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//apiKey.apiKeyPrefix = 'Token';
+
+let apiInstance = new SubscreasyJsClient.SubscriberResourceApi();
+let opts = {
+  'page': 56, // Number | Page number of the requested page
+  'size': 56, // Number | Size of a page
+  'sort': ["null"] // [String] | Sorting criteria in the format: property(,asc|desc). Default sort order is ascending. Multiple sort criteria are supported.
+};
+apiInstance.getAllSubscribersUsingGET(opts, (error, data, response) => {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+});
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **page** | **Number**| Page number of the requested page | [optional] 
+ **size** | **Number**| Size of a page | [optional] 
+ **sort** | [**[String]**](String.md)| Sorting criteria in the format: property(,asc|desc). Default sort order is ascending. Multiple sort criteria are supported. | [optional] 
+
+### Return type
+
+[**[Subscriber]**](Subscriber.md)
+
+### Authorization
+
+[apiKey](../README.md#apiKey)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: */*
+
+
+## getSubscriberByEmailUsingGET
+
+> [Subscriber] getSubscriberByEmailUsingGET(email, opts)
 
 getSubscriberByEmail
 
 ### Example
-```javascript
-var SubscreasyJsClient = require('subscreasy-js-client');
-var defaultClient = SubscreasyJsClient.ApiClient.instance;
 
+```javascript
+import SubscreasyJsClient from 'subscreasy-js-client';
+let defaultClient = SubscreasyJsClient.ApiClient.instance;
 // Configure API key authorization: apiKey
-var apiKey = defaultClient.authentications['apiKey'];
+let apiKey = defaultClient.authentications['apiKey'];
 apiKey.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //apiKey.apiKeyPrefix = 'Token';
 
-var apiInstance = new SubscreasyJsClient.SubscriberResourceApi();
-
-var email = "email_example"; // String | email
-
-
-var callback = function(error, data, response) {
+let apiInstance = new SubscreasyJsClient.SubscriberResourceApi();
+let email = "email_example"; // String | email
+let opts = {
+  'page': 56, // Number | Page number of the requested page
+  'size': 56, // Number | Size of a page
+  'sort': ["null"] // [String] | Sorting criteria in the format: property(,asc|desc). Default sort order is ascending. Multiple sort criteria are supported.
+};
+apiInstance.getSubscriberByEmailUsingGET(email, opts, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
     console.log('API called successfully. Returned data: ' + data);
   }
-};
-apiInstance.getSubscriberByEmailUsingGET(email, callback);
+});
 ```
 
 ### Parameters
+
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **email** | **String**| email | 
+ **page** | **Number**| Page number of the requested page | [optional] 
+ **size** | **Number**| Size of a page | [optional] 
+ **sort** | [**[String]**](String.md)| Sorting criteria in the format: property(,asc|desc). Default sort order is ascending. Multiple sort criteria are supported. | [optional] 
 
 ### Return type
 
@@ -209,46 +267,52 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: */*
+- **Content-Type**: Not defined
+- **Accept**: */*
 
-<a name="getSubscriberByNameUsingGET"></a>
-# **getSubscriberByNameUsingGET**
-> [Subscriber] getSubscriberByNameUsingGET(name)
+
+## getSubscriberByNameUsingGET
+
+> [Subscriber] getSubscriberByNameUsingGET(name, opts)
 
 getSubscriberByName
 
 ### Example
-```javascript
-var SubscreasyJsClient = require('subscreasy-js-client');
-var defaultClient = SubscreasyJsClient.ApiClient.instance;
 
+```javascript
+import SubscreasyJsClient from 'subscreasy-js-client';
+let defaultClient = SubscreasyJsClient.ApiClient.instance;
 // Configure API key authorization: apiKey
-var apiKey = defaultClient.authentications['apiKey'];
+let apiKey = defaultClient.authentications['apiKey'];
 apiKey.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //apiKey.apiKeyPrefix = 'Token';
 
-var apiInstance = new SubscreasyJsClient.SubscriberResourceApi();
-
-var name = "name_example"; // String | name
-
-
-var callback = function(error, data, response) {
+let apiInstance = new SubscreasyJsClient.SubscriberResourceApi();
+let name = "name_example"; // String | name
+let opts = {
+  'page': 56, // Number | Page number of the requested page
+  'size': 56, // Number | Size of a page
+  'sort': ["null"] // [String] | Sorting criteria in the format: property(,asc|desc). Default sort order is ascending. Multiple sort criteria are supported.
+};
+apiInstance.getSubscriberByNameUsingGET(name, opts, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
     console.log('API called successfully. Returned data: ' + data);
   }
-};
-apiInstance.getSubscriberByNameUsingGET(name, callback);
+});
 ```
 
 ### Parameters
 
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **name** | **String**| name | 
+ **page** | **Number**| Page number of the requested page | [optional] 
+ **size** | **Number**| Size of a page | [optional] 
+ **sort** | [**[String]**](String.md)| Sorting criteria in the format: property(,asc|desc). Default sort order is ascending. Multiple sort criteria are supported. | [optional] 
 
 ### Return type
 
@@ -260,42 +324,40 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: */*
+- **Content-Type**: Not defined
+- **Accept**: */*
 
-<a name="getSubscriberBySecureIdUsingGET"></a>
-# **getSubscriberBySecureIdUsingGET**
+
+## getSubscriberBySecureIdUsingGET
+
 > Subscriber getSubscriberBySecureIdUsingGET(secureId)
 
 getSubscriberBySecureId
 
 ### Example
-```javascript
-var SubscreasyJsClient = require('subscreasy-js-client');
-var defaultClient = SubscreasyJsClient.ApiClient.instance;
 
+```javascript
+import SubscreasyJsClient from 'subscreasy-js-client';
+let defaultClient = SubscreasyJsClient.ApiClient.instance;
 // Configure API key authorization: apiKey
-var apiKey = defaultClient.authentications['apiKey'];
+let apiKey = defaultClient.authentications['apiKey'];
 apiKey.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //apiKey.apiKeyPrefix = 'Token';
 
-var apiInstance = new SubscreasyJsClient.SubscriberResourceApi();
-
-var secureId = "secureId_example"; // String | secureId
-
-
-var callback = function(error, data, response) {
+let apiInstance = new SubscreasyJsClient.SubscriberResourceApi();
+let secureId = "secureId_example"; // String | secureId
+apiInstance.getSubscriberBySecureIdUsingGET(secureId, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
     console.log('API called successfully. Returned data: ' + data);
   }
-};
-apiInstance.getSubscriberBySecureIdUsingGET(secureId, callback);
+});
 ```
 
 ### Parameters
+
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -311,42 +373,40 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: */*
+- **Content-Type**: Not defined
+- **Accept**: */*
 
-<a name="getSubscriberUsingGET"></a>
-# **getSubscriberUsingGET**
+
+## getSubscriberUsingGET
+
 > Subscriber getSubscriberUsingGET(id)
 
 getSubscriber
 
 ### Example
-```javascript
-var SubscreasyJsClient = require('subscreasy-js-client');
-var defaultClient = SubscreasyJsClient.ApiClient.instance;
 
+```javascript
+import SubscreasyJsClient from 'subscreasy-js-client';
+let defaultClient = SubscreasyJsClient.ApiClient.instance;
 // Configure API key authorization: apiKey
-var apiKey = defaultClient.authentications['apiKey'];
+let apiKey = defaultClient.authentications['apiKey'];
 apiKey.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //apiKey.apiKeyPrefix = 'Token';
 
-var apiInstance = new SubscreasyJsClient.SubscriberResourceApi();
-
-var id = 789; // Number | id
-
-
-var callback = function(error, data, response) {
+let apiInstance = new SubscreasyJsClient.SubscriberResourceApi();
+let id = 789; // Number | id
+apiInstance.getSubscriberUsingGET(id, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
     console.log('API called successfully. Returned data: ' + data);
   }
-};
-apiInstance.getSubscriberUsingGET(id, callback);
+});
 ```
 
 ### Parameters
+
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -362,42 +422,40 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: */*
+- **Content-Type**: Not defined
+- **Accept**: */*
 
-<a name="updateSubscriberUsingPUT"></a>
-# **updateSubscriberUsingPUT**
+
+## updateSubscriberUsingPUT
+
 > Subscriber updateSubscriberUsingPUT(subscriber)
 
 updateSubscriber
 
 ### Example
-```javascript
-var SubscreasyJsClient = require('subscreasy-js-client');
-var defaultClient = SubscreasyJsClient.ApiClient.instance;
 
+```javascript
+import SubscreasyJsClient from 'subscreasy-js-client';
+let defaultClient = SubscreasyJsClient.ApiClient.instance;
 // Configure API key authorization: apiKey
-var apiKey = defaultClient.authentications['apiKey'];
+let apiKey = defaultClient.authentications['apiKey'];
 apiKey.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //apiKey.apiKeyPrefix = 'Token';
 
-var apiInstance = new SubscreasyJsClient.SubscriberResourceApi();
-
-var subscriber = new SubscreasyJsClient.Subscriber(); // Subscriber | subscriber
-
-
-var callback = function(error, data, response) {
+let apiInstance = new SubscreasyJsClient.SubscriberResourceApi();
+let subscriber = new SubscreasyJsClient.Subscriber(); // Subscriber | subscriber
+apiInstance.updateSubscriberUsingPUT(subscriber, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
     console.log('API called successfully. Returned data: ' + data);
   }
-};
-apiInstance.updateSubscriberUsingPUT(subscriber, callback);
+});
 ```
 
 ### Parameters
+
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -413,6 +471,6 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: */*
+- **Content-Type**: application/json
+- **Accept**: */*
 

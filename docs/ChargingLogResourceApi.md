@@ -1,6 +1,6 @@
 # SubscreasyJsClient.ChargingLogResourceApi
 
-All URIs are relative to *https://localhost:8080*
+All URIs are relative to *http://sandbox.subscreasy.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -8,43 +8,46 @@ Method | HTTP request | Description
 [**deleteChargingLogUsingDELETE**](ChargingLogResourceApi.md#deleteChargingLogUsingDELETE) | **DELETE** /api/charging-logs/{id} | deleteChargingLog
 [**getAllChargingLogsUsingGET**](ChargingLogResourceApi.md#getAllChargingLogsUsingGET) | **GET** /api/charging-logs | getAllChargingLogs
 [**getChargingLogUsingGET**](ChargingLogResourceApi.md#getChargingLogUsingGET) | **GET** /api/charging-logs/{id} | getChargingLog
+[**getChargingLogsByStatusUsingGET**](ChargingLogResourceApi.md#getChargingLogsByStatusUsingGET) | **GET** /api/charging-logs/status/{status} | getChargingLogsByStatus
+[**getPaymentsByMerchantSubscriberIdUsingGET**](ChargingLogResourceApi.md#getPaymentsByMerchantSubscriberIdUsingGET) | **GET** /api/charging-logs/subscriber/m/{merchantSubscriberId} | getPaymentsByMerchantSubscriberId
+[**getPaymentsBySubscriberIdUsingGET**](ChargingLogResourceApi.md#getPaymentsBySubscriberIdUsingGET) | **GET** /api/charging-logs/subscriber/id/{subscriberId} | getPaymentsBySubscriberId
+[**getPaymentsBySubscriberIdUsingGET1**](ChargingLogResourceApi.md#getPaymentsBySubscriberIdUsingGET1) | **GET** /api/charging-logs/subscriber/{subscriberSecureId} | getPaymentsBySubscriberId
+[**getPaymentsBySubscriptionUsingGET**](ChargingLogResourceApi.md#getPaymentsBySubscriptionUsingGET) | **GET** /api/charging-logs/subscription/{id} | getPaymentsBySubscription
 [**refundUsingPOST**](ChargingLogResourceApi.md#refundUsingPOST) | **POST** /api/charging-logs/refund/{chargingLogId} | refund
 [**updateChargingLogUsingPUT**](ChargingLogResourceApi.md#updateChargingLogUsingPUT) | **PUT** /api/charging-logs | updateChargingLog
 
 
-<a name="createChargingLogUsingPOST"></a>
-# **createChargingLogUsingPOST**
+
+## createChargingLogUsingPOST
+
 > ChargingLog createChargingLogUsingPOST(chargingLog)
 
 createChargingLog
 
 ### Example
-```javascript
-var SubscreasyJsClient = require('subscreasy-js-client');
-var defaultClient = SubscreasyJsClient.ApiClient.instance;
 
+```javascript
+import SubscreasyJsClient from 'subscreasy-js-client';
+let defaultClient = SubscreasyJsClient.ApiClient.instance;
 // Configure API key authorization: apiKey
-var apiKey = defaultClient.authentications['apiKey'];
+let apiKey = defaultClient.authentications['apiKey'];
 apiKey.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //apiKey.apiKeyPrefix = 'Token';
 
-var apiInstance = new SubscreasyJsClient.ChargingLogResourceApi();
-
-var chargingLog = new SubscreasyJsClient.ChargingLog(); // ChargingLog | chargingLog
-
-
-var callback = function(error, data, response) {
+let apiInstance = new SubscreasyJsClient.ChargingLogResourceApi();
+let chargingLog = new SubscreasyJsClient.ChargingLog(); // ChargingLog | chargingLog
+apiInstance.createChargingLogUsingPOST(chargingLog, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
     console.log('API called successfully. Returned data: ' + data);
   }
-};
-apiInstance.createChargingLogUsingPOST(chargingLog, callback);
+});
 ```
 
 ### Parameters
+
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -60,42 +63,40 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: */*
+- **Content-Type**: application/json
+- **Accept**: */*
 
-<a name="deleteChargingLogUsingDELETE"></a>
-# **deleteChargingLogUsingDELETE**
+
+## deleteChargingLogUsingDELETE
+
 > deleteChargingLogUsingDELETE(id)
 
 deleteChargingLog
 
 ### Example
-```javascript
-var SubscreasyJsClient = require('subscreasy-js-client');
-var defaultClient = SubscreasyJsClient.ApiClient.instance;
 
+```javascript
+import SubscreasyJsClient from 'subscreasy-js-client';
+let defaultClient = SubscreasyJsClient.ApiClient.instance;
 // Configure API key authorization: apiKey
-var apiKey = defaultClient.authentications['apiKey'];
+let apiKey = defaultClient.authentications['apiKey'];
 apiKey.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //apiKey.apiKeyPrefix = 'Token';
 
-var apiInstance = new SubscreasyJsClient.ChargingLogResourceApi();
-
-var id = 789; // Number | id
-
-
-var callback = function(error, data, response) {
+let apiInstance = new SubscreasyJsClient.ChargingLogResourceApi();
+let id = 789; // Number | id
+apiInstance.deleteChargingLogUsingDELETE(id, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
     console.log('API called successfully.');
   }
-};
-apiInstance.deleteChargingLogUsingDELETE(id, callback);
+});
 ```
 
 ### Parameters
+
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -111,45 +112,44 @@ null (empty response body)
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: */*
+- **Content-Type**: Not defined
+- **Accept**: Not defined
 
-<a name="getAllChargingLogsUsingGET"></a>
-# **getAllChargingLogsUsingGET**
+
+## getAllChargingLogsUsingGET
+
 > [ChargingLog] getAllChargingLogsUsingGET(opts)
 
 getAllChargingLogs
 
 ### Example
-```javascript
-var SubscreasyJsClient = require('subscreasy-js-client');
-var defaultClient = SubscreasyJsClient.ApiClient.instance;
 
+```javascript
+import SubscreasyJsClient from 'subscreasy-js-client';
+let defaultClient = SubscreasyJsClient.ApiClient.instance;
 // Configure API key authorization: apiKey
-var apiKey = defaultClient.authentications['apiKey'];
+let apiKey = defaultClient.authentications['apiKey'];
 apiKey.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //apiKey.apiKeyPrefix = 'Token';
 
-var apiInstance = new SubscreasyJsClient.ChargingLogResourceApi();
-
-var opts = { 
+let apiInstance = new SubscreasyJsClient.ChargingLogResourceApi();
+let opts = {
   'page': 56, // Number | Page number of the requested page
   'size': 56, // Number | Size of a page
-  'sort': ["sort_example"] // [String] | Sorting criteria in the format: property(,asc|desc). Default sort order is ascending. Multiple sort criteria are supported.
+  'sort': ["null"] // [String] | Sorting criteria in the format: property(,asc|desc). Default sort order is ascending. Multiple sort criteria are supported.
 };
-
-var callback = function(error, data, response) {
+apiInstance.getAllChargingLogsUsingGET(opts, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
     console.log('API called successfully. Returned data: ' + data);
   }
-};
-apiInstance.getAllChargingLogsUsingGET(opts, callback);
+});
 ```
 
 ### Parameters
+
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -167,42 +167,40 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: */*
+- **Content-Type**: Not defined
+- **Accept**: */*
 
-<a name="getChargingLogUsingGET"></a>
-# **getChargingLogUsingGET**
+
+## getChargingLogUsingGET
+
 > ChargingLog getChargingLogUsingGET(id)
 
 getChargingLog
 
 ### Example
-```javascript
-var SubscreasyJsClient = require('subscreasy-js-client');
-var defaultClient = SubscreasyJsClient.ApiClient.instance;
 
+```javascript
+import SubscreasyJsClient from 'subscreasy-js-client';
+let defaultClient = SubscreasyJsClient.ApiClient.instance;
 // Configure API key authorization: apiKey
-var apiKey = defaultClient.authentications['apiKey'];
+let apiKey = defaultClient.authentications['apiKey'];
 apiKey.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //apiKey.apiKeyPrefix = 'Token';
 
-var apiInstance = new SubscreasyJsClient.ChargingLogResourceApi();
-
-var id = 789; // Number | id
-
-
-var callback = function(error, data, response) {
+let apiInstance = new SubscreasyJsClient.ChargingLogResourceApi();
+let id = 789; // Number | id
+apiInstance.getChargingLogUsingGET(id, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
     console.log('API called successfully. Returned data: ' + data);
   }
-};
-apiInstance.getChargingLogUsingGET(id, callback);
+});
 ```
 
 ### Parameters
+
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -218,42 +216,317 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: */*
+- **Content-Type**: Not defined
+- **Accept**: */*
 
-<a name="refundUsingPOST"></a>
-# **refundUsingPOST**
-> ChargingLog refundUsingPOST(chargingLogId)
 
-refund
+## getChargingLogsByStatusUsingGET
+
+> [ChargingLog] getChargingLogsByStatusUsingGET(status, opts)
+
+getChargingLogsByStatus
 
 ### Example
-```javascript
-var SubscreasyJsClient = require('subscreasy-js-client');
-var defaultClient = SubscreasyJsClient.ApiClient.instance;
 
+```javascript
+import SubscreasyJsClient from 'subscreasy-js-client';
+let defaultClient = SubscreasyJsClient.ApiClient.instance;
 // Configure API key authorization: apiKey
-var apiKey = defaultClient.authentications['apiKey'];
+let apiKey = defaultClient.authentications['apiKey'];
 apiKey.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //apiKey.apiKeyPrefix = 'Token';
 
-var apiInstance = new SubscreasyJsClient.ChargingLogResourceApi();
-
-var chargingLogId = 789; // Number | chargingLogId
-
-
-var callback = function(error, data, response) {
+let apiInstance = new SubscreasyJsClient.ChargingLogResourceApi();
+let status = "status_example"; // String | status
+let opts = {
+  'page': 56, // Number | Page number of the requested page
+  'size': 56, // Number | Size of a page
+  'sort': ["null"] // [String] | Sorting criteria in the format: property(,asc|desc). Default sort order is ascending. Multiple sort criteria are supported.
+};
+apiInstance.getChargingLogsByStatusUsingGET(status, opts, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
     console.log('API called successfully. Returned data: ' + data);
   }
-};
-apiInstance.refundUsingPOST(chargingLogId, callback);
+});
 ```
 
 ### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **status** | **String**| status | 
+ **page** | **Number**| Page number of the requested page | [optional] 
+ **size** | **Number**| Size of a page | [optional] 
+ **sort** | [**[String]**](String.md)| Sorting criteria in the format: property(,asc|desc). Default sort order is ascending. Multiple sort criteria are supported. | [optional] 
+
+### Return type
+
+[**[ChargingLog]**](ChargingLog.md)
+
+### Authorization
+
+[apiKey](../README.md#apiKey)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: */*
+
+
+## getPaymentsByMerchantSubscriberIdUsingGET
+
+> [ChargingLog] getPaymentsByMerchantSubscriberIdUsingGET(merchantSubscriberId, opts)
+
+getPaymentsByMerchantSubscriberId
+
+### Example
+
+```javascript
+import SubscreasyJsClient from 'subscreasy-js-client';
+let defaultClient = SubscreasyJsClient.ApiClient.instance;
+// Configure API key authorization: apiKey
+let apiKey = defaultClient.authentications['apiKey'];
+apiKey.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//apiKey.apiKeyPrefix = 'Token';
+
+let apiInstance = new SubscreasyJsClient.ChargingLogResourceApi();
+let merchantSubscriberId = "merchantSubscriberId_example"; // String | merchantSubscriberId
+let opts = {
+  'page': 56, // Number | Page number of the requested page
+  'size': 56, // Number | Size of a page
+  'sort': ["null"] // [String] | Sorting criteria in the format: property(,asc|desc). Default sort order is ascending. Multiple sort criteria are supported.
+};
+apiInstance.getPaymentsByMerchantSubscriberIdUsingGET(merchantSubscriberId, opts, (error, data, response) => {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+});
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **merchantSubscriberId** | **String**| merchantSubscriberId | 
+ **page** | **Number**| Page number of the requested page | [optional] 
+ **size** | **Number**| Size of a page | [optional] 
+ **sort** | [**[String]**](String.md)| Sorting criteria in the format: property(,asc|desc). Default sort order is ascending. Multiple sort criteria are supported. | [optional] 
+
+### Return type
+
+[**[ChargingLog]**](ChargingLog.md)
+
+### Authorization
+
+[apiKey](../README.md#apiKey)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: */*
+
+
+## getPaymentsBySubscriberIdUsingGET
+
+> [ChargingLog] getPaymentsBySubscriberIdUsingGET(subscriberId, opts)
+
+getPaymentsBySubscriberId
+
+### Example
+
+```javascript
+import SubscreasyJsClient from 'subscreasy-js-client';
+let defaultClient = SubscreasyJsClient.ApiClient.instance;
+// Configure API key authorization: apiKey
+let apiKey = defaultClient.authentications['apiKey'];
+apiKey.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//apiKey.apiKeyPrefix = 'Token';
+
+let apiInstance = new SubscreasyJsClient.ChargingLogResourceApi();
+let subscriberId = 789; // Number | subscriberId
+let opts = {
+  'page': 56, // Number | Page number of the requested page
+  'size': 56, // Number | Size of a page
+  'sort': ["null"] // [String] | Sorting criteria in the format: property(,asc|desc). Default sort order is ascending. Multiple sort criteria are supported.
+};
+apiInstance.getPaymentsBySubscriberIdUsingGET(subscriberId, opts, (error, data, response) => {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+});
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **subscriberId** | **Number**| subscriberId | 
+ **page** | **Number**| Page number of the requested page | [optional] 
+ **size** | **Number**| Size of a page | [optional] 
+ **sort** | [**[String]**](String.md)| Sorting criteria in the format: property(,asc|desc). Default sort order is ascending. Multiple sort criteria are supported. | [optional] 
+
+### Return type
+
+[**[ChargingLog]**](ChargingLog.md)
+
+### Authorization
+
+[apiKey](../README.md#apiKey)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: */*
+
+
+## getPaymentsBySubscriberIdUsingGET1
+
+> [ChargingLog] getPaymentsBySubscriberIdUsingGET1(subscriberSecureId, opts)
+
+getPaymentsBySubscriberId
+
+### Example
+
+```javascript
+import SubscreasyJsClient from 'subscreasy-js-client';
+let defaultClient = SubscreasyJsClient.ApiClient.instance;
+// Configure API key authorization: apiKey
+let apiKey = defaultClient.authentications['apiKey'];
+apiKey.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//apiKey.apiKeyPrefix = 'Token';
+
+let apiInstance = new SubscreasyJsClient.ChargingLogResourceApi();
+let subscriberSecureId = "subscriberSecureId_example"; // String | subscriberSecureId
+let opts = {
+  'page': 56, // Number | Page number of the requested page
+  'size': 56, // Number | Size of a page
+  'sort': ["null"] // [String] | Sorting criteria in the format: property(,asc|desc). Default sort order is ascending. Multiple sort criteria are supported.
+};
+apiInstance.getPaymentsBySubscriberIdUsingGET1(subscriberSecureId, opts, (error, data, response) => {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+});
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **subscriberSecureId** | **String**| subscriberSecureId | 
+ **page** | **Number**| Page number of the requested page | [optional] 
+ **size** | **Number**| Size of a page | [optional] 
+ **sort** | [**[String]**](String.md)| Sorting criteria in the format: property(,asc|desc). Default sort order is ascending. Multiple sort criteria are supported. | [optional] 
+
+### Return type
+
+[**[ChargingLog]**](ChargingLog.md)
+
+### Authorization
+
+[apiKey](../README.md#apiKey)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: */*
+
+
+## getPaymentsBySubscriptionUsingGET
+
+> [ChargingLog] getPaymentsBySubscriptionUsingGET(id)
+
+getPaymentsBySubscription
+
+### Example
+
+```javascript
+import SubscreasyJsClient from 'subscreasy-js-client';
+let defaultClient = SubscreasyJsClient.ApiClient.instance;
+// Configure API key authorization: apiKey
+let apiKey = defaultClient.authentications['apiKey'];
+apiKey.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//apiKey.apiKeyPrefix = 'Token';
+
+let apiInstance = new SubscreasyJsClient.ChargingLogResourceApi();
+let id = 789; // Number | id
+apiInstance.getPaymentsBySubscriptionUsingGET(id, (error, data, response) => {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+});
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **Number**| id | 
+
+### Return type
+
+[**[ChargingLog]**](ChargingLog.md)
+
+### Authorization
+
+[apiKey](../README.md#apiKey)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: */*
+
+
+## refundUsingPOST
+
+> ChargingLog refundUsingPOST(chargingLogId)
+
+refund
+
+### Example
+
+```javascript
+import SubscreasyJsClient from 'subscreasy-js-client';
+let defaultClient = SubscreasyJsClient.ApiClient.instance;
+// Configure API key authorization: apiKey
+let apiKey = defaultClient.authentications['apiKey'];
+apiKey.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//apiKey.apiKeyPrefix = 'Token';
+
+let apiInstance = new SubscreasyJsClient.ChargingLogResourceApi();
+let chargingLogId = 789; // Number | chargingLogId
+apiInstance.refundUsingPOST(chargingLogId, (error, data, response) => {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+});
+```
+
+### Parameters
+
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -269,42 +542,40 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: */*
+- **Content-Type**: Not defined
+- **Accept**: */*
 
-<a name="updateChargingLogUsingPUT"></a>
-# **updateChargingLogUsingPUT**
+
+## updateChargingLogUsingPUT
+
 > ChargingLog updateChargingLogUsingPUT(chargingLog)
 
 updateChargingLog
 
 ### Example
-```javascript
-var SubscreasyJsClient = require('subscreasy-js-client');
-var defaultClient = SubscreasyJsClient.ApiClient.instance;
 
+```javascript
+import SubscreasyJsClient from 'subscreasy-js-client';
+let defaultClient = SubscreasyJsClient.ApiClient.instance;
 // Configure API key authorization: apiKey
-var apiKey = defaultClient.authentications['apiKey'];
+let apiKey = defaultClient.authentications['apiKey'];
 apiKey.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //apiKey.apiKeyPrefix = 'Token';
 
-var apiInstance = new SubscreasyJsClient.ChargingLogResourceApi();
-
-var chargingLog = new SubscreasyJsClient.ChargingLog(); // ChargingLog | chargingLog
-
-
-var callback = function(error, data, response) {
+let apiInstance = new SubscreasyJsClient.ChargingLogResourceApi();
+let chargingLog = new SubscreasyJsClient.ChargingLog(); // ChargingLog | chargingLog
+apiInstance.updateChargingLogUsingPUT(chargingLog, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
     console.log('API called successfully. Returned data: ' + data);
   }
-};
-apiInstance.updateChargingLogUsingPUT(chargingLog, callback);
+});
 ```
 
 ### Parameters
+
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -320,6 +591,6 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: */*
+- **Content-Type**: application/json
+- **Accept**: */*
 

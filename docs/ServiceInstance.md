@@ -1,6 +1,7 @@
 # SubscreasyJsClient.ServiceInstance
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **capacity** | **Number** |  | [optional] 
@@ -14,7 +15,6 @@ Name | Type | Description | Notes
 **overUsageQuota** | **Number** |  | [optional] 
 **quotaOrigin** | **String** |  | [optional] 
 **serviceOffering** | [**ServiceOffering**](ServiceOffering.md) |  | [optional] 
-**serviceType** | **String** |  | [optional] 
 **startDate** | **Date** |  | [optional] 
 **status** | **String** |  | [optional] 
 **subscriberId** | **String** |  | [optional] 
@@ -23,7 +23,7 @@ Name | Type | Description | Notes
 **version** | **Number** |  | [optional] 
 
 
-<a name="QuotaOriginEnum"></a>
+
 ## Enum: QuotaOriginEnum
 
 
@@ -34,20 +34,7 @@ Name | Type | Description | Notes
 
 
 
-<a name="ServiceTypeEnum"></a>
-## Enum: ServiceTypeEnum
 
-
-* `ONOFF` (value: `"ONOFF"`)
-
-* `SEAT_BASED` (value: `"SEAT_BASED"`)
-
-* `USAGE_BASED` (value: `"USAGE_BASED"`)
-
-
-
-
-<a name="StatusEnum"></a>
 ## Enum: StatusEnum
 
 
@@ -61,10 +48,14 @@ Name | Type | Description | Notes
 
 * `CANCELLED` (value: `"CANCELLED"`)
 
+* `IN_TRIAL` (value: `"IN_TRIAL"`)
+
+* `PAYMENT_DUE` (value: `"PAYMENT_DUE"`)
 
 
 
-<a name="TypeEnum"></a>
+
+
 ## Enum: TypeEnum
 
 

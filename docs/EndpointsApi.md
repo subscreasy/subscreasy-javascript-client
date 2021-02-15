@@ -1,13 +1,12 @@
 # SubscreasyJsClient.EndpointsApi
 
-All URIs are relative to *https://localhost:8080*
+All URIs are relative to *http://sandbox.subscreasy.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**authorizeUsingPUT**](EndpointsApi.md#authorizeUsingPUT) | **PUT** /api/authorize | authorize
 [**deductUsingPUT**](EndpointsApi.md#deductUsingPUT) | **PUT** /api/deduct | deduct
 [**getAuthorizedServicesUsingGET**](EndpointsApi.md#getAuthorizedServicesUsingGET) | **GET** /api/service/subscriber/{secureId} | getAuthorizedServices
-[**getChargingLogBySubscriptionUsingGET**](EndpointsApi.md#getChargingLogBySubscriptionUsingGET) | **GET** /api/charging-logs/subscription/{id} | getChargingLogBySubscription
 [**getCustomerTotalAmountUsingGET**](EndpointsApi.md#getCustomerTotalAmountUsingGET) | **GET** /api/customer-totalAmountCharge/{id} | getCustomerTotalAmount
 [**getInvoiceDetailsUsingGET**](EndpointsApi.md#getInvoiceDetailsUsingGET) | **GET** /api/getInvoiceDetails | getInvoiceDetails
 [**getMessageTemplateUsingGET**](EndpointsApi.md#getMessageTemplateUsingGET) | **GET** /api/message-templates/email/{lifecycleEventName} | getMessageTemplate
@@ -16,39 +15,37 @@ Method | HTTP request | Description
 [**getTotalRevenuePerMonthUsingGET**](EndpointsApi.md#getTotalRevenuePerMonthUsingGET) | **GET** /api/charging-logs-totalamount-customer/{id} | getTotalRevenuePerMonth
 
 
-<a name="authorizeUsingPUT"></a>
-# **authorizeUsingPUT**
-> &#39;Boolean&#39; authorizeUsingPUT(authorization)
+
+## authorizeUsingPUT
+
+> Boolean authorizeUsingPUT(authorization)
 
 authorize
 
 ### Example
-```javascript
-var SubscreasyJsClient = require('subscreasy-js-client');
-var defaultClient = SubscreasyJsClient.ApiClient.instance;
 
+```javascript
+import SubscreasyJsClient from 'subscreasy-js-client';
+let defaultClient = SubscreasyJsClient.ApiClient.instance;
 // Configure API key authorization: apiKey
-var apiKey = defaultClient.authentications['apiKey'];
+let apiKey = defaultClient.authentications['apiKey'];
 apiKey.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //apiKey.apiKeyPrefix = 'Token';
 
-var apiInstance = new SubscreasyJsClient.EndpointsApi();
-
-var authorization = new SubscreasyJsClient.Authorization(); // Authorization | authorization
-
-
-var callback = function(error, data, response) {
+let apiInstance = new SubscreasyJsClient.EndpointsApi();
+let authorization = new SubscreasyJsClient.Authorization(); // Authorization | authorization
+apiInstance.authorizeUsingPUT(authorization, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
     console.log('API called successfully. Returned data: ' + data);
   }
-};
-apiInstance.authorizeUsingPUT(authorization, callback);
+});
 ```
 
 ### Parameters
+
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -56,7 +53,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**&#39;Boolean&#39;**
+**Boolean**
 
 ### Authorization
 
@@ -64,42 +61,40 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: */*
+- **Content-Type**: application/json
+- **Accept**: */*
 
-<a name="deductUsingPUT"></a>
-# **deductUsingPUT**
+
+## deductUsingPUT
+
 > DeductionResult deductUsingPUT(deduction)
 
 deduct
 
 ### Example
-```javascript
-var SubscreasyJsClient = require('subscreasy-js-client');
-var defaultClient = SubscreasyJsClient.ApiClient.instance;
 
+```javascript
+import SubscreasyJsClient from 'subscreasy-js-client';
+let defaultClient = SubscreasyJsClient.ApiClient.instance;
 // Configure API key authorization: apiKey
-var apiKey = defaultClient.authentications['apiKey'];
+let apiKey = defaultClient.authentications['apiKey'];
 apiKey.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //apiKey.apiKeyPrefix = 'Token';
 
-var apiInstance = new SubscreasyJsClient.EndpointsApi();
-
-var deduction = new SubscreasyJsClient.Deduction(); // Deduction | deduction
-
-
-var callback = function(error, data, response) {
+let apiInstance = new SubscreasyJsClient.EndpointsApi();
+let deduction = new SubscreasyJsClient.Deduction(); // Deduction | deduction
+apiInstance.deductUsingPUT(deduction, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
     console.log('API called successfully. Returned data: ' + data);
   }
-};
-apiInstance.deductUsingPUT(deduction, callback);
+});
 ```
 
 ### Parameters
+
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -115,42 +110,40 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+- **Content-Type**: application/json
+- **Accept**: application/json
 
-<a name="getAuthorizedServicesUsingGET"></a>
-# **getAuthorizedServicesUsingGET**
+
+## getAuthorizedServicesUsingGET
+
 > AuthorizedServicesResponse getAuthorizedServicesUsingGET(secureId)
 
 getAuthorizedServices
 
 ### Example
-```javascript
-var SubscreasyJsClient = require('subscreasy-js-client');
-var defaultClient = SubscreasyJsClient.ApiClient.instance;
 
+```javascript
+import SubscreasyJsClient from 'subscreasy-js-client';
+let defaultClient = SubscreasyJsClient.ApiClient.instance;
 // Configure API key authorization: apiKey
-var apiKey = defaultClient.authentications['apiKey'];
+let apiKey = defaultClient.authentications['apiKey'];
 apiKey.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //apiKey.apiKeyPrefix = 'Token';
 
-var apiInstance = new SubscreasyJsClient.EndpointsApi();
-
-var secureId = "secureId_example"; // String | secureId
-
-
-var callback = function(error, data, response) {
+let apiInstance = new SubscreasyJsClient.EndpointsApi();
+let secureId = "secureId_example"; // String | secureId
+apiInstance.getAuthorizedServicesUsingGET(secureId, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
     console.log('API called successfully. Returned data: ' + data);
   }
-};
-apiInstance.getAuthorizedServicesUsingGET(secureId, callback);
+});
 ```
 
 ### Parameters
+
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -166,93 +159,40 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: */*
-
-<a name="getChargingLogBySubscriptionUsingGET"></a>
-# **getChargingLogBySubscriptionUsingGET**
-> [ChargingLog] getChargingLogBySubscriptionUsingGET(id)
-
-getChargingLogBySubscription
-
-### Example
-```javascript
-var SubscreasyJsClient = require('subscreasy-js-client');
-var defaultClient = SubscreasyJsClient.ApiClient.instance;
-
-// Configure API key authorization: apiKey
-var apiKey = defaultClient.authentications['apiKey'];
-apiKey.apiKey = 'YOUR API KEY';
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//apiKey.apiKeyPrefix = 'Token';
-
-var apiInstance = new SubscreasyJsClient.EndpointsApi();
-
-var id = 789; // Number | id
+- **Content-Type**: Not defined
+- **Accept**: */*
 
 
-var callback = function(error, data, response) {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-};
-apiInstance.getChargingLogBySubscriptionUsingGET(id, callback);
-```
+## getCustomerTotalAmountUsingGET
 
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **id** | **Number**| id | 
-
-### Return type
-
-[**[ChargingLog]**](ChargingLog.md)
-
-### Authorization
-
-[apiKey](../README.md#apiKey)
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: */*
-
-<a name="getCustomerTotalAmountUsingGET"></a>
-# **getCustomerTotalAmountUsingGET**
-> &#39;Number&#39; getCustomerTotalAmountUsingGET(id)
+> Number getCustomerTotalAmountUsingGET(id)
 
 getCustomerTotalAmount
 
 ### Example
-```javascript
-var SubscreasyJsClient = require('subscreasy-js-client');
-var defaultClient = SubscreasyJsClient.ApiClient.instance;
 
+```javascript
+import SubscreasyJsClient from 'subscreasy-js-client';
+let defaultClient = SubscreasyJsClient.ApiClient.instance;
 // Configure API key authorization: apiKey
-var apiKey = defaultClient.authentications['apiKey'];
+let apiKey = defaultClient.authentications['apiKey'];
 apiKey.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //apiKey.apiKeyPrefix = 'Token';
 
-var apiInstance = new SubscreasyJsClient.EndpointsApi();
-
-var id = "id_example"; // String | id
-
-
-var callback = function(error, data, response) {
+let apiInstance = new SubscreasyJsClient.EndpointsApi();
+let id = "id_example"; // String | id
+apiInstance.getCustomerTotalAmountUsingGET(id, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
     console.log('API called successfully. Returned data: ' + data);
   }
-};
-apiInstance.getCustomerTotalAmountUsingGET(id, callback);
+});
 ```
 
 ### Parameters
+
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -260,7 +200,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**&#39;Number&#39;**
+**Number**
 
 ### Authorization
 
@@ -268,42 +208,40 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: */*
+- **Content-Type**: Not defined
+- **Accept**: */*
 
-<a name="getInvoiceDetailsUsingGET"></a>
-# **getInvoiceDetailsUsingGET**
+
+## getInvoiceDetailsUsingGET
+
 > Object getInvoiceDetailsUsingGET(invoiceRequest)
 
 getInvoiceDetails
 
 ### Example
-```javascript
-var SubscreasyJsClient = require('subscreasy-js-client');
-var defaultClient = SubscreasyJsClient.ApiClient.instance;
 
+```javascript
+import SubscreasyJsClient from 'subscreasy-js-client';
+let defaultClient = SubscreasyJsClient.ApiClient.instance;
 // Configure API key authorization: apiKey
-var apiKey = defaultClient.authentications['apiKey'];
+let apiKey = defaultClient.authentications['apiKey'];
 apiKey.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //apiKey.apiKeyPrefix = 'Token';
 
-var apiInstance = new SubscreasyJsClient.EndpointsApi();
-
-var invoiceRequest = new SubscreasyJsClient.InvoiceRequest(); // InvoiceRequest | invoiceRequest
-
-
-var callback = function(error, data, response) {
+let apiInstance = new SubscreasyJsClient.EndpointsApi();
+let invoiceRequest = new SubscreasyJsClient.InvoiceRequest(); // InvoiceRequest | invoiceRequest
+apiInstance.getInvoiceDetailsUsingGET(invoiceRequest, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
     console.log('API called successfully. Returned data: ' + data);
   }
-};
-apiInstance.getInvoiceDetailsUsingGET(invoiceRequest, callback);
+});
 ```
 
 ### Parameters
+
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -319,42 +257,40 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: */*
+- **Content-Type**: Not defined
+- **Accept**: */*
 
-<a name="getMessageTemplateUsingGET"></a>
-# **getMessageTemplateUsingGET**
+
+## getMessageTemplateUsingGET
+
 > MessageTemplate getMessageTemplateUsingGET(lifecycleEventName)
 
 getMessageTemplate
 
 ### Example
-```javascript
-var SubscreasyJsClient = require('subscreasy-js-client');
-var defaultClient = SubscreasyJsClient.ApiClient.instance;
 
+```javascript
+import SubscreasyJsClient from 'subscreasy-js-client';
+let defaultClient = SubscreasyJsClient.ApiClient.instance;
 // Configure API key authorization: apiKey
-var apiKey = defaultClient.authentications['apiKey'];
+let apiKey = defaultClient.authentications['apiKey'];
 apiKey.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //apiKey.apiKeyPrefix = 'Token';
 
-var apiInstance = new SubscreasyJsClient.EndpointsApi();
-
-var lifecycleEventName = "lifecycleEventName_example"; // String | lifecycleEventName
-
-
-var callback = function(error, data, response) {
+let apiInstance = new SubscreasyJsClient.EndpointsApi();
+let lifecycleEventName = "lifecycleEventName_example"; // String | lifecycleEventName
+apiInstance.getMessageTemplateUsingGET(lifecycleEventName, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
     console.log('API called successfully. Returned data: ' + data);
   }
-};
-apiInstance.getMessageTemplateUsingGET(lifecycleEventName, callback);
+});
 ```
 
 ### Parameters
+
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -370,42 +306,40 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: */*
+- **Content-Type**: Not defined
+- **Accept**: */*
 
-<a name="getServiceInstancesBySubscriptionUsingGET"></a>
-# **getServiceInstancesBySubscriptionUsingGET**
+
+## getServiceInstancesBySubscriptionUsingGET
+
 > [ServiceInstanceResult] getServiceInstancesBySubscriptionUsingGET(id)
 
 getServiceInstancesBySubscription
 
 ### Example
-```javascript
-var SubscreasyJsClient = require('subscreasy-js-client');
-var defaultClient = SubscreasyJsClient.ApiClient.instance;
 
+```javascript
+import SubscreasyJsClient from 'subscreasy-js-client';
+let defaultClient = SubscreasyJsClient.ApiClient.instance;
 // Configure API key authorization: apiKey
-var apiKey = defaultClient.authentications['apiKey'];
+let apiKey = defaultClient.authentications['apiKey'];
 apiKey.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //apiKey.apiKeyPrefix = 'Token';
 
-var apiInstance = new SubscreasyJsClient.EndpointsApi();
-
-var id = 789; // Number | id
-
-
-var callback = function(error, data, response) {
+let apiInstance = new SubscreasyJsClient.EndpointsApi();
+let id = 789; // Number | id
+apiInstance.getServiceInstancesBySubscriptionUsingGET(id, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
     console.log('API called successfully. Returned data: ' + data);
   }
-};
-apiInstance.getServiceInstancesBySubscriptionUsingGET(id, callback);
+});
 ```
 
 ### Parameters
+
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -421,42 +355,40 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: */*
+- **Content-Type**: Not defined
+- **Accept**: */*
 
-<a name="getServiceOfferingsBySubscriptionPlanUsingGET"></a>
-# **getServiceOfferingsBySubscriptionPlanUsingGET**
+
+## getServiceOfferingsBySubscriptionPlanUsingGET
+
 > [ServiceOfferingResult] getServiceOfferingsBySubscriptionPlanUsingGET(id)
 
 getServiceOfferingsBySubscriptionPlan
 
 ### Example
-```javascript
-var SubscreasyJsClient = require('subscreasy-js-client');
-var defaultClient = SubscreasyJsClient.ApiClient.instance;
 
+```javascript
+import SubscreasyJsClient from 'subscreasy-js-client';
+let defaultClient = SubscreasyJsClient.ApiClient.instance;
 // Configure API key authorization: apiKey
-var apiKey = defaultClient.authentications['apiKey'];
+let apiKey = defaultClient.authentications['apiKey'];
 apiKey.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //apiKey.apiKeyPrefix = 'Token';
 
-var apiInstance = new SubscreasyJsClient.EndpointsApi();
-
-var id = 789; // Number | id
-
-
-var callback = function(error, data, response) {
+let apiInstance = new SubscreasyJsClient.EndpointsApi();
+let id = 789; // Number | id
+apiInstance.getServiceOfferingsBySubscriptionPlanUsingGET(id, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
     console.log('API called successfully. Returned data: ' + data);
   }
-};
-apiInstance.getServiceOfferingsBySubscriptionPlanUsingGET(id, callback);
+});
 ```
 
 ### Parameters
+
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -472,42 +404,40 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: */*
+- **Content-Type**: Not defined
+- **Accept**: */*
 
-<a name="getTotalRevenuePerMonthUsingGET"></a>
-# **getTotalRevenuePerMonthUsingGET**
+
+## getTotalRevenuePerMonthUsingGET
+
 > [Object] getTotalRevenuePerMonthUsingGET(id)
 
 getTotalRevenuePerMonth
 
 ### Example
-```javascript
-var SubscreasyJsClient = require('subscreasy-js-client');
-var defaultClient = SubscreasyJsClient.ApiClient.instance;
 
+```javascript
+import SubscreasyJsClient from 'subscreasy-js-client';
+let defaultClient = SubscreasyJsClient.ApiClient.instance;
 // Configure API key authorization: apiKey
-var apiKey = defaultClient.authentications['apiKey'];
+let apiKey = defaultClient.authentications['apiKey'];
 apiKey.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //apiKey.apiKeyPrefix = 'Token';
 
-var apiInstance = new SubscreasyJsClient.EndpointsApi();
-
-var id = 789; // Number | id
-
-
-var callback = function(error, data, response) {
+let apiInstance = new SubscreasyJsClient.EndpointsApi();
+let id = 789; // Number | id
+apiInstance.getTotalRevenuePerMonthUsingGET(id, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
     console.log('API called successfully. Returned data: ' + data);
   }
-};
-apiInstance.getTotalRevenuePerMonthUsingGET(id, callback);
+});
 ```
 
 ### Parameters
+
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -523,6 +453,6 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: */*
+- **Content-Type**: Not defined
+- **Accept**: */*
 
